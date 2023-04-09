@@ -1,0 +1,1002 @@
+# Compile of Controller.vhd was successful.
+# Compile of FetchReg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc.vhd was successful.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of ALU.vhd was successful.
+# Compile of DE_Reg.vhd was successful.
+# Compile of FullAdder.vhd was successful.
+# Compile of my_adder.vhd was successful.
+# Compile of my_nadder.vhd was successful.
+# Compile of PartA.vhd was successful.
+# Compile of PartB.vhd was successful.
+# Compile of PartC.vhd was successful.
+# Compile of PartD.vhd was successful.
+# Compile of Reg_File.vhd was successful.
+# Compile of select_adder.vhd was successful.
+# Compile of writeBack_reg.vhd was successful.
+# 17 compiles, 1 failed with 2 errors.
+# Compile of Controller.vhd was successful.
+# Compile of FetchReg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc.vhd was successful.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of ALU.vhd was successful.
+# Compile of DE_Reg.vhd was successful.
+# Compile of FullAdder.vhd was successful.
+# Compile of my_adder.vhd was successful.
+# Compile of my_nadder.vhd was successful.
+# Compile of PartA.vhd was successful.
+# Compile of PartB.vhd was successful.
+# Compile of PartC.vhd was successful.
+# Compile of PartD.vhd was successful.
+# Compile of Reg_File.vhd was successful.
+# Compile of select_adder.vhd was successful.
+# Compile of writeBack_reg.vhd was successful.
+# 17 compiles, 1 failed with 2 errors.
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:25:09 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# WARNING: No extended dataflow license exists
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+-quit sim
+# invalid command name "-quit"
+quit -sim
+# End time: 08:27:49 on Mar 23,2023, Elapsed time: 0:02:40
+# Errors: 0, Warnings: 1
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:27:57 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+run
+force -freeze sim:/pipeline/enable 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 60 ps  Iteration: 2  Instance: /pipeline/reg_file
+quit -sim
+# End time: 08:31:12 on Mar 23,2023, Elapsed time: 0:03:15
+# Errors: 0, Warnings: 8
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:31:23 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/enable 1 0
+force -freeze sim:/pipeline/enable U 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+run -continue
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+vsim -gui work.pipeline
+# End time: 08:34:20 on Mar 23,2023, Elapsed time: 0:02:57
+# Errors: 0, Warnings: 1
+# vsim -gui work.pipeline 
+# Start time: 08:34:20 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+# vsim -gui work.pipeline 
+# Start time: 08:31:23 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/enable 0 0
+quit -sim
+# End time: 08:35:59 on Mar 23,2023, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 1
+# Compile of pc.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:36:14 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+run
+force -freeze sim:/pipeline/enable 1 0
+run
+force -freeze sim:/pipeline/enable 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 80 ps  Iteration: 2  Instance: /pipeline/reg_file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+mem load -filltype value -filldata x'F000' -fillradix hexadecimal /pipeline/reg_file/my_regs(0)
+# (vsim-3658) Illegal radix character found in 'x'F000'' at in fill pattern "x'F000'".
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(0)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+add wave -position 15  sim:/pipeline/reg_file/my_regs
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+force -freeze sim:/pipeline/reg_file/my_regs(0) F000 0
+run
+run
+quit -sim
+# End time: 08:48:35 on Mar 23,2023, Elapsed time: 0:12:21
+# Errors: 0, Warnings: 6
+# Compile of pc.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:48:49 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(0)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+add wave -position end  sim:/pipeline/reg_file/my_regs
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/reg_file/my_regs(0) F000 0
+force -freeze sim:/pipeline/counter 00 0
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ps  Iteration: 3  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 110 ps  Iteration: 3  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+run
+quit -sim
+# End time: 09:03:40 on Mar 23,2023, Elapsed time: 0:14:51
+# Errors: 0, Warnings: 11
+# Compile of instCache.vhd was successful.
+# Compile of Controller.vhd was successful.
+# Compile of FetchReg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of DE_Reg.vhd was successful.
+# Compile of FullAdder.vhd was successful.
+# Compile of my_adder.vhd was successful.
+# Compile of my_nadder.vhd was successful.
+# Compile of PartA.vhd was successful.
+# Compile of PartB.vhd was successful.
+# Compile of PartC.vhd was successful.
+# Compile of PartD.vhd was successful.
+# Compile of Reg_File.vhd was successful.
+# Compile of select_adder.vhd was successful.
+# Compile of writeBack_reg.vhd was successful.
+# 17 compiles, 0 failed with no errors.
+# Compile of Controller.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:04:17 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+do do.txt
+# End time: 09:04:30 on Mar 23,2023, Elapsed time: 0:00:13
+# Errors: 0, Warnings: 4
+# vsim -gui work.pipeline 
+# Start time: 09:04:30 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+add wave -position 6  sim:/pipeline/reg_file/my_regs
+force -freeze sim:/pipeline/reg_file/my_regs(0) F000 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+mem load -filltype value -filldata FFE1 -fillradix hexadecimal /pipeline/reg_file/my_regs(3)
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 4  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 4  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /pipeline/reg_file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(0)
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(1)
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(2)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10PS
+force -freeze sim:/pipeline/rst 1 0
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 135 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 195 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 0  Instance: /pipeline/reg_file
+quit -sim
+# End time: 09:23:50 on Mar 23,2023, Elapsed time: 0:19:20
+# Errors: 0, Warnings: 20
+# Compile of Controller.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:24:05 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+do do,
+# Cannot open macro file: do,
+do do.txt
+# End time: 09:24:20 on Mar 23,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 2
+# vsim -gui work.pipeline 
+# Start time: 09:24:20 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position 8  sim:/pipeline/reg_file/my_regs
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 95 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 105 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 115 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 125 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 135 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 145 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 165 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 175 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 185 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 195 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 205 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 215 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 235 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 245 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 245 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 245 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 255 ps  Iteration: 0  Instance: /pipeline/reg_file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do do.txt
+# End time: 09:27:45 on Mar 23,2023, Elapsed time: 0:03:25
+# Errors: 0, Warnings: 1
+# vsim -gui work.pipeline 
+# Start time: 09:27:45 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+add wave -position 6  sim:/pipeline/reg_file/my_regs
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do do
+# Cannot open macro file: do
+do do.txt
+# End time: 09:29:58 on Mar 23,2023, Elapsed time: 0:02:13
+# Errors: 0, Warnings: 1
+# vsim -gui work.pipeline 
+# Start time: 09:29:58 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position 5 sim:/pipeline/reg_file/*
+do do.txt
+# End time: 09:32:50 on Mar 23,2023, Elapsed time: 0:02:52
+# Errors: 0, Warnings: 1
+# vsim -gui work.pipeline 
+# Start time: 09:32:50 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 140 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 155 ps  Iteration: 1  Instance: /pipeline/reg_file
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do do.txt
+# End time: 09:39:07 on Mar 23,2023, Elapsed time: 0:06:17
+# Errors: 0, Warnings: 1
+# vsim -gui work.pipeline 
+# Start time: 09:39:08 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 70 ps  Iteration: 2  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 85 ps  Iteration: 1  Instance: /pipeline/reg_file
+# End time: 09:53:15 on Mar 23,2023, Elapsed time: 0:14:07
+# Errors: 0, Warnings: 10

@@ -1,0 +1,141 @@
+{C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/Reg_File.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/Reg_File.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Reg_File
+-- Compiling architecture Reg_File_arch of Reg_File
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/pipeline.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/pipeline.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pipeline
+-- Compiling architecture pipeline_arch of pipeline
+-- Loading entity pc
+-- Loading entity instCache
+-- Loading entity FetchReg
+-- Loading entity Controller
+-- Loading entity Reg_File
+-- Loading entity DE_Reg
+-- Loading entity ALU
+-- Loading entity writeBack_reg
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/DE_Reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/DE_Reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity DE_Reg
+-- Compiling architecture DE_arch of DE_Reg
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/instCache.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/instCache.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instCache
+-- Compiling architecture syncrama of instCache
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/my_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/my_adder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_adder
+-- Compiling architecture a_my_adder of my_adder
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/select_adder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/select_adder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity select_adder
+-- Compiling architecture a_my_adder of select_adder
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/FetchReg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/FetchReg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FetchReg
+-- Compiling architecture FetchReg_arch of FetchReg
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartA.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartA.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PartA
+-- Compiling architecture PartA_arch of PartA
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/writeBack_reg.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/writeBack_reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity writeBack_reg
+-- Compiling architecture WB_arch of writeBack_reg
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartB.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartB.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PartB
+-- Compiling architecture PartB_arch of PartB
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ALU.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ALU.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity ALU
+-- Compiling architecture ALU_arch of ALU
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartC.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartC.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PartC
+-- Compiling architecture PartC_arch of PartC
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/pc.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/pc.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pc
+-- Compiling architecture pcArch of pc
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/my_nadder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/my_nadder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity my_nadder
+-- Compiling architecture a_my_adder of my_nadder
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/FullAdder.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/FullAdder.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FullAdder
+-- Compiling architecture FullAdder_arch of FullAdder
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartD.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/PartD.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity PartD
+-- Compiling architecture PartD_arch of PartD
+
+} {} {}}

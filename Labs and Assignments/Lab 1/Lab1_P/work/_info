@@ -1,0 +1,218 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/donia/Uni/Senior-1/Spring/Arch/Labs and Assignments/Lab 1
+Ealu
+Z0 w1676988633
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 14
+Z3 dC:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P
+Z4 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/ALU.vhd
+Z5 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/ALU.vhd
+l0
+L4 1
+VF<[RmFd@<me1e?D_K`BXc1
+!s100 M@DRA<;nH88oi[W>3X2Ek2
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1676988636
+!i10b 1
+Z8 !s108 1676988636.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/ALU.vhd|
+Z10 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/ALU.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Aalu_arch
+R1
+R2
+DEx4 work 3 alu 0 22 F<[RmFd@<me1e?D_K`BXc1
+!i122 14
+l60
+L16 58
+VQ=<o9mTV0HhiDo<FH_^Mo0
+!s100 :BI?^k?bdE?fLZi2Fz[D=2
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Epartb
+Z13 w1676984504
+R1
+R2
+!i122 6
+R3
+Z14 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartB.vhd
+Z15 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartB.vhd
+l0
+L3 1
+VW]ig7cEeJ@1355b5igkT41
+!s100 S7nWf3hMlSD3ERG_bh8602
+R6
+32
+Z16 !s110 1676984508
+!i10b 1
+Z17 !s108 1676984508.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartB.vhd|
+Z19 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartB.vhd|
+!i113 1
+R11
+R12
+Apartb_arch
+R1
+R2
+DEx4 work 5 partb 0 22 W]ig7cEeJ@1355b5igkT41
+!i122 6
+l18
+L15 12
+V<h=JaU:o^UJ3>60]P`::71
+!s100 iQ770hUE]O[Ki]l3?UXOR2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Epartc
+Z20 w1676536618
+R1
+R2
+!i122 1
+R3
+Z21 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartC.vhd
+Z22 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartC.vhd
+l0
+L3 1
+VdUj6YaLo?[=jQ0=31NEMX3
+!s100 9F6QHSCBdE9mJI:fg9cz<1
+R6
+32
+Z23 !s110 1676983717
+!i10b 1
+Z24 !s108 1676983717.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartC.vhd|
+Z26 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartC.vhd|
+!i113 1
+R11
+R12
+Apartc_arch
+R1
+R2
+DEx4 work 5 partc 0 22 dUj6YaLo?[=jQ0=31NEMX3
+!i122 1
+l19
+Z27 L16 16
+V=Wi4?YF8aBA<?HHEFBVI;0
+!s100 1Coj90TBljHHZ^7BY5_2W1
+R6
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R11
+R12
+Epartd
+Z28 w1676987379
+R1
+R2
+!i122 8
+R3
+Z29 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartD.vhd
+Z30 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartD.vhd
+l0
+L3 1
+VGnJL;gMb6;LkT8CPS[T?L1
+!s100 7RfjdN7KE8ZifOCWMSoD30
+R6
+32
+Z31 !s110 1676987423
+!i10b 1
+Z32 !s108 1676987423.000000
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartD.vhd|
+Z34 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Lab 1/Lab1_P/PartD.vhd|
+!i113 1
+R11
+R12
+Apartd_arch
+R1
+R2
+DEx4 work 5 partd 0 22 GnJL;gMb6;LkT8CPS[T?L1
+!i122 8
+l19
+R27
+VQi1LC@[Jh2EVAI2LL``540
+!s100 h2EVI<h[MQTzAYK=h`mV60
+R6
+32
+R31
+!i10b 1
+R32
+R33
+R34
+!i113 1
+R11
+R12
+Etb_alu
+Z35 w1676996767
+Z36 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R1
+R2
+!i122 41
+R3
+Z37 8C:\Users\donia\Uni\Senior-1\Spring\Architecture\Labs and Assignments\Lab 1\Lab1_P\tb_Alu.vhd
+Z38 FC:\Users\donia\Uni\Senior-1\Spring\Architecture\Labs and Assignments\Lab 1\Lab1_P\tb_Alu.vhd
+l0
+L6 1
+VU]VbDl]0;1NgRMK07f;PW2
+!s100 LGe0M;=NgB`ERS>L14m;?2
+R6
+32
+Z39 !s110 1676996778
+!i10b 1
+Z40 !s108 1676996778.000000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\donia\Uni\Senior-1\Spring\Architecture\Labs and Assignments\Lab 1\Lab1_P\tb_Alu.vhd|
+Z42 !s107 C:\Users\donia\Uni\Senior-1\Spring\Architecture\Labs and Assignments\Lab 1\Lab1_P\tb_Alu.vhd|
+!i113 1
+R11
+R12
+Atesting_alu
+R36
+R1
+R2
+Z43 DEx4 work 6 tb_alu 0 22 U]VbDl]0;1NgRMK07f;PW2
+!i122 41
+l31
+L10 366
+VDkHa0YgiT`>k5]f09SGN:1
+!s100 V0jz5dKCWaAUGJ2neDz[43
+R6
+32
+R39
+!i10b 1
+R40
+R41
+R42
+!i113 1
+R11
+R12

@@ -1,0 +1,56 @@
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:31:23 on Mar 23,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.pc(pcarch)
+# Loading work.instcache(syncrama)
+# Loading work.fetchreg(fetchreg_arch)
+# Loading work.controller(controller_arch)
+# Loading work.reg_file(reg_file_arch)
+# Loading work.de_reg(de_arch)
+# Loading work.alu(alu_arch)
+# Loading work.parta(parta_arch)
+# Loading work.fulladder(fulladder_arch)
+# Loading work.my_nadder(a_my_adder)
+# Loading work.my_adder(a_my_adder)
+# Loading work.select_adder(a_my_adder)
+# Loading work.partb(partb_arch)
+# Loading work.partc(partc_arch)
+# Loading work.partd(partd_arch)
+# Loading work.writeback_reg(wb_arch)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/enable
+add wave -position end  sim:/pipeline/counter
+add wave -position end  sim:/pipeline/instruction
+add wave -position end  sim:/pipeline/Op_code
+add wave -position end  sim:/pipeline/Src_1
+add wave -position end  sim:/pipeline/Src_2
+add wave -position end  sim:/pipeline/src1out1
+add wave -position end  sim:/pipeline/src2out1
+add wave -position end  sim:/pipeline/src1out2
+add wave -position end  sim:/pipeline/src2out2
+add wave -position end  sim:/pipeline/dst1
+add wave -position end  sim:/pipeline/dst2
+add wave -position end  sim:/pipeline/dst3
+add wave -position end  sim:/pipeline/writeback_enable1
+add wave -position end  sim:/pipeline/writeback_enable2
+add wave -position end  sim:/pipeline/writeback_enable3
+add wave -position end  sim:/pipeline/Alu_selector1
+add wave -position end  sim:/pipeline/Alu_selector2
+add wave -position end  sim:/pipeline/alu_output1
+add wave -position end  sim:/pipeline/alu_output2
+add wave -position end  sim:/pipeline/cout
+add wave -position 6  sim:/pipeline/reg_file/my_regs
+mem load -i {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Labs and Assignments/Pipeline/Solution/ins.mem} /pipeline/inst_cache/ram
+mem load -filltype value -filldata F000 -fillradix hexadecimal /pipeline/reg_file/my_regs(0)
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run 10ps
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/enable 1 0
+run 80ps

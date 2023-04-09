@@ -1,0 +1,27 @@
+
+vsim work.partc(partc_arch)
+add wave -position end  sim:/partc/A
+add wave -position end  sim:/partc/B
+add wave -position end  sim:/partc/Cin
+add wave -position end  sim:/partc/S
+add wave -position end  sim:/partc/Cout
+add wave -position end  sim:/partc/F
+force -freeze sim:/partc/S 03 0
+force -freeze sim:/partc/A A00A 0
+# Load canceled
+run
+force -freeze sim:/partc/S 00 0
+run
+force -freeze sim:/partc/A 000A 0
+run
+force -freeze sim:/partc/S 01 0
+force -freeze sim:/partc/A B00C 0
+run
+force -freeze sim:/partc/A 000C 0
+run
+force -freeze sim:/partc/S 02 0
+force -freeze sim:/partc/A A00A 0
+force -freeze sim:/partc/Cin 0 0
+run
+force -freeze sim:/partc/Cin 1 0
+run
