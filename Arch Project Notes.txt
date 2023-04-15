@@ -1,3 +1,7 @@
+--> TO DO AFTER MEETING 15th APRIL:
+
+-bits on pipeline
+
 ----> To Do:
 
 - Alu selectors either new ones by mapping (like lab), or certain bits of the opcode
@@ -6,8 +10,10 @@
 
 - result of branch f anhy stage EX (3rd C.C ) or 4th C.C (3ady bra7tna bs lazem n77ddha f el design)
 - handle el control hazard (7asab rad el mo3eeda)
-- law software hn7dd 3dd el nop 7asab el stage elly decision bytl3 feeha
 - law HW fa hn7dd no3 el static prediction elly hnmsh 3aleh w eh el HW elly hnzoudo 3shan el flush
+
+- f el decode law la2eit ret/rti aw2f el fetch
+
 
 ----> Genereal Notes
 - 1 memory (1 hard disk)
@@ -18,12 +24,14 @@
 
 --> Instruction (16bits)
 
-- (31-27)5 Opcode
-- (src1 26-24)3 register
-- (src2 23-21)3 register
-- (dst 20-18)3 register
-- (17-2)16 immediate valu
-- (1,0)2 redundant bits
+- (15-11)5 Opcode
+- (10) 1 imd bit
+- (src1 9-7)3 register
+- (src2 6-4)3 register
+- (dst 3-1)3 register
+- (0) 1 redundant bit
+- (15-0)16 immediate value
+
 
 -----> Hazards: 
 
@@ -43,10 +51,6 @@
 -multiplixer bein elly tal3 mn el memory (law mem instruction) wlly tale3 mn buffer mem1/mem2 (alu result saved henak)
 
 ------> PC and waste of memory
-
-- el pc hy2ra 32 bit w a3ml check el other 16 dol needed for immediate wla la2 law ah ha increment 2
-
-- f el decode law la2eit ret/rti aw2f el fetch
 
 
 
