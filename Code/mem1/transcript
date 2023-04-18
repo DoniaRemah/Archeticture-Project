@@ -167,3 +167,39 @@ run
 force -freeze sim:/sp_reg/writeEnable 1 0
 run
 run
+quit -sim
+# End time: 00:23:47 on Apr 19,2023, Elapsed time: 0:45:21
+# Errors: 0, Warnings: 5
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -gui work.mem1_mem2_buf
+# vsim -gui work.mem1_mem2_buf 
+# Start time: 00:24:24 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.mem1_mem2_buf(behavioral)
+add wave -position end sim:/mem1_mem2_buf/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aboue  Hostname: DESKTOP-3DLTUAC  ProcessID: 20492
+#           Attempting to use alternate WLF file "./wlftgniz8e".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftgniz8e
+force -freeze sim:/mem1_mem2_buf/clk 1 0
+force -freeze sim:/mem1_mem2_buf/reset 1 0
+run
+force -freeze sim:/mem1_mem2_buf/writeEnable 0 0
+force -freeze sim:/mem1_mem2_buf/dataToBeWritten ffff 0
+run
+force -freeze sim:/mem1_mem2_buf/clk 0 0, 1 {100 ps} -r 200
+force -freeze sim:/mem1_mem2_buf/writeEnable 1 0
+run
+run
+force -freeze sim:/mem1_mem2_buf/reset 0 0
+run
+run
