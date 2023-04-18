@@ -10,32 +10,32 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/20.1
 Emux2x1
-Z0 w1681839263
+Z0 w1681849730
 Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 0
+!i122 8
 Z3 dC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1
-Z4 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd
-Z5 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd
+Z4 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
+Z5 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
 l0
 L5 1
 Vz7aV@5>S3X_dU`iG]n1Bz2
 !s100 lGa5eQSkE=>1c;LBMX9N^3
 Z6 OV;C;2020.1;71
 32
-Z7 !s110 1681840413
+Z7 !s110 1681851270
 !i10b 1
-Z8 !s108 1681840413.000000
-Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
-!s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
+Z8 !s108 1681851270.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
+Z10 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
 !i113 1
-Z10 o-work work -2002 -explicit
-Z11 tExplicit 1 CvgOpt 0
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
 Amux2x1_arch
 R1
 R2
 DEx4 work 6 mux2x1 0 22 z7aV@5>S3X_dU`iG]n1Bz2
-!i122 0
+!i122 8
 l17
 L16 11
 V:4dLI]9]a[>iB=X<SI;J;2
@@ -46,7 +46,48 @@ R7
 !i10b 1
 R8
 R9
-Z12 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
-!i113 1
 R10
+!i113 1
 R11
+R12
+Emux8x1
+Z13 w1681851261
+R1
+R2
+!i122 9
+R3
+Z14 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
+Z15 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
+l0
+L4 1
+V^z:Z0b@39YNVMQ:i]iKnY2
+!s100 z6I4ZN;B0hzm]MDOI64hn1
+R6
+32
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
+Z17 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
+!i113 1
+R11
+R12
+Amux8x1_arch
+R1
+R2
+DEx4 work 6 mux8x1 0 22 ^z:Z0b@39YNVMQ:i]iKnY2
+!i122 9
+l28
+Z18 L18 28
+Z19 V`jaA1g^mMhFdd29cNi6:20
+Z20 !s100 d:R[5JQ;dV<WC^c_cgU;S0
+R6
+32
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
