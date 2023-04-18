@@ -1,0 +1,21 @@
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.mpf).  File can not be renamed.
+# Compile of mux2x1.vhd was successful.
+vsim -gui work.mux2x1
+# vsim -gui work.mux2x1 
+# Start time: 19:53:48 on Apr 18,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux2x1(mux2x1_arch)
+add wave -position end sim:/mux2x1/*
+# ** Error: Acs sdne.
+# 
+#        Unable to replace existing ini file (C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.mpf).  File can not be renamed.
+force -freeze sim:/mux2x1/dataIn0 5555 0
+force -freeze sim:/mux2x1/dataIn1 9999 0
+force -freeze sim:/mux2x1/selector 0 0
+run
+force -freeze sim:/mux2x1/selector 1 0
+run

@@ -1,0 +1,52 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/20.1
+Emux2x1
+Z0 w1681839263
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+Z3 dC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1
+Z4 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd
+Z5 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd
+l0
+L5 1
+Vz7aV@5>S3X_dU`iG]n1Bz2
+!s100 lGa5eQSkE=>1c;LBMX9N^3
+Z6 OV;C;2020.1;71
+32
+Z7 !s110 1681840413
+!i10b 1
+Z8 !s108 1681840413.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
+!s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
+!i113 1
+Z10 o-work work -2002 -explicit
+Z11 tExplicit 1 CvgOpt 0
+Amux2x1_arch
+R1
+R2
+DEx4 work 6 mux2x1 0 22 z7aV@5>S3X_dU`iG]n1Bz2
+!i122 0
+l17
+L16 11
+V:4dLI]9]a[>iB=X<SI;J;2
+!s100 @9bdz<TRTBQRYY^RONW=Y1
+R6
+32
+R7
+!i10b 1
+R8
+R9
+Z12 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mux2x1.vhd|
+!i113 1
+R10
+R11
