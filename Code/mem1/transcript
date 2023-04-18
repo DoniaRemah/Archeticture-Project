@@ -127,3 +127,43 @@ force -freeze sim:/adder/B 00FB 0
 run
 force -freeze sim:/adder/B FFFB 0
 run
+quit -sim
+# End time: 23:37:40 on Apr 18,2023, Elapsed time: 0:16:43
+# Errors: 0, Warnings: 3
+# Load canceled
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -gui work.sp_reg
+# vsim -gui work.sp_reg 
+# Start time: 23:38:26 on Apr 18,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.sp_reg(behavioral)
+add wave -position end sim:/sp_reg/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: aboue  Hostname: DESKTOP-3DLTUAC  ProcessID: 20492
+#           Attempting to use alternate WLF file "./wlft2j1aec".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2j1aec
+force -freeze sim:/sp_reg/reset 1 0
+run
+force -freeze sim:/sp_reg/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/sp_reg/reset 0 0
+force -freeze sim:/sp_reg/writeEnable 1 0
+force -freeze sim:/sp_reg/dataIn ffff 0
+run
+run
+force -freeze sim:/sp_reg/writeEnable 0 0
+force -freeze sim:/sp_reg/dataIn FFF4 0
+run
+run
+run
+run
+force -freeze sim:/sp_reg/writeEnable 1 0
+run
+run
