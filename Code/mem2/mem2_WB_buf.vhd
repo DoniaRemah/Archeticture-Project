@@ -12,25 +12,28 @@ entity mem1_mem2_buf is
         dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
 
         -- the data in
-        dataRead,flagsRead,rdAddress,ALU_Imm:in std_logic_vector(15 downto 0);
+        dataRead,flagsRead,ALU_Imm:in std_logic_vector(15 downto 0);
+        RdAddress:in std_logic_vector(2 downto 0);
         newFlags:in std_logic_vector(2 downto 0);
         
         -- the data out
         -- write back signals
         dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut:out std_logic;
 
-        wbAddress,memResult,AluResult:out std_logic_vector(15 downto 0);
+        memResult,AluResult:out std_logic_vector(15 downto 0);
         -- the mem flags are the read flags from the memory
         -- the alu flags are the new flags
         -- note: when reading the flags from the memory, take the most significant 3 bit
-        memFlags,ALUflags:out std_logic_vector(2 downto 0)
+        memFlags,ALUflags,wbAddress:out std_logic_vector(2 downto 0)
     );
 end mem1_mem2_buf;
 
 architecture Behavioral of mem1_mem2_buf is
     -- signal for all inputs
     signal dataSelectorSig, inDataSelectorSig, flagSelectorSig, flagEnableSig, regFileEnableSig:std_logic;
-    signal dataReadSig,flagsReadSig,rdAddressSig,ALU_ImmSig:std_logic_vector(15 downto 0);
+    signal dataReadSig,ALU_ImmSig:std_logic_vector(15 downto 0);
+    signal flagsReadSig:std_logic_vector(2 downto 0);
+    signal RdAddressSig:std_logic_vector(2 downto 0);
     signal newFlagsSig:std_logic_vector(2 downto 0);
 begin
     process(clk,reset)
@@ -44,10 +47,10 @@ begin
             regFileEnableSig <= '0';
             dataReadSig <= (others => '0');
             flagsReadSig <= (others => '0');
-            rdAddressSig <= (others => '0');
+            RdAddressSig <= (others => '0');
             ALU_ImmSig <= (others => '0');
             newFlagsSig <= (others => '0');
-        elsif rising_edge(clk) then
+        elsif falling_edge(clk) then
             if writeEnable = '1' then
                 -- write the signals
                 dataSelectorSig <= dataSelector;
@@ -57,7 +60,7 @@ begin
                 regFileEnableSig <= regFileEnable;
                 dataReadSig <= dataRead;
                 flagsReadSig <= flagsRead;
-                rdAddressSig <= rdAddress;
+                RdAddressSig <= RdAddress;
                 ALU_ImmSig <= ALU_Imm;
                 newFlagsSig <= newFlags;
             end if;
@@ -69,7 +72,7 @@ begin
     flagSelectorOut <= flagSelectorSig;
     flagEnableOut <= flagEnableSig;
     regFileEnableOut <= regFileEnableSig;
-    wbAddress <= rdAddressSig;
+    wbAddress <= RdAddressSig;
     memResult <= dataReadSig;
     memFlags <= flagsReadSig;
     AluResult <= ALU_ImmSig;

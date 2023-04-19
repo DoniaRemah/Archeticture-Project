@@ -18,7 +18,8 @@ entity mem1 is
         -- memory signals
         readAddressSel,writeAddressSel,dataWrittenSel,memOp,memRead, memWrite, dataBusSelector, propRetRti: in std_logic;
 
-        newPCAddress,rs1Data,rs2Data,ALU_Imm,rdAddress: in std_logic_vector(15 downto 0);
+        newPCAddress,rs1Data,rs2Data,ALU_Imm: in std_logic_vector(15 downto 0);
+        rdAddress: in std_logic_vector(2 downto 0);
 
         newFlags: in std_logic_vector(2 downto 0);
 
@@ -27,7 +28,8 @@ entity mem1 is
 
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut: out std_logic;
 
-        dataToBeWrittenOut, ALU_ImmOut, writeAddressOut, readAddressOut,RdAddressOut : out std_logic_vector(15 downto 0);
+        dataToBeWrittenOut, ALU_ImmOut, writeAddressOut, readAddressOut : out std_logic_vector(15 downto 0);
+        RdAddressOut: out std_logic_vector(2 downto 0);
         
         newFlagsOut: out std_logic_vector(2 downto 0)
     );
