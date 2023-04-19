@@ -6,7 +6,8 @@ entity mem1_mem2_buf is
     port (
         clk : in std_logic;         
         reset : in std_logic;       
-        writeEnable : in std_logic;     
+        writeEnable : in std_logic; 
+        interrupt : in std_logic;     
 
         -- the write back signals
         dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
@@ -15,7 +16,8 @@ entity mem1_mem2_buf is
         readAddressSel,writeAddressSel,dataWrittenSel,memOp,memRead, memWrite, dataBusSelector, propRetRti: in std_logic;
 
         -- the data in
-        dataToBeWritten, ALU_Imm, writeAddress, readAddress,RdAddress : in std_logic_vector(15 downto 0);  
+        dataToBeWritten, ALU_Imm, writeAddress, readAddress : in std_logic_vector(15 downto 0);  
+        RdAddress: in std_logic_vector(2 downto 0);
         newFlags: in std_logic_vector(2 downto 0);
         
         -- the data out
@@ -24,7 +26,8 @@ entity mem1_mem2_buf is
 
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut: out std_logic;
 
-        dataToBeWrittenOut, ALU_ImmOut, writeAddressOut, readAddressOut,RdAddressOut : out std_logic_vector(15 downto 0);
+        dataToBeWrittenOut, ALU_ImmOut, writeAddressOut, readAddressOut : out std_logic_vector(15 downto 0);
+        RdAddressOut: out std_logic_vector(2 downto 0);
         
         newFlagsOut: out std_logic_vector(2 downto 0)
     );
@@ -34,7 +37,8 @@ architecture Behavioral of mem1_mem2_buf is
     -- declare signals for all inputs
     signal dataSelectorSig, inDataSelectorSig, flagSelectorSig, flagEnableSig, regFileEnableSig: std_logic;
     signal readAddressSelSig, writeAddressSelSig, dataWrittenSelSig, memOpSig, memReadSig, memWriteSig, dataBusSelectorSig, propRetRtiSig: std_logic;
-    signal dataToBeWrittenSig, ALU_ImmSig, writeAddressSig, readAddressSig, RdAddressSig: std_logic_vector(15 downto 0);
+    signal dataToBeWrittenSig, ALU_ImmSig, writeAddressSig, readAddressSig: std_logic_vector(15 downto 0);
+    signal RdAddressSig: std_logic_vector(2 downto 0);
     signal newFlagsSig: std_logic_vector(2 downto 0);
 begin
     process (clk, reset)
@@ -60,7 +64,8 @@ begin
             readAddressSig <= (others => '0');
             RdAddressSig <= (others => '0');
             newFlagsSig <= (others => '0');
-        elsif rising_edge(clk) then
+            -- check on the falling edge of teh clock
+        elsif falling_edge(clk) then
             if writeEnable = '1' then
             -- assign input signals to corresponding signals
                 dataSelectorSig <= dataSelector;
