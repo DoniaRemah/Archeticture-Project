@@ -5,3 +5,17 @@
 # Compile of mem1_mem2_buf.vhd was successful.
 # Compile of mem1.vhd was successful.
 # 6 compiles, 0 failed with no errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 1 errors.
+# 6 compiles, 1 failed with 1 error.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd was successful.
+# 6 compiles, 0 failed with no errors.

@@ -152,7 +152,7 @@ architecture Behavioral of mem1 is
                 writeAddress => writeAddressOutSignal,
                 readAddress => readAddressOutSignal,
                 RdAddress => RdAddress,
-                newFlags => newFlags
+                newFlags => newFlags,
 
                 -- outputs
                 dataSelectorOut => dataSelectorOut,
