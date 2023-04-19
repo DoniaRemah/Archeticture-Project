@@ -127,6 +127,7 @@ architecture Behavioral of mem1 is
 
         writeBuffer: entity work.mem1_mem2_buf
             port map(
+                -- inputs
                 clk => clk,
                 reset => reset,
                 -- put the write enable for the buffer to be 1
@@ -152,6 +153,28 @@ architecture Behavioral of mem1 is
                 readAddress => readAddressOutSignal,
                 RdAddress => RdAddress,
                 newFlags => newFlags
+
+                -- outputs
+                dataSelectorOut => dataSelectorOut,
+                inDataSelectorOut => inDataSelectorOut,
+                flagSelectorOut => flagSelectorOut,
+                flagEnableOut => flagEnableOut,
+                regFileEnableOut => regFileEnableOut,
+                readAddressSelOut => readAddressSelOut,
+                writeAddressSelOut => writeAddressSelOut,
+                dataWrittenSelOut => dataWrittenSelOut,
+                memOpOut => memOpOut,
+                memReadOut => memReadOut,
+                memWriteOut => memWriteOut,
+                dataBusSelectorOut => dataBusSelectorOut,
+                propRetRtiOut => propRetRtiOut,
+                dataToBeWrittenOut => dataToBeWrittenOut,
+                ALU_ImmOut => ALU_ImmOut,
+                writeAddressOut => writeAddressOut,
+                readAddressOut => readAddressOut,
+                RdAddressOut => RdAddressOut,
+                newFlagsOut => newFlagsOut
+
             );
 
 end Behavioral;
