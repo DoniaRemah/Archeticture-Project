@@ -17,16 +17,16 @@ Components for the fetch stage:
        
 6. Fetch Component including:
     - input signals: 
-        clk,rst
-        1.Jumped Call Address
-        2.Memory Returned PC
-        3.Propagated Ret/Rti
-        4.Current Ret/Rti
-        5. Hazard signal
-        6. Branching signal
-        7. Call signal
+        clk,rst -> DONE
+        1.Jumped Call Address -> DONE
+        2.Memory Returned PC -> DONE
+        3.Propagated Ret/Rti -> DONE
+        4.Current Ret/Rti -> DONE
+        5. Hazard signal -> DONE
+        6. Branching signal -> DONE 
+        7. Call signal -> DONE
     - output signals: 
-        1. Instruction
-        2. New PC
+        1. Instruction -> DONE
+        2. New PC -> DONE
         3. Flush
         4. Freeze
