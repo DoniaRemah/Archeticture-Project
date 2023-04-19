@@ -83,6 +83,9 @@ architecture Behavioral of mem1 is
         readAddressOut <= readAddressOutSignal;
 
         mux2x1_1: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 16
+            )
             port map(
                 dataIn0 => newPCAddress,
                 dataIn1 => rs1Data,
@@ -113,6 +116,9 @@ architecture Behavioral of mem1 is
                 C => newSP
             );
         mux2x1_2: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 16
+            )
             port map(
                 dataIn0 => rs2Data,
                 dataIn1 => SP,
@@ -121,6 +127,9 @@ architecture Behavioral of mem1 is
             );
 
         mux2x1_3: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 16
+            )
             port map(
                 dataIn0 => rs1Data,
                 dataIn1 => SP,

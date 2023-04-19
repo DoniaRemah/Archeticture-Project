@@ -27,6 +27,9 @@ begin
     WBAddressOut <= WBAddress;
 
             mux2x1_1: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 16
+            )
             port map(
                 dataIn0 => ALUResult,
                 dataIn1 => memResult,
@@ -35,6 +38,9 @@ begin
             );
 
             mux2x1_2: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 16
+            )
             port map(
                 dataIn0 => outOfMux1,
                 dataIn1 => InPortData,
@@ -42,7 +48,14 @@ begin
                 dataOut => WBData
             );
 
-
-
-
+            mux2x1_3: entity work.mux2x1
+            generic map (
+                DATA_WIDTH => 3
+            )
+            port map(
+                dataIn0 => ALUFlags,
+                dataIn1 => memFlags,
+                selector => flagSelector,
+                dataOut => WBFlags
+            );
 end architecture Behavioral;
