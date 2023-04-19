@@ -30,3 +30,5 @@ Components for the fetch stage:
         2. New PC -> DONE
         3. Flush
         4. Freeze
+
+========================== Add INTERRUPT SIGNAL TO EVERYTHING

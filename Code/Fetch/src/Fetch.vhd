@@ -36,10 +36,13 @@ end Fetch;
 -- architecture for the 4*1 mux
 architecture Fetch_arch of Fetch is
 begin
-        process ()
-        variable selector:std_logic_vector(1 downto 0);
-        begin
+        process (clk, rst)
                 
+        begin
+
+                if rst ='1' then
+
+
         end process;
 end Fetch_arch;
 

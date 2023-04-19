@@ -14,13 +14,15 @@ data_out: OUT std_logic_vector (n downto 0));
 END generic_reg;
 
 ARCHITECTURE reg_arch OF generic_reg IS
+signal data_out_sig: std_logic_vector(n downto 0);
 BEGIN
 PROCESS(clk,rst,we)
 BEGIN
 IF(rst = '1') THEN
-    data_out <= (others =>'0');
-ELSIF falling_edge(clk) and we='1' THEN
-    data_out<= data_in;
+    data_out_sig <= (others =>'0');
+ELSIF rising_edge(clk) and we='1' THEN
+    data_out_sig<= data_in;
 END IF;
 END PROCESS;
+data_out <= data_out_sig;
 END reg_arch;
