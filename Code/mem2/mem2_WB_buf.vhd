@@ -6,7 +6,8 @@ entity mem1_mem2_buf is
     port (
         clk : in std_logic;         
         reset : in std_logic;       
-        writeEnable : in std_logic;     
+        writeEnable : in std_logic;   
+        interrupt : in std_logic; 
 
         -- the write back signals
         dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
