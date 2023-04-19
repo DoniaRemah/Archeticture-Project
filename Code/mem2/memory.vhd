@@ -33,48 +33,44 @@ architecture behavioral of memory is
     signal data_read_internal: std_logic_vector(15 downto 0);
 begin
 
-process(clk, reset)
+-- try if something happened
+-- always read and write on the rising edge
+
+process(clk)
 begin
-    if reset = '1' then
-        -- reset memory to all zeros
-        memory_array <= (others => (others => '0'));
-        write_address_internal <= (others => '0');
-        read_address_internal <= (others => '0');
-        flags_internal <= (others => '0');
-        data_read_internal <= (others => '0');
-        flagsRead <= (others => '0');
-    elsif rising_edge(clk) then
+    if rising_edge(clk) then
         if memOp = '1' then
             if memRead = '1' then
                 if dataBusSelector = '0' then
                     -- read 16 bits from readAddress
                     read_address_internal <= unsigned(readAddress);
                     data_read_internal <= memory_array(to_integer(read_address_internal));
-                    flagsRead <= (others => '0');
+                    flags_internal <= (others => '0');
+                -- rti
+                -- this here is sp 
                 elsif dataBusSelector = '1' then
-                    -- read 16 bits from readAddress and update flags
                     read_address_internal <= unsigned(readAddress);
-                    data_read_internal <= memory_array(to_integer(read_address_internal));
-                    -- add one to read_address_internal
-                    read_address_internal <= read_address_internal + 1;
                     flags_internal <=  memory_array(to_integer(read_address_internal));
-                    flagsRead <= flags_internal(15 downto 13);
+                    -- flagsRead <= flags_internal(15 downto 13);
+                    read_address_internal <= read_address_internal + 1;
+                    data_read_internal <= memory_array(to_integer(read_address_internal));    
                 end if;
             end if;
-        elsif falling_edge(clk) then
+        end if;
+    elsif falling_edge(clk) then
+        if memOp = '1' then
             if memWrite = '1' then
-                if dataBusSelector = '0' then
                     -- write dataToBeWritten to writeAddress
                     write_address_internal <= unsigned(writeAddress);
                     memory_array(to_integer(write_address_internal)) <= dataToBeWritten;
-                elsif dataBusSelector = '1' then
-                    -- write dataToBeWritten to writeAddress and update flags
-                    write_address_internal <= unsigned(writeAddress);
-                    memory_array(to_integer(write_address_internal)) <= dataToBeWritten;
-                    -- add one to write_address_internal
-                    write_address_internal <= write_address_internal + 1;
-                    memory_array(to_integer(write_address_internal)) <= newFlags & "0000000000000";
-                end if;
+                -- interrupt
+                -- elsif dataBusSelector = '1' then
+                --     -- write dataToBeWritten to writeAddress and update flags
+                --     write_address_internal <= unsigned(writeAddress);
+                --     memory_array(to_integer(write_address_internal)) <= dataToBeWritten;
+                --     -- add one to write_address_internal
+                --     write_address_internal <= write_address_internal + 1;
+                --     memory_array(to_integer(write_address_internal)) <= newFlags & "0000000000000";
             end if;
         end if;
     else
@@ -86,4 +82,5 @@ end process;
 
 
     dataRead <= data_read_internal;
+    flagsRead <= flags_internal(15 downto 13);
 end architecture behavioral;
