@@ -56,31 +56,64 @@ architecture Behavioral of mem1 is
                 dataOut => dataOutofMux8x1
             );
 
+        sp_reg: entity work.sp_reg
+            port map(
+                clk => clk,
+                reset => reset,
+                writeEnable => SP_WE,
+                dataIn => newSP,
+                dataOut => SP
+            );
+
         adder: entity work.adder
             port map(
                 A => dataOutofMux8x1,
                 B => SP,
                 C => newSP
             );
-        
-        sp_reg: entity work.sp_reg
-            port map(
-                clk => clk,
-                reset => reset,
-                writeEnable => SP_WE,
-                dataIn => SP,
-                dataOut => SP
-            );
-
         mux2x1_2: entity work.mux2x1
             port map(
                 dataIn0 => rs2Data,
-                dataIn1 => rs2Data,
-                selector => dataWrittenSel,
-                dataOut => ALU_ImmOut
+                dataIn1 => SP,
+                selector => writeAddressSel,
+                dataOut => writeAddressOut
             );
 
+        mux2x1_3: entity work.mux2x1
+            port map(
+                dataIn0 => rs1Data,
+                dataIn1 => SP,
+                selector => readAddressSel,
+                dataOut => readAddressOut
+            );
 
+        writeBuffer: entity work.mem1_mem2_buf
+            port map(
+                clk => clk,
+                reset => reset,
+                -- put the write enable for the buffer to be 1
+                -- Since there are no hazards yet
+                writeEnable => '1',
+                dataSelector => dataSelectorOut,
+                inDataSelector => inDataSelectorOut,
+                flagSelector => flagSelectorOut,
+                flagEnable => flagEnableOut,
+                regFileEnable => regFileEnableOut,
+                readAddressSel => readAddressSelOut,
+                writeAddressSel => writeAddressSelOut,
+                dataWrittenSel => dataWrittenSelOut,
+                memOp => memOpOut,
+                memRead => memReadOut,
+                memWrite => memWriteOut,
+                dataBusSelector => dataBusSelectorOut,
+                propRetRti => propRetRtiOut,
+                dataToBeWritten => dataToBeWrittenOut,
+                ALU_Imm => ALU_ImmOut,
+                writeAddress => writeAddressOut,
+                readAddress => readAddressOut,
+                RdAddress => RdAddressOut,
+                newFlags => newFlagsOut
+            );
 
 end Behavioral;
 
