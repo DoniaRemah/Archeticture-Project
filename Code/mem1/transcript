@@ -203,3 +203,90 @@ run
 force -freeze sim:/mem1_mem2_buf/reset 0 0
 run
 run
+quit -sim
+# End time: 02:32:02 on Apr 19,2023, Elapsed time: 2:07:38
+# Errors: 0, Warnings: 5
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 20 errors.
+# 6 compiles, 1 failed with 20 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 7 errors.
+# 6 compiles, 1 failed with 7 errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 1 errors.
+# 6 compiles, 1 failed with 1 error.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd failed with 1 errors.
+# 6 compiles, 1 failed with 1 error.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of mem1.vhd was successful.
+# 6 compiles, 0 failed with no errors.

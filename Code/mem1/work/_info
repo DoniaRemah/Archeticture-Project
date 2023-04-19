@@ -14,7 +14,7 @@ Z0 w1681851786
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 19
+!i122 90
 Z4 dC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1
 Z5 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/adder/adder.vhd
 Z6 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/adder/adder.vhd
@@ -24,9 +24,9 @@ VYH=Zd_b:?VIdXEbJoVQ=32
 !s100 jlELYYmR<A[gRLGAWL7bZ3
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1681856648
+Z8 !s110 1681865729
 !i10b 1
-Z9 !s108 1681856648.000000
+Z9 !s108 1681865729.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/adder/adder.vhd|
 Z11 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/adder/adder.vhd|
 !i113 1
@@ -36,8 +36,8 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 5 adder 0 22 YH=Zd_b:?VIdXEbJoVQ=32
-!i122 19
+Z14 DEx4 work 5 adder 0 22 YH=Zd_b:?VIdXEbJoVQ=32
+!i122 90
 l14
 L13 11
 V1k4A;B;W[Ad2JeHm>5kKe1
@@ -52,26 +52,74 @@ R11
 !i113 1
 R12
 R13
-Emem1_mem2_buf
-Z14 w1681856539
+Emem1
+Z15 w1681865718
 R1
 R2
 R3
-!i122 21
+!i122 93
 R4
-Z15 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd
-Z16 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd
+Z16 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.vhd
+Z17 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.vhd
+l0
+L6 1
+V>NVkBb@DkH@=mlRR7J`C10
+!s100 FKkc16MQIWXlTFKX3TzQf2
+R7
+32
+Z18 !s110 1681865730
+!i10b 1
+Z19 !s108 1681865730.000000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.vhd|
+Z21 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+Z22 DEx4 work 13 mem1_mem2_buf 0 22 2g]0aGFk^?Kk>YW9I:[kg1
+R14
+Z23 DEx4 work 6 sp_reg 0 22 Y9@>cCbzKWgA3dflD8kc^1
+Z24 DEx4 work 6 mux8x1 0 22 ^z:Z0b@39YNVMQ:i]iKnY2
+Z25 DEx4 work 6 mux2x1 0 22 z7aV@5>S3X_dU`iG]n1Bz2
+R1
+R2
+R3
+Z26 DEx4 work 4 mem1 0 22 >NVkBb@DkH@=mlRR7J`C10
+!i122 93
+l48
+L36 123
+VYzbdlHAYgQ3nDiKTnzmCz1
+!s100 cfA>0GnlYQO6J78Lk:Cz00
+R7
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 1
+R12
+R13
+Emem1_mem2_buf
+Z27 w1681859105
+R1
+R2
+R3
+!i122 92
+R4
+Z28 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd
+Z29 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd
 l0
 L5 1
 V2g]0aGFk^?Kk>YW9I:[kg1
 !s100 eZ__^AHz<eCn;zY^SC^TR3
 R7
 32
-R8
+R18
 !i10b 1
-R9
-Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd|
-!s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd|
+R19
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd|
+Z31 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd|
 !i113 1
 R12
 R13
@@ -79,30 +127,30 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 13 mem1_mem2_buf 0 22 2g]0aGFk^?Kk>YW9I:[kg1
-!i122 21
+R22
+!i122 92
 l39
 L33 75
 VM]le]f<gHd_C6HP89iXQm1
 !s100 FaFW7Ai60Z@9d7X>ZA4m_2
 R7
 32
-R8
+R18
 !i10b 1
-R9
-R17
-Z18 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/mem1_mem2_buf.vhd|
+R19
+R30
+R31
 !i113 1
 R12
 R13
 Emux2x1
-Z19 w1681849730
+Z32 w1681849730
 R2
 R3
-!i122 17
+!i122 88
 R4
-Z20 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
-Z21 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
+Z33 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
+Z34 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd
 l0
 L5 1
 Vz7aV@5>S3X_dU`iG]n1Bz2
@@ -112,16 +160,16 @@ R7
 R8
 !i10b 1
 R9
-Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
-Z23 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
+Z36 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux2x1.vhd|
 !i113 1
 R12
 R13
 Amux2x1_arch
 R2
 R3
-DEx4 work 6 mux2x1 0 22 z7aV@5>S3X_dU`iG]n1Bz2
-!i122 17
+R25
+!i122 88
 l17
 L16 11
 V:4dLI]9]a[>iB=X<SI;J;2
@@ -131,19 +179,19 @@ R7
 R8
 !i10b 1
 R9
-R22
-R23
+R35
+R36
 !i113 1
 R12
 R13
 Emux8x1
-Z24 w1681851446
+Z37 w1681851446
 R2
 R3
-!i122 18
+!i122 89
 R4
-Z25 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
-Z26 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
+Z38 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
+Z39 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd
 l0
 L4 1
 V^z:Z0b@39YNVMQ:i]iKnY2
@@ -153,16 +201,16 @@ R7
 R8
 !i10b 1
 R9
-Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
-Z28 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
+Z41 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/muxes/mux8x1.vhd|
 !i113 1
 R12
 R13
 Amux8x1_arch
 R2
 R3
-DEx4 work 6 mux8x1 0 22 ^z:Z0b@39YNVMQ:i]iKnY2
-!i122 18
+R24
+!i122 89
 l28
 L18 28
 V`jaA1g^mMhFdd29cNi6:20
@@ -172,31 +220,31 @@ R7
 R8
 !i10b 1
 R9
-R27
-R28
+R40
+R41
 !i113 1
 R12
 R13
 Esp_reg
-Z29 w1681854204
+Z42 w1681854204
 R1
 R2
 R3
-!i122 20
+!i122 91
 R4
-Z30 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd
-Z31 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd
+Z43 8C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd
+Z44 FC:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd
 l0
 L5 1
 VY9@>cCbzKWgA3dflD8kc^1
 !s100 :W<COgE4Z1:>7I6O^232=2
 R7
 32
-R8
+R18
 !i10b 1
 R9
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd|
-Z33 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd|
+Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd|
+Z46 !s107 C:/Users/aboue/Desktop/Uni/Senior 1 spring/Architecture/Project/Code/Archeticture-Project/Code/mem1/sp_reg.vhd|
 !i113 1
 R12
 R13
@@ -204,19 +252,19 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 6 sp_reg 0 22 Y9@>cCbzKWgA3dflD8kc^1
-!i122 20
+R23
+!i122 91
 l18
 L15 18
 VY`Y<:jiG9WkgL0=3_z]CX1
 !s100 ]IF^k4?7Q=O>``[S[<TBl2
 R7
 32
-R8
+R18
 !i10b 1
 R9
-R32
-R33
+R45
+R46
 !i113 1
 R12
 R13

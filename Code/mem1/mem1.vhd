@@ -38,21 +38,59 @@ architecture Behavioral of mem1 is
     signal SP: std_logic_vector(15 downto 0);
     signal newSP: std_logic_vector(15 downto 0);
     signal dataOutofMux8x1: std_logic_vector(15 downto 0);
+
+    signal dataToBeWrittenOutSignal: std_logic_vector(15 downto 0);
+    signal writeAddressOutSignal: std_logic_vector(15 downto 0);
+    signal readAddressOutSignal: std_logic_vector(15 downto 0);
+
+    signal selector8x1: std_logic_vector(2 downto 0);
     begin
         -- the SP_WE is the oring of the readAddressSel and the writeAddressSel
         SP_WE <= readAddressSel or writeAddressSel;
+        selector8x1 <= dataBusSelector & readAddressSel & writeAddressSel;
+
+        -- put the unassigned outputs to equal the inputs
+
+        -- the write back signals
+        dataSelectorOut <= dataSelector;
+        inDataSelectorOut <= inDataSelector;
+        flagSelectorOut <= flagSelector;
+        flagEnableOut <= flagEnable;
+        regFileEnableOut <= regFileEnable;
+
+        -- memory signals
+        readAddressSelOut <= readAddressSel;
+        writeAddressSelOut <= writeAddressSel;
+        dataWrittenSelOut <= dataWrittenSel;
+        memOpOut <= memOp;
+        memReadOut <= memRead;
+        memWriteOut <= memWrite;
+        dataBusSelectorOut <= dataBusSelector;
+        propRetRtiOut <= propRetRti;
+
+        -- the values that will be passed from the ex/mem1 buffer to the mem1/mem2 buffer
+        ALU_ImmOut <= ALU_Imm;
+        RdAddressOut <= rdAddress;
+        newFlagsOut <= newFlags;
+
+
+        -- put the signals on the remaining outputs
+        dataToBeWrittenOut <= dataToBeWrittenOutSignal;
+        writeAddressOut <= writeAddressOutSignal;
+        readAddressOut <= readAddressOutSignal;
 
         mux2x1_1: entity work.mux2x1
             port map(
                 dataIn0 => newPCAddress,
                 dataIn1 => rs1Data,
                 selector => dataWrittenSel,
-                dataOut => dataToBeWrittenOut
+                dataOut => dataToBeWrittenOutSignal
             );
 
         mux8x1: entity work.mux8x1
             port map(
-                selector => dataBusSelector&readAddressSel&writeAddressSel,
+                -- selector => dataBusSelector & readAddressSel & writeAddressSel,
+                selector => selector8x1,
                 dataOut => dataOutofMux8x1
             );
 
@@ -76,7 +114,7 @@ architecture Behavioral of mem1 is
                 dataIn0 => rs2Data,
                 dataIn1 => SP,
                 selector => writeAddressSel,
-                dataOut => writeAddressOut
+                dataOut => writeAddressOutSignal
             );
 
         mux2x1_3: entity work.mux2x1
@@ -84,7 +122,7 @@ architecture Behavioral of mem1 is
                 dataIn0 => rs1Data,
                 dataIn1 => SP,
                 selector => readAddressSel,
-                dataOut => readAddressOut
+                dataOut => readAddressOutSignal
             );
 
         writeBuffer: entity work.mem1_mem2_buf
@@ -94,25 +132,26 @@ architecture Behavioral of mem1 is
                 -- put the write enable for the buffer to be 1
                 -- Since there are no hazards yet
                 writeEnable => '1',
-                dataSelector => dataSelectorOut,
-                inDataSelector => inDataSelectorOut,
-                flagSelector => flagSelectorOut,
-                flagEnable => flagEnableOut,
-                regFileEnable => regFileEnableOut,
-                readAddressSel => readAddressSelOut,
-                writeAddressSel => writeAddressSelOut,
-                dataWrittenSel => dataWrittenSelOut,
-                memOp => memOpOut,
-                memRead => memReadOut,
-                memWrite => memWriteOut,
-                dataBusSelector => dataBusSelectorOut,
-                propRetRti => propRetRtiOut,
-                dataToBeWritten => dataToBeWrittenOut,
-                ALU_Imm => ALU_ImmOut,
-                writeAddress => writeAddressOut,
-                readAddress => readAddressOut,
-                RdAddress => RdAddressOut,
-                newFlags => newFlagsOut
+                dataSelector => dataSelector,
+                inDataSelector => inDataSelector,
+                flagSelector => flagSelector,
+                flagEnable => flagEnable,
+                regFileEnable => regFileEnable,
+                readAddressSel => readAddressSel,
+                writeAddressSel => writeAddressSel,
+                dataWrittenSel => dataWrittenSel,
+                memOp => memOp,
+                memRead => memRead,
+                memWrite => memWrite,
+                dataBusSelector => dataBusSelector,
+                propRetRti => propRetRti,
+
+                dataToBeWritten => dataToBeWrittenOutSignal,
+                ALU_Imm => ALU_Imm,
+                writeAddress => writeAddressOutSignal,
+                readAddress => readAddressOutSignal,
+                RdAddress => RdAddress,
+                newFlags => newFlags
             );
 
 end Behavioral;
