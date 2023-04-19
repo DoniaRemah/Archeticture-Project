@@ -1,0 +1,32 @@
+Components for the fetch stage:
+
+1. Adder -> DONE
+2. mux 4x1 -> DONE
+3. pc register 
+4. mux 2x1 -> DONE
+5. if/id buffer including:
+    - input signals: 
+        clk,rst
+        1. Instruction
+        2. New PC
+        3. Flush
+        4. Freeze
+        5. Hazard Signal
+    - output signals: 
+        1. Instruction
+       
+6. Fetch Component including:
+    - input signals: 
+        clk,rst
+        1.Jumped Call Address
+        2.Memory Returned PC
+        3.Propagated Ret/Rti
+        4.Current Ret/Rti
+        5. Hazard signal
+        6. Branching signal
+        7. Call signal
+    - output signals: 
+        1. Instruction
+        2. New PC
+        3. Flush
+        4. Freeze

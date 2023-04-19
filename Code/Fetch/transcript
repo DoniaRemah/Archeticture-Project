@@ -1,0 +1,288 @@
+# Compile of mux4x1.vhd was successful.
+vsim -gui work.mux4x1
+# vsim -gui work.mux4x1 
+# Start time: 07:45:27 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+add wave -position end  sim:/mux4x1/dataIn0
+add wave -position end  sim:/mux4x1/dataIn1
+add wave -position end  sim:/mux4x1/dataIn2
+add wave -position end  sim:/mux4x1/dataIn3
+add wave -position end  sim:/mux4x1/selector0
+add wave -position end  sim:/mux4x1/selector1
+add wave -position end  sim:/mux4x1/dataOut
+add wave -position end  sim:/mux4x1/selector
+force -freeze sim:/mux4x1/dataIn0 FFFF 0
+force -freeze sim:/mux4x1/dataIn1 EEEE 0
+force -freeze sim:/mux4x1/dataIn2 AAAA 0
+force -freeze sim:/mux4x1/dataIn3 6666 0
+force -freeze sim:/mux4x1/selector0 0 0
+force -freeze sim:/mux4x1/selector1 0 0
+run
+run
+step
+# Nothing left to do.
+step
+# Nothing left to do.
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/mux4x1/dataIn0 FFFF 0
+force -freeze sim:/mux4x1/dataIn1 EEEE 0
+force -freeze sim:/mux4x1/dataIn2 AAAA 0
+force -freeze sim:/mux4x1/dataIn3 6666 0
+force -freeze sim:/mux4x1/selector0 0 0
+force -freeze sim:/mux4x1/selector1 0 0
+run
+# Break in Process line__19 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd line 21
+step
+step
+step
+step
+step
+# Break key hit
+quit -sim
+# End time: 07:56:26 on Apr 19,2023, Elapsed time: 0:10:59
+# Errors: 0, Warnings: 1
+vsim -gui work.mux4x1
+# vsim -gui work.mux4x1 
+# Start time: 08:00:31 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+quit -sim
+# End time: 08:00:45 on Apr 19,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 1
+# Compile of mux4x1.vhd was successful.
+vsim -gui work.mux4x1
+# vsim -gui work.mux4x1 
+# Start time: 08:00:55 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+quit -sim
+# End time: 08:01:21 on Apr 19,2023, Elapsed time: 0:00:26
+# Errors: 0, Warnings: 2
+do mux4x1.do
+# Cannot open macro file: mux4x1.do
+do mux4x1.txt
+# Cannot open macro file: mux4x1.txt
+do mux4x1.txt
+# vsim -gui work.mux4x1 
+# Start time: 08:03:15 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+# Break in Process line__19 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd line 21
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do mux4x1.txt
+# End time: 08:04:45 on Apr 19,2023, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 1
+# vsim -gui work.mux4x1 
+# Start time: 08:04:46 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+step
+step -over
+step -over
+# Break key hit
+step -out
+# Nothing left to do.
+quit -sim
+# End time: 08:10:38 on Apr 19,2023, Elapsed time: 0:05:52
+# Errors: 0, Warnings: 1
+# Compile of mux4x1.vhd failed with 6 errors.
+# Compile of mux4x1.vhd was successful.
+DO mux4x1.txt
+# invalid command name "DO"
+do mux4x1.txt
+# vsim -gui work.mux4x1 
+# Start time: 08:13:07 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+# ** UI-Msg: (vish-4014) No objects found matching '/mux4x1/selector'.
+# Error in macro ./mux4x1.txt line 15
+# ** UI-Msg: (vish-4014) No objects found matching '/mux4x1/selector'.
+#     while executing
+# "add wave -position end  sim:/mux4x1/selector"
+run
+do mux4x1.txt
+# End time: 08:14:13 on Apr 19,2023, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 3
+# vsim -gui work.mux4x1 
+# Start time: 08:14:13 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+run
+run
+quit -sim
+# End time: 08:15:14 on Apr 19,2023, Elapsed time: 0:01:01
+# Errors: 0, Warnings: 1
+vsim -gui work.mux4x1
+# vsim -gui work.mux4x1 
+# Start time: 08:16:54 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+add wave -position end  sim:/mux4x1/selector0
+force -freeze sim:/mux4x1/selector0 0 0
+force -freeze sim:/mux4x1/selector0 1 0
+force -freeze sim:/mux4x1/selector0 8 0
+# ** UI-Msg: (vsim-4026) Value "8" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: 8 0.
+# 
+force -freeze sim:/mux4x1/selector0 0 0
+do mux4x1.txt
+# End time: 08:18:02 on Apr 19,2023, Elapsed time: 0:01:08
+# Errors: 0, Warnings: 1
+# vsim -gui work.mux4x1 
+# Start time: 08:18:02 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+run 2ps
+quit -sim
+# End time: 08:20:04 on Apr 19,2023, Elapsed time: 0:02:02
+# Errors: 0, Warnings: 1
+# Compile of adder.vhd was successful.
+vsim -gui work.adder
+# vsim -gui work.adder 
+# Start time: 08:20:31 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.adder(behavioral)
+add wave -position end  sim:/adder/A
+add wave -position end  sim:/adder/B
+add wave -position end  sim:/adder/C
+force -freeze sim:/adder/A 10 0
+force -freeze sim:/adder/B 6 0
+run
+force -freeze sim:/adder/A -2 0
+run
+force -freeze sim:/adder/B 0000 0
+force -freeze sim:/adder/A 0001 0
+run
+quit -sim
+# End time: 08:39:22 on Apr 19,2023, Elapsed time: 0:18:51
+# Errors: 0, Warnings: 3
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.generic_reg
+# vsim -gui work.generic_reg 
+# Start time: 08:48:31 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+add wave -position end  sim:/generic_reg/n
+add wave -position end  sim:/generic_reg/clk
+add wave -position end  sim:/generic_reg/rst
+add wave -position end  sim:/generic_reg/we
+add wave -position end  sim:/generic_reg/data_in
+add wave -position end  sim:/generic_reg/data_out
+force -freeze sim:/generic_reg/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/generic_reg/rst 1 0
+run 10ps
+restart -f -nolog
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+restart -f -nowave
+quit -sim
+# End time: 08:51:21 on Apr 19,2023, Elapsed time: 0:02:50
+# Errors: 0, Warnings: 1
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.generic_reg
+# vsim -gui work.generic_reg 
+# Start time: 08:51:30 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+add wave -position end  sim:/generic_reg/n
+add wave -position end  sim:/generic_reg/clk
+add wave -position end  sim:/generic_reg/rst
+add wave -position end  sim:/generic_reg/data_in
+add wave -position end  sim:/generic_reg/we
+add wave -position end  sim:/generic_reg/data_out
+force -freeze sim:/generic_reg/clk 1 0, 0 {5 ps} -r 10
+force -freeze sim:/generic_reg/rst 1 0
+run 10ps
+force -freeze sim:/generic_reg/rst 0 0
+force -freeze sim:/generic_reg/data_in 15 0
+force -freeze sim:/generic_reg/we 1 0
+run 10ps
+run 10ps
+force -freeze sim:/generic_reg/we 0 0
+force -freeze sim:/generic_reg/data_in 20 0
+run 10ps
+run 10ps
+force -freeze sim:/generic_reg/we 1 0
+run 10ps
+run 10ps
+quit -sim
+# End time: 08:57:06 on Apr 19,2023, Elapsed time: 0:05:36
+# Errors: 0, Warnings: 2
+do do_generic_reg.txt
+do do_generic_reg.txt
+# vsim -gui work.generic_reg 
+# Start time: 08:59:53 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+end -sim
+# bad option "-sim": must be blank, cget, configure, copy, data, get, put, read, redither, transparency, or write
+quit -sim
+# End time: 09:00:12 on Apr 19,2023, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 3
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# 3 compiles, 0 failed with no errors.
+do do_generic_reg.txt
+# vsim -gui work.generic_reg 
+# Start time: 09:00:21 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+do do_generic_reg.txt
+# End time: 09:00:59 on Apr 19,2023, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 2
+# vsim -gui work.generic_reg 
+# Start time: 09:00:59 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+do do_generic_reg.txt
+# End time: 09:01:47 on Apr 19,2023, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1
+# vsim -gui work.generic_reg 
+# Start time: 09:01:47 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.generic_reg(reg_arch)
+# End time: 09:05:00 on Apr 19,2023, Elapsed time: 0:03:13
+# Errors: 0, Warnings: 1

@@ -1,0 +1,29 @@
+vsim -gui work.mux4x1
+# vsim -gui work.mux4x1 
+# Start time: 08:00:55 on Apr 19,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.mux4x1(mux4x1_arch)
+add wave -position end  sim:/mux4x1/dataIn0
+add wave -position end  sim:/mux4x1/dataIn1
+add wave -position end  sim:/mux4x1/dataIn2
+add wave -position end  sim:/mux4x1/dataIn3
+add wave -position end  sim:/mux4x1/selector0
+add wave -position end  sim:/mux4x1/selector1
+add wave -position end  sim:/mux4x1/dataOut
+force -freeze sim:/mux4x1/dataIn0 FFFF 0
+force -freeze sim:/mux4x1/dataIn1 EEEE 0
+force -freeze sim:/mux4x1/dataIn2 AAAA 0
+force -freeze sim:/mux4x1/dataIn3 6666 0
+force -freeze sim:/mux4x1/selector0 0 0
+force -freeze sim:/mux4x1/selector1 0 0
+run 2ps
+force -freeze sim:/mux4x1/selector1 1 0
+run 2ps
+force -freeze sim:/mux4x1/selector0 1 0
+force -freeze sim:/mux4x1/selector1 0 0
+run 2ps
+force -freeze sim:/mux4x1/selector0 1 0
+force -freeze sim:/mux4x1/selector1 1 0
+run 2ps
