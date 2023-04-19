@@ -2,7 +2,7 @@ Components for the fetch stage:
 
 1. Adder -> DONE
 2. mux 4x1 -> DONE
-3. pc register 
+3. pc register -> DONE
 4. mux 2x1 -> DONE
 5. if/id buffer including:
     - input signals: 
