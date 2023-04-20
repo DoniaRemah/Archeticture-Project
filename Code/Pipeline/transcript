@@ -892,3 +892,461 @@ quit -sim
 # Compile of pipeline.vhd failed with 1 errors.
 # Compile of pipeline.vhd was successful.
 # Compile of pipeline.vhd was successful.
+# Compile of cache.mem failed with 1 errors.
+# Compile of Fetch.vhd failed with 6 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# Compile of mem1.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mem2_WB_buf.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of WB.vhd was successful.
+# 29 compiles, 2 failed with 7 errors.
+# Compile of cache.mem failed with 1 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# Compile of mem1.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mem2_WB_buf.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of WB.vhd was successful.
+# 28 compiles, 1 failed with 1 error.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 12:38:34 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+mem save -o C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -f mti -data hex -addr decimal -wordsperline 1 /pipeline/memory/memory_array
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/pc_en
+add wave -position end  sim:/pipeline/pc_rst_value
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC_mux_out
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/xor_value
+add wave -position end  sim:/pipeline/not_call_branching
+add wave -position end  sim:/pipeline/addition_value
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/buff_pc
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Jumped_call_address
+add wave -position end  sim:/pipeline/Memory_returned_address
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/current_ret_rti
+add wave -position end  sim:/pipeline/Flush_sig
+add wave -position end  sim:/pipeline/Freeze_sig
+add wave -position end  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Branching_sig
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+add wave -position end  sim:/pipeline/interrupt
+add wave -position end  sim:/pipeline/writeback_address
+add wave -position end  sim:/pipeline/writeback_data
+add wave -position end  sim:/pipeline/writeback_flags
+add wave -position end  sim:/pipeline/out_flags
+add wave -position end  sim:/pipeline/Rd_data
+add wave -position end  sim:/pipeline/Rs1_data
+add wave -position end  sim:/pipeline/Rs2_data
+add wave -position end  sim:/pipeline/dataSelectorOut
+add wave -position end  sim:/pipeline/inDataSelectorOut
+add wave -position end  sim:/pipeline/flagSelectorOut
+add wave -position end  sim:/pipeline/flagEnableOut
+add wave -position end  sim:/pipeline/regFileEnableOut
+add wave -position end  sim:/pipeline/readAddressSelOut
+add wave -position end  sim:/pipeline/writeAddressSelOut
+add wave -position end  sim:/pipeline/dataWrittenSelOut
+add wave -position end  sim:/pipeline/memOpOut
+add wave -position end  sim:/pipeline/memReadOut
+add wave -position end  sim:/pipeline/memWriteOut
+add wave -position end  sim:/pipeline/dataBusSelectorOut
+add wave -position end  sim:/pipeline/propRetRtiOut
+add wave -position end  sim:/pipeline/ALUEnableOut
+add wave -position end  sim:/pipeline/Imm_Src_selectorOut
+add wave -position end  sim:/pipeline/branchingOpOut
+add wave -position end  sim:/pipeline/callOpOut
+add wave -position end  sim:/pipeline/partSelectorOut
+add wave -position end  sim:/pipeline/opSelectorOut
+add wave -position end  sim:/pipeline/rdDataOut
+add wave -position end  sim:/pipeline/newPCAddressOut
+add wave -position end  sim:/pipeline/rs1DataOut
+add wave -position end  sim:/pipeline/rs2DataOut
+add wave -position end  sim:/pipeline/offset_ImmOut
+add wave -position end  sim:/pipeline/RdAddressOut
+add wave -position end  sim:/pipeline/FlagsOut
+add wave -position end  sim:/pipeline/prop_ret_rti_out
+add wave -position end  sim:/pipeline/alu_res
+add wave -position end  sim:/pipeline/alu_flags_res
+add wave -position end  sim:/pipeline/dataSelectorOut_ex
+add wave -position end  sim:/pipeline/inDataSelectorOut_ex
+add wave -position end  sim:/pipeline/flagSelectorOut_ex
+add wave -position end  sim:/pipeline/flagEnableOut_ex
+add wave -position end  sim:/pipeline/regFileEnableOut_ex
+add wave -position end  sim:/pipeline/readAddressSelOut_ex
+add wave -position end  sim:/pipeline/writeAddressSelOut_ex
+add wave -position end  sim:/pipeline/dataWrittenSelOut_ex
+add wave -position end  sim:/pipeline/memOpOut_ex
+add wave -position end  sim:/pipeline/memReadOut_ex
+add wave -position end  sim:/pipeline/memWriteOut_ex
+add wave -position end  sim:/pipeline/dataBusSelectorOut_ex
+add wave -position end  sim:/pipeline/propRetRtiOut_ex
+add wave -position end  sim:/pipeline/ALU_ImmOut_ex
+add wave -position end  sim:/pipeline/rs1_data_Out_ex
+add wave -position end  sim:/pipeline/rs2_data_Out_ex
+add wave -position end  sim:/pipeline/newPC_address_out_ex
+add wave -position end  sim:/pipeline/RdAddressOut_ex
+add wave -position end  sim:/pipeline/newFlagsOut_ex
+add wave -position end  sim:/pipeline/data_tobe_written_out_mem1
+add wave -position end  sim:/pipeline/write_adress_out_mem1
+add wave -position end  sim:/pipeline/read_address_out_mem1
+add wave -position end  sim:/pipeline/dataSelectorOut_mem2
+add wave -position end  sim:/pipeline/inDataSelectorOut_mem2
+add wave -position end  sim:/pipeline/flagSelectorOut_mem2
+add wave -position end  sim:/pipeline/flagEnableOut_mem2
+add wave -position end  sim:/pipeline/regFileEnableOut_mem2
+add wave -position end  sim:/pipeline/readAddressSelOut_mem2
+add wave -position end  sim:/pipeline/writeAddressSelOut_mem2
+add wave -position end  sim:/pipeline/dataWrittenSelOut_mem2
+add wave -position end  sim:/pipeline/memOpOut_mem2
+add wave -position end  sim:/pipeline/memReadOut_mem2
+add wave -position end  sim:/pipeline/memWriteOut_mem2
+add wave -position end  sim:/pipeline/dataBusSelectorOut_mem2
+add wave -position end  sim:/pipeline/propRetRtiOut_mem2
+add wave -position end  sim:/pipeline/dataToBeWrittenOut_mem2
+add wave -position end  sim:/pipeline/ALU_ImmOut_mem2
+add wave -position end  sim:/pipeline/writeAddressOut_mem2
+add wave -position end  sim:/pipeline/readAddressOut_mem2
+add wave -position end  sim:/pipeline/RdAddressOut_mem2
+add wave -position end  sim:/pipeline/newFlagsOut_mem2
+add wave -position end  sim:/pipeline/dataread_memory
+add wave -position end  sim:/pipeline/flagsread_memory
+add wave -position end  sim:/pipeline/dataSelectorOut_wb
+add wave -position end  sim:/pipeline/inDataSelectorOut_wb
+add wave -position end  sim:/pipeline/flagSelectorOut_wb
+add wave -position end  sim:/pipeline/flagEnableOut_wb
+add wave -position end  sim:/pipeline/regFileEnableOut_wb
+add wave -position end  sim:/pipeline/memResult_wb
+add wave -position end  sim:/pipeline/AluResult_wb
+add wave -position end  sim:/pipeline/memFlags_wb
+add wave -position end  sim:/pipeline/ALUflags_wb
+add wave -position end  sim:/pipeline/wbAddress_wb
+add wave -position end  sim:/pipeline/control_prop
+add wave -position end sim:/pipeline/*
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10PS
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+force -freeze sim:/pipeline/current_ret_rti 0 0
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -update_properties /pipeline/memory/memory_array
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/inport FFFE 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem -update_properties /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -update_properties /pipeline/memory/memory_array
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem -update_properties /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -update_properties /pipeline/memory/memory_array
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/inport FFFE 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+quit -sim
+# End time: 13:10:11 on Apr 20,2023, Elapsed time: 0:31:37
+# Errors: 0, Warnings: 9
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 13:10:37 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem -update_properties /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -update_properties /pipeline/memory/memory_array
+add wave -position end sim:/pipeline/*
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/inport FFFE 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 225 ps  Iteration: 0  Instance: /pipeline/memory

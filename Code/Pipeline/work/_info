@@ -14,7 +14,7 @@ Z0 w1681969666
 Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
-!i122 132
+!i122 215
 Z4 dC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline
 Z5 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd
 Z6 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd
@@ -24,9 +24,9 @@ VYH=Zd_b:?VIdXEbJoVQ=32
 !s100 jlELYYmR<A[gRLGAWL7bZ3
 Z7 OV;C;2020.1;71
 32
-Z8 !s110 1681979345
+Z8 !s110 1681987093
 !i10b 1
-Z9 !s108 1681979344.000000
+Z9 !s108 1681987092.000000
 Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd|
 Z11 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd|
 !i113 1
@@ -37,7 +37,7 @@ R1
 R2
 R3
 Z14 DEx4 work 5 adder 0 22 YH=Zd_b:?VIdXEbJoVQ=32
-!i122 132
+!i122 215
 l14
 L13 11
 V1k4A;B;W[Ad2JeHm>5kKe1
@@ -56,7 +56,7 @@ Ealu
 Z15 w1681977844
 R2
 R3
-!i122 135
+!i122 218
 R4
 Z16 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd
 Z17 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd
@@ -66,9 +66,9 @@ V<U7C@8@U;zWcgWPWD0UH01
 !s100 CS6kTFHZWRb0o_jaaK7if2
 R7
 32
-Z18 !s110 1681979346
+Z18 !s110 1681987094
 !i10b 1
-Z19 !s108 1681979346.000000
+Z19 !s108 1681987094.000000
 Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd|
 Z21 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd|
 !i113 1
@@ -78,7 +78,7 @@ Aarchalu
 R2
 R3
 DEx4 work 3 alu 0 22 <U7C@8@U;zWcgWPWD0UH01
-!i122 135
+!i122 218
 l90
 L18 86
 VdM7DHJG]H^HYeSZlnSm882
@@ -97,7 +97,7 @@ Ealuop
 R15
 R2
 R3
-!i122 136
+!i122 219
 R4
 Z22 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd
 Z23 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd
@@ -107,11 +107,11 @@ VRSmh:FFagEH4RNgho?_5z3
 !s100 Wh`>;8j?<aBo<<f2=JG]Q2
 R7
 32
-Z24 !s110 1681979347
+R18
 !i10b 1
-Z25 !s108 1681979347.000000
-Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd|
-Z27 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd|
+R19
+Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd|
+Z25 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd|
 !i113 1
 R12
 R13
@@ -119,18 +119,18 @@ Aarchaluop
 R2
 R3
 DEx4 work 5 aluop 0 22 RSmh:FFagEH4RNgho?_5z3
-!i122 136
+!i122 219
 l38
 L15 31
 VcK@g<zTR7>YliMen;?RG=2
 !s100 JQEd2b_OVO_z=M>z8Za_12
 R7
 32
-R24
+R18
 !i10b 1
+R19
+R24
 R25
-R26
-R27
 !i113 1
 R12
 R13
@@ -139,21 +139,21 @@ R15
 R1
 R2
 R3
-!i122 137
+!i122 220
 R4
-Z28 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd
-Z29 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd
+Z26 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd
+Z27 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd
 l0
 L5 1
 V2e4:QBZ=F>Ca<<6S^MKSh2
 !s100 dOLlC<F@SC=X5<c_3lmRG0
 R7
 32
-Z30 !s110 1681979348
+Z28 !s110 1681987095
 !i10b 1
-R25
-Z31 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd|
-Z32 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd|
+Z29 !s108 1681987095.000000
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd|
+Z31 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd|
 !i113 1
 R12
 R13
@@ -162,18 +162,18 @@ R1
 R2
 R3
 DEx4 work 5 andop 0 22 2e4:QBZ=F>Ca<<6S^MKSh2
-!i122 137
+!i122 220
 l20
 L15 22
 VOhS[]1Lm]MoO6FQMi<EC91
 !s100 4S2a?IJI6ga^Oz>;@d;jm0
 R7
 32
-R30
+R28
 !i10b 1
-R25
+R29
+R30
 R31
-R32
 !i113 1
 R12
 R13
@@ -181,21 +181,21 @@ Ebranchingop
 R15
 R2
 R3
-!i122 138
+!i122 221
 R4
-Z33 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
-Z34 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
+Z32 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
+Z33 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
 l0
 L4 1
 VYe?7`3^?C5h3O7jW5kTl92
 !s100 ]YEW_IGCLbUb<_89L`o?h2
 R7
 32
-Z35 !s110 1681979349
+R28
 !i10b 1
-Z36 !s108 1681979348.000000
-Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd|
-Z38 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd|
+R29
+Z34 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd|
+Z35 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd|
 !i113 1
 R12
 R13
@@ -203,18 +203,18 @@ Aarchbranchingop
 R2
 R3
 DEx4 work 11 branchingop 0 22 Ye?7`3^?C5h3O7jW5kTl92
-!i122 138
+!i122 221
 l15
 L13 8
 VVokYX358zY`SE;KeSB=6^2
 !s100 ElY0f2S=j:mVDnfUXhJcI1
 R7
 32
-R35
+R28
 !i10b 1
-R36
-R37
-R38
+R29
+R34
+R35
 !i113 1
 R12
 R13
@@ -222,21 +222,21 @@ Ecarryop
 R15
 R2
 R3
-!i122 139
+!i122 222
 R4
-Z39 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd
-Z40 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd
+Z36 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd
+Z37 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd
 l0
 L4 1
 V;fz<BDDjH2dLdU^fN3h^I3
 !s100 oBiCk@6g3HNH];Nm7<Fkh0
 R7
 32
-R35
+Z38 !s110 1681987096
 !i10b 1
-Z41 !s108 1681979349.000000
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd|
-Z43 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd|
+R29
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd|
+Z40 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd|
 !i113 1
 R12
 R13
@@ -244,59 +244,59 @@ Aarchcarryop
 R2
 R3
 DEx4 work 7 carryop 0 22 ;fz<BDDjH2dLdU^fN3h^I3
-!i122 139
+!i122 222
 l14
 L12 7
 VM_[C?lO;7>lCn8OEemXBC0
 !s100 WW1@I<eE<ozG>:aY;@e@L0
 R7
 32
-R35
+R38
 !i10b 1
-R41
-R42
-R43
+R29
+R39
+R40
 !i113 1
 R12
 R13
 Econtrol_unit
-Z44 w1681969758
+Z41 w1681969758
 R2
 R3
-!i122 126
+!i122 209
 R4
-Z45 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd
-Z46 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd
+Z42 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd
+Z43 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd
 l0
 L5 1
 V@`m38R=YI9z^17[ZHnhoZ0
 !s100 ?O?nFhf0[ZmGCgbdc8[Sh0
 R7
 32
-Z47 !s110 1681979342
+Z44 !s110 1681987090
 !i10b 1
-Z48 !s108 1681979342.000000
-Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd|
-Z50 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd|
+Z45 !s108 1681987090.000000
+Z46 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd|
+Z47 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R2
 R3
-Z51 DEx4 work 12 control_unit 0 22 @`m38R=YI9z^17[ZHnhoZ0
-!i122 126
+Z48 DEx4 work 12 control_unit 0 22 @`m38R=YI9z^17[ZHnhoZ0
+!i122 209
 l31
 L29 23
 VndD3@ZcN<>d^bg?fIC^dF2
 !s100 C8zbl[iR64T56[k5F4[7f0
 R7
 32
-R47
+R44
 !i10b 1
-R48
-R49
-R50
+R45
+R46
+R47
 !i113 1
 R12
 R13
@@ -305,21 +305,21 @@ R15
 R1
 R2
 R3
-!i122 143
+!i122 226
 R4
-Z52 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd
-Z53 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd
+Z49 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd
+Z50 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd
 l0
 L5 1
 V]fkkZfA:K^>T1AlkCDme;2
 !s100 2HQdolh0bH:1_c5lfgFG30
 R7
 32
-Z54 !s110 1681979352
+Z51 !s110 1681987097
 !i10b 1
-Z55 !s108 1681979351.000000
-Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd|
-Z57 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd|
+Z52 !s108 1681987097.000000
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd|
+Z54 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd|
 !i113 1
 R12
 R13
@@ -327,30 +327,30 @@ Abehavioral
 R1
 R2
 R3
-Z58 DEx4 work 11 ex_mem1_buf 0 22 ]fkkZfA:K^>T1AlkCDme;2
-!i122 143
+Z55 DEx4 work 11 ex_mem1_buf 0 22 ]fkkZfA:K^>T1AlkCDme;2
+!i122 226
 l43
 L36 98
 V;2l:eMgD3]dgP8[83Li<=1
 !s100 1@mW=?nIRHRNNA9^Ci?KE0
 R7
 32
-R54
+R51
 !i10b 1
-R55
-R56
-R57
+R52
+R53
+R54
 !i113 1
 R12
 R13
 Eexecute
-Z59 w1681978136
+Z56 w1681978136
 R2
 R3
-!i122 134
+!i122 217
 R4
-Z60 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd
-Z61 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd
+Z57 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd
+Z58 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd
 l0
 L4 1
 VXo?[9;8oO76@gNS8G@CIL0
@@ -359,17 +359,17 @@ R7
 32
 R18
 !i10b 1
-R19
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd|
-Z63 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd|
+Z59 !s108 1681987093.000000
+Z60 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd|
+Z61 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd|
 !i113 1
 R12
 R13
 Aarchexecute
 R2
 R3
-Z64 DEx4 work 7 execute 0 22 Xo?[9;8oO76@gNS8G@CIL0
-!i122 134
+Z62 DEx4 work 7 execute 0 22 Xo?[9;8oO76@gNS8G@CIL0
+!i122 217
 l95
 L21 86
 VIEE[agkVOHOiB7[CgVl4C3
@@ -378,17 +378,17 @@ R7
 32
 R18
 !i10b 1
-R19
-R62
-R63
+R59
+R60
+R61
 !i113 1
 R12
 R13
 Efetch
-Z65 w1681969665
+Z63 w1681969665
 R2
 R3
-!i122 122
+!i122 178
 R4
 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/Fetch.vhd
 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/Fetch.vhd
@@ -398,75 +398,75 @@ VHPXM_LfAhQHWKARf?25Wh2
 !s100 e[fXb<k3jY2TAIM2h^Fie1
 R7
 32
-!s110 1681979340
+!s110 1681987049
 !i10b 1
-Z66 !s108 1681979340.000000
+!s108 1681987049.000000
 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/Fetch.vhd|
 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/Fetch.vhd|
 !i113 1
 R12
 R13
 Efetch_decode_buffer
-Z67 w1681973298
+Z64 w1681973298
 R2
 R3
-!i122 123
+!i122 206
 R4
-Z68 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd
-Z69 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd
+Z65 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd
+Z66 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd
 l0
 L8 1
 VGeNb881RLSB@g3W3md35C2
 !s100 A95:O2_h8VEnAn`NF;bJ?0
 R7
 32
-Z70 !s110 1681979341
+Z67 !s110 1681987089
 !i10b 1
-R66
-Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd|
-Z72 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd|
+Z68 !s108 1681987088.000000
+Z69 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd|
+Z70 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd|
 !i113 1
 R12
 R13
 Afetch_decode_buffer_arch
 R2
 R3
-Z73 DEx4 work 19 fetch_decode_buffer 0 22 GeNb881RLSB@g3W3md35C2
-!i122 123
+Z71 DEx4 work 19 fetch_decode_buffer 0 22 GeNb881RLSB@g3W3md35C2
+!i122 206
 l20
 L17 18
 V93<hA[XJT6<4KYGE=kOG00
 !s100 mNT3=ThAHFEI]5aEPfbPb0
 R7
 32
-R70
+R67
 !i10b 1
-R66
-R71
-R72
+R68
+R69
+R70
 !i113 1
 R12
 R13
 Eflagreg
-Z74 w1681976318
+Z72 w1681976318
 R1
 R2
 R3
-!i122 127
+!i122 210
 R4
-Z75 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd
-Z76 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd
+Z73 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd
+Z74 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd
 l0
 L5 1
 V;9Hj[hQ^<jCN3cg;IHnPO1
 !s100 T5nHW71Sc^hflhR=l<aGa0
 R7
 32
-R47
+R44
 !i10b 1
-R48
-Z77 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd|
-Z78 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd|
+R45
+Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd|
+Z76 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd|
 !i113 1
 R12
 R13
@@ -474,42 +474,42 @@ Abehavioral
 R1
 R2
 R3
-Z79 DEx4 work 7 flagreg 0 22 ;9Hj[hQ^<jCN3cg;IHnPO1
-!i122 127
+Z77 DEx4 work 7 flagreg 0 22 ;9Hj[hQ^<jCN3cg;IHnPO1
+!i122 210
 l22
-Z80 L19 17
+Z78 L19 17
 V54RHOH0SaCo^kePfW?Nbi3
 !s100 DT54cU:82^bl8VcH;CF`O0
 R7
 32
-R47
+R44
 !i10b 1
-R48
-R77
-R78
+R45
+R75
+R76
 !i113 1
 R12
 R13
 Eid_ex_buf
-Z81 w1681976546
+Z79 w1681976546
 R1
 R2
 R3
-!i122 142
+!i122 225
 R4
-Z82 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
-Z83 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
+Z80 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
+Z81 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
 l0
 L5 1
 VAh>W^48iRGI`FYPBzJiGF1
 !s100 3]KGi?T6B^ki]`?Qo;@Oz3
 R7
 32
-Z84 !s110 1681979351
+R51
 !i10b 1
-Z85 !s108 1681979350.000000
-Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd|
-Z87 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd|
+Z82 !s108 1681987096.000000
+Z83 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd|
+Z84 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd|
 !i113 1
 R12
 R13
@@ -517,19 +517,19 @@ Abehavioral
 R1
 R2
 R3
-Z88 DEx4 work 9 id_ex_buf 0 22 Ah>W^48iRGI`FYPBzJiGF1
-!i122 142
+Z85 DEx4 work 9 id_ex_buf 0 22 Ah>W^48iRGI`FYPBzJiGF1
+!i122 225
 l54
 L53 67
 VmV@OA8Fb6C0e4J>JXWiaJ2
 !s100 lXgPa>Z@KlRI1I1mz1C>P1
 R7
 32
-R84
+R51
 !i10b 1
-R85
-R86
-R87
+R82
+R83
+R84
 !i113 1
 R12
 R13
@@ -538,21 +538,21 @@ R15
 R1
 R2
 R3
-!i122 140
+!i122 223
 R4
-Z89 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd
-Z90 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd
+Z86 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd
+Z87 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd
 l0
 L5 1
 VfPRLjL:<ea:ajgN4bQ]cC1
 !s100 =U8AfPC78;;fP:X3Bh:Ig2
 R7
 32
-Z91 !s110 1681979350
+R38
 !i10b 1
-R41
-Z92 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd|
-Z93 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd|
+R82
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd|
+Z89 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd|
 !i113 1
 R12
 R13
@@ -561,41 +561,41 @@ R1
 R2
 R3
 DEx4 work 3 inc 0 22 fPRLjL:<ea:ajgN4bQ]cC1
-!i122 140
+!i122 223
 l18
 L13 22
 VFod6?NL[VXM`:1OaAa_aE2
 !s100 gL1KC4d_MYe]nAkj`4h;^1
 R7
 32
-R91
+R38
 !i10b 1
-R41
-R92
-R93
+R82
+R88
+R89
 !i113 1
 R12
 R13
 Einstcache
-R65
+R63
 R1
 R2
 R3
-!i122 124
+!i122 207
 R4
-Z94 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd
-Z95 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd
+Z90 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd
+Z91 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd
 l0
 L5 1
 VQmWalkVWofX`UL4zDKJk82
 !s100 AnFnHQCV8ke6^h]VRV>9>0
 R7
 32
-R70
+R67
 !i10b 1
-Z96 !s108 1681979341.000000
-Z97 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd|
-Z98 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd|
+Z92 !s108 1681987089.000000
+Z93 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd|
+Z94 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd|
 !i113 1
 R12
 R13
@@ -603,89 +603,89 @@ Acache_arc
 R1
 R2
 R3
-Z99 DEx4 work 9 instcache 0 22 QmWalkVWofX`UL4zDKJk82
-!i122 124
+Z95 DEx4 work 9 instcache 0 22 QmWalkVWofX`UL4zDKJk82
+!i122 207
 l19
 L12 12
 V8G@FL285z1OgMQl1:E:>z1
 !s100 AUJM`H>Rl_k?kV64[im]00
 R7
 32
-R70
+R67
 !i10b 1
-R96
-R97
-R98
+R92
+R93
+R94
 !i113 1
 R12
 R13
 Emem1
-Z100 w1681980112
+Z96 w1681980112
 R1
 R2
 R3
-!i122 147
+!i122 227
 R4
-Z101 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
-Z102 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
+Z97 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
+Z98 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
 l0
 L6 1
 VODKzmVkMH7dZJ7V]m^DHS0
 !s100 :<B1P:eAWc<]^M8Yb[M5n0
 R7
 32
-Z103 !s110 1681980201
+Z99 !s110 1681987098
 !i10b 1
-Z104 !s108 1681980201.000000
-Z105 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd|
-Z106 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd|
+R52
+Z100 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd|
+Z101 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd|
 !i113 1
 R12
 R13
 Abehavioral
 R14
-Z107 DEx4 work 6 sp_reg 0 22 Y9@>cCbzKWgA3dflD8kc^1
-Z108 DEx4 work 6 mux8x1 0 22 ^z:Z0b@39YNVMQ:i]iKnY2
-Z109 DEx4 work 6 mux2x1 0 22 T1Cio6FSPB9a03FWmz]@D3
+Z102 DEx4 work 6 sp_reg 0 22 Y9@>cCbzKWgA3dflD8kc^1
+Z103 DEx4 work 6 mux8x1 0 22 ^z:Z0b@39YNVMQ:i]iKnY2
+Z104 DEx4 work 6 mux2x1 0 22 T1Cio6FSPB9a03FWmz]@D3
 R1
 R2
 R3
-Z110 DEx4 work 4 mem1 0 22 ODKzmVkMH7dZJ7V]m^DHS0
-!i122 147
+Z105 DEx4 work 4 mem1 0 22 ODKzmVkMH7dZJ7V]m^DHS0
+!i122 227
 l36
 L25 126
 VZI@bMEMn?Vijg^Bbkf:Ej3
 !s100 RD6AdOf>635EWWdAYCX7^2
 R7
 32
-R103
+R99
 !i10b 1
-R104
-R105
-R106
+R52
+R100
+R101
 !i113 1
 R12
 R13
 Emem1_mem2_buf
-R81
+R79
 R1
 R2
 R3
-!i122 168
+!i122 231
 R4
-Z111 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd
-Z112 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd
+Z106 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd
+Z107 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd
 l0
 L5 1
 Vm0=`5ZDoz`W9WAlkIG9Ro3
 !s100 NEH1B3W1WGH`M5XlTM;0h0
 R7
 32
-Z113 !s110 1681983072
+Z108 !s110 1681987099
 !i10b 1
-Z114 !s108 1681983072.000000
-Z115 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd|
-Z116 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd|
+Z109 !s108 1681987099.000000
+Z110 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd|
+Z111 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd|
 !i113 1
 R12
 R13
@@ -693,42 +693,42 @@ Abehavioral
 R1
 R2
 R3
-Z117 DEx4 work 13 mem1_mem2_buf 0 22 m0=`5ZDoz`W9WAlkIG9Ro3
-!i122 168
+Z112 DEx4 work 13 mem1_mem2_buf 0 22 m0=`5ZDoz`W9WAlkIG9Ro3
+!i122 231
 l38
 L36 54
 VIEVT8?zlO55^`^i73Hoo93
 !s100 5NdXk8;Q5c@]I`go:2I8D2
 R7
 32
-R113
+R108
 !i10b 1
-R114
-R115
-R116
+R109
+R110
+R111
 !i113 1
 R12
 R13
 Emem2_wb_buf
-Z118 w1681983004
+Z113 w1681983004
 R1
 R2
 R3
-!i122 167
+!i122 230
 R4
-Z119 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd
-Z120 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd
+Z114 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd
+Z115 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd
 l0
 L5 1
 V2eIO^P0Zhd8VagCnedKii3
 !s100 5me2I2:OC3DVc>@:2R7843
 R7
 32
-Z121 !s110 1681983067
+R108
 !i10b 1
-Z122 !s108 1681983067.000000
-Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd|
-Z124 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd|
+Z116 !s108 1681987098.000000
+Z117 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd|
+Z118 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd|
 !i113 1
 R12
 R13
@@ -736,42 +736,42 @@ Abehavioral
 R1
 R2
 R3
-Z125 DEx4 work 11 mem2_wb_buf 0 22 2eIO^P0Zhd8VagCnedKii3
-!i122 167
+Z119 DEx4 work 11 mem2_wb_buf 0 22 2eIO^P0Zhd8VagCnedKii3
+!i122 230
 l33
 L32 33
 VkXSh@^gGXT7J_MC[H0JbI2
 !s100 bM:G]_4chENGZHn3`5a@>1
 R7
 32
-R121
+R108
 !i10b 1
-R122
-R123
-R124
+R116
+R117
+R118
 !i113 1
 R12
 R13
 Ememory
-R81
+R79
 R1
 R2
 R3
-!i122 154
+!i122 229
 R4
-Z126 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd
-Z127 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd
+Z120 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd
+Z121 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd
 l0
 L5 1
 Vd[[>=2bakf4immzGIcLPU0
 !s100 FNQERWIP12lVC4AzmBEdR2
 R7
 32
-Z128 !s110 1681981289
+R99
 !i10b 1
-Z129 !s108 1681981289.000000
-Z130 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd|
-Z131 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd|
+R116
+Z122 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd|
+Z123 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd|
 !i113 1
 R12
 R13
@@ -779,19 +779,19 @@ Abehavioral
 R1
 R2
 R3
-Z132 DEx4 work 6 memory 0 22 d[[>=2bakf4immzGIcLPU0
-!i122 154
+Z124 DEx4 work 6 memory 0 22 d[[>=2bakf4immzGIcLPU0
+!i122 229
 l34
 L25 62
 Va^YggFH410L71lCPlCH3L0
 !s100 f?hG8D1fnmdnI9ZgNN_>e2
 R7
 32
-R128
+R99
 !i10b 1
-R129
-R130
-R131
+R116
+R122
+R123
 !i113 1
 R12
 R13
@@ -799,21 +799,21 @@ Emovop
 R15
 R2
 R3
-!i122 141
+!i122 224
 R4
-Z133 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd
-Z134 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd
+Z125 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd
+Z126 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd
 l0
 L4 1
 V6WRni<fS8BcN>C7CODWCS1
 !s100 M:4DN?cdcU:?GU<Q6;CT[3
 R7
 32
-R91
+R38
 !i10b 1
-R85
-Z135 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd|
-Z136 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd|
+R82
+Z127 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd|
+Z128 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd|
 !i113 1
 R12
 R13
@@ -821,18 +821,18 @@ Aarchmovop
 R2
 R3
 DEx4 work 5 movop 0 22 6WRni<fS8BcN>C7CODWCS1
-!i122 141
+!i122 224
 l17
 L15 8
 VEkVXIz8b1889;1XjRBKP10
 !s100 hY@k:RN[n[AocC^cYoRVU1
 R7
 32
-R91
+R38
 !i10b 1
-R85
-R135
-R136
+R82
+R127
+R128
 !i113 1
 R12
 R13
@@ -840,40 +840,40 @@ Emux2x1
 R0
 R2
 R3
-!i122 129
+!i122 212
 R4
-Z137 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd
-Z138 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd
+Z129 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd
+Z130 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd
 l0
 L5 1
 VT1Cio6FSPB9a03FWmz]@D3
 !s100 ;G_IB3hF<Fb@k_PJKn^Oh1
 R7
 32
-Z139 !s110 1681979343
+Z131 !s110 1681987091
 !i10b 1
-Z140 !s108 1681979343.000000
-Z141 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd|
-Z142 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd|
+Z132 !s108 1681987091.000000
+Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd|
+Z134 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd|
 !i113 1
 R12
 R13
 Amux2x1_arch
 R2
 R3
-R109
-!i122 129
+R104
+!i122 212
 l21
 L20 11
 VQ3YXg^iC@_;@?T9J4TO:I3
 !s100 <a>`<e0>[TSWbQbYOH3j93
 R7
 32
-R139
+R131
 !i10b 1
-R140
-R141
-R142
+R132
+R133
+R134
 !i113 1
 R12
 R13
@@ -881,40 +881,40 @@ Emux4x1
 R0
 R2
 R3
-!i122 130
+!i122 213
 R4
-Z143 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd
-Z144 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd
+Z135 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd
+Z136 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd
 l0
 L5 1
 VE71XRAk509MLgJo5UC9WA1
 !s100 _ne`j_XZnzIc^ADgT_mzz0
 R7
 32
-Z145 !s110 1681979344
+Z137 !s110 1681987092
 !i10b 1
-R140
-Z146 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd|
-Z147 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd|
+R132
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd|
+Z139 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd|
 !i113 1
 R12
 R13
 Amux4x1_arch
 R2
 R3
-Z148 DEx4 work 6 mux4x1 0 22 E71XRAk509MLgJo5UC9WA1
-!i122 130
+Z140 DEx4 work 6 mux4x1 0 22 E71XRAk509MLgJo5UC9WA1
+!i122 213
 l20
-R80
+R78
 VD`]W_V49APReG`6`bEDM?1
 !s100 6=TTK7hHDAMdo=D]`<@bi1
 R7
 32
-R145
+R137
 !i10b 1
-R140
-R146
-R147
+R132
+R138
+R139
 !i113 1
 R12
 R13
@@ -922,163 +922,163 @@ Emux8x1
 R0
 R2
 R3
-!i122 131
+!i122 214
 R4
-Z149 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd
-Z150 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd
+Z141 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd
+Z142 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd
 l0
 L4 1
 V^z:Z0b@39YNVMQ:i]iKnY2
 !s100 z6I4ZN;B0hzm]MDOI64hn1
 R7
 32
-R145
+R137
 !i10b 1
 R9
-Z151 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd|
-Z152 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd|
+Z143 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd|
+Z144 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd|
 !i113 1
 R12
 R13
 Amux8x1_arch
 R2
 R3
-R108
-!i122 131
+R103
+!i122 214
 l28
 L18 28
 V`jaA1g^mMhFdd29cNi6:20
 !s100 d:R[5JQ;dV<WC^c_cgU;S0
 R7
 32
-R145
+R137
 !i10b 1
 R9
-R151
-R152
+R143
+R144
 !i113 1
 R12
 R13
 Epc_reg
-R65
+R63
 R2
 R3
-!i122 125
+!i122 208
 R4
-Z153 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd
-Z154 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd
+Z145 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd
+Z146 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd
 l0
 L8 1
 V:a1=keakA:IZfk2^cmim02
 !s100 11O?7]DB?_bjTeeje>amN2
 R7
 32
-R70
+R44
 !i10b 1
-R96
-Z155 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd|
-Z156 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd|
+R92
+Z147 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd|
+Z148 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd|
 !i113 1
 R12
 R13
 Apc_reg_arch
 R2
 R3
-Z157 DEx4 work 6 pc_reg 0 22 :a1=keakA:IZfk2^cmim02
-!i122 125
+Z149 DEx4 work 6 pc_reg 0 22 :a1=keakA:IZfk2^cmim02
+!i122 208
 l19
 L17 17
 VQ]U5KXS2lHKGVD_i`XdeW2
 !s100 _3akG5Y9G2DMPhzQhE1gb3
 R7
 32
-R70
+R44
 !i10b 1
-R96
-R155
-R156
+R92
+R147
+R148
 !i113 1
 R12
 R13
 Epipeline
-Z158 w1681985989
+Z150 w1681988984
 R2
 R3
-!i122 177
+!i122 233
 R4
-Z159 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
-Z160 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
+Z151 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
+Z152 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
 l0
 L5 1
 VJeUQFXP1NJQC;DDfYJAK93
 !s100 zZW^lLgN:g60SM`Oz_1QG1
 R7
 32
-Z161 !s110 1681986092
+Z153 !s110 1681989014
 !i10b 1
-Z162 !s108 1681986092.000000
-Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
-Z164 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
+Z154 !s108 1681989013.000000
+Z155 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
+Z156 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
 !i113 1
 R12
 R13
 Apipeline_arch
-Z165 DEx4 work 2 wb 0 22 fKnXWWhhaK9dEZ6^L<>>L1
-R125
-R132
-R117
-R110
-R58
-R64
-R51
-R88
-Z166 DEx4 work 7 regfile 0 22 9?;@QY37UcR0a8LbiGYPi1
-R79
-R73
+Z157 DEx4 work 2 wb 0 22 fKnXWWhhaK9dEZ6^L<>>L1
+R119
+R124
+R112
+R105
+R55
+R62
+R48
+R85
+Z158 DEx4 work 7 regfile 0 22 9?;@QY37UcR0a8LbiGYPi1
+R77
+R71
 R14
-R109
-R157
-R148
+R104
+R149
+R140
 R1
-R99
+R95
 R2
 R3
-Z167 DEx4 work 8 pipeline 0 22 JeUQFXP1NJQC;DDfYJAK93
-!i122 177
+Z159 DEx4 work 8 pipeline 0 22 JeUQFXP1NJQC;DDfYJAK93
+!i122 233
 l131
-L15 185
-VjM2G853j`XZ^B2<RLR47J3
-!s100 al20gTQg:4BIKbPR_iLag1
+Z160 L15 185
+VlWEz;zfSVNUXPlmlO8OZi3
+!s100 WfdZTZ?`I6T1Z2EdCP?lY0
 R7
 32
-R161
+R153
 !i10b 1
-R162
-R163
-R164
+R154
+R155
+R156
 !i113 1
 R12
 R13
 Eregfile
-R44
+R41
 R1
 R2
 R3
-!i122 128
+!i122 211
 R4
-Z168 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
-Z169 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
+Z161 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
+Z162 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
 l0
 L5 1
 V9?;@QY37UcR0a8LbiGYPi1
 !s100 8=ZS@cOI]L28iIoMVU@Yo2
 R7
 32
-R139
+R131
 !i10b 1
-R140
-Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
-Z171 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
+R132
+Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
+Z164 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
 !i113 1
 R12
 R13
@@ -1086,19 +1086,19 @@ Abehavioral
 R1
 R2
 R3
-R166
-!i122 128
+R158
+!i122 211
 l25
 L21 22
 V?NLKLQEfl4_B2PkP_iWQ@3
 !s100 ?fjK33m`o?l_ckUJNKITe2
 R7
 32
-R139
+R131
 !i10b 1
-R140
-R170
-R171
+R132
+R163
+R164
 !i113 1
 R12
 R13
@@ -1107,21 +1107,21 @@ R0
 R1
 R2
 R3
-!i122 146
+!i122 228
 R4
-Z172 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
-Z173 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
+Z165 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
+Z166 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
 l0
 L5 1
 VY9@>cCbzKWgA3dflD8kc^1
 !s100 :W<COgE4Z1:>7I6O^232=2
 R7
 32
-Z174 !s110 1681980198
+R99
 !i10b 1
-Z175 !s108 1681980198.000000
-Z176 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd|
-Z177 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd|
+R116
+Z167 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd|
+Z168 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd|
 !i113 1
 R12
 R13
@@ -1129,63 +1129,63 @@ Abehavioral
 R1
 R2
 R3
-R107
-!i122 146
+R102
+!i122 228
 l18
 L15 18
 VY`Y<:jiG9WkgL0=3_z]CX1
 !s100 ]IF^k4?7Q=O>``[S[<TBl2
 R7
 32
-R174
+R99
 !i10b 1
-R175
-R176
-R177
+R116
+R167
+R168
 !i113 1
 R12
 R13
 Ewb
-Z178 w1681984061
+Z169 w1681984061
 R1
 R2
 R3
-!i122 173
+!i122 232
 R4
-Z179 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd
-Z180 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd
+Z170 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd
+Z171 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd
 l0
 L5 1
 VfKnXWWhhaK9dEZ6^L<>>L1
 !s100 doUc_D>?WPYUlnezSR>BP0
 R7
 32
-Z181 !s110 1681984072
+Z172 !s110 1681987100
 !i10b 1
-Z182 !s108 1681984072.000000
-Z183 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd|
-Z184 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd|
+R109
+Z173 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd|
+Z174 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd|
 !i113 1
 R12
 R13
 Abehavioral
-R109
+R104
 R1
 R2
 R3
-R165
-!i122 173
+R157
+!i122 232
 l23
 L21 37
 V01o3nzmaH:`CY91G9ZcQ:0
 !s100 <:Yah=cm><TAZWE`;9^YY3
 R7
 32
-R181
+R172
 !i10b 1
-R182
-R183
-R184
+R109
+R173
+R174
 !i113 1
 R12
 R13

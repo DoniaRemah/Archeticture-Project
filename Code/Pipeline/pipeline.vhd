@@ -69,7 +69,7 @@ signal out_flags: std_logic_vector(2 downto 0);
 signal Rd_data: std_logic_vector(15 downto 0);
 signal Rs1_data: std_logic_vector(15 downto 0);
 signal Rs2_data: std_logic_vector(15 downto 0);
-
+signal reg_file_en_wb: std_logic;
 --// Decode Buffer
 
 signal dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut: std_logic;
@@ -149,7 +149,7 @@ begin
         flag_reg: entity work.flagReg port map (clk,rst,interrupt,flag_en,writeback_flags,out_flags);
 
         Reg_File: entity work.regFile port map(clk,rst,interrupt,buff_ins(24 downto 22),buff_ins(21 downto 19),buff_ins(18 downto 16),writeback_address,
-        writeback_data,reg_file_en,Rd_data,Rs1_data,Rs2_data);
+        writeback_data,reg_file_en_wb,Rd_data,Rs1_data,Rs2_data);
         -- // Decode Components
 
         dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,'1',interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
@@ -190,7 +190,7 @@ begin
 
 
         mem2_Wb_Buffer: entity work.mem2_WB_buf port map (clk,rst,'1',interrupt,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, 
-        regFileEnableOut_mem2,dataread_memory,ALU_ImmOut_mem2,RdAddressOut_mem2,newFlagsOut_mem2,flagsread_memory,dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb, flag_en, reg_file_en,
+        regFileEnableOut_mem2,dataread_memory,ALU_ImmOut_mem2,RdAddressOut_mem2,newFlagsOut_mem2,flagsread_memory,dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb, flag_en, reg_file_en_wb,
         memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address);
 
         wb: entity work.WB port map (dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb,memResult_wb,AluResult_wb,inport,memFlags_wb,ALUflags_wb,writeback_data,writeback_flags);
