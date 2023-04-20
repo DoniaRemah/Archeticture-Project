@@ -865,3 +865,27 @@ quit -sim
 # Compile of mem1_mem2_buf.vhd was successful.
 # Compile of pipeline.vhd failed with 1 errors.
 # Compile of pipeline.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of mem2_WB_buf.vhd was successful with warnings.
+# Compile of mem2_WB_buf.vhd was successful with warnings.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of mem2_WB_buf.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of mem2_WB_buf.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of mem2_WB_buf.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of WB.vhd was successful.
+# Compile of WB.vhd failed with 1 errors.
+# Compile of WB.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of WB.vhd was successful.
+# Compile of pipeline.vhd was successful.
