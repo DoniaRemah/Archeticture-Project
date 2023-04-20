@@ -30,53 +30,36 @@ entity mem1_mem2_buf is
 end mem1_mem2_buf;
 
 architecture Behavioral of mem1_mem2_buf is
-    -- signal for all inputs
-    signal dataSelectorSig, inDataSelectorSig, flagSelectorSig, flagEnableSig, regFileEnableSig:std_logic;
-    signal dataReadSig,ALU_ImmSig:std_logic_vector(15 downto 0);
-    signal flagsReadSig:std_logic_vector(2 downto 0);
-    signal RdAddressSig:std_logic_vector(2 downto 0);
-    signal newFlagsSig:std_logic_vector(2 downto 0);
 begin
     process(clk,reset)
     begin
         if reset = '1' then
-            -- reset all signals
-            dataSelectorSig <= '0';
-            inDataSelectorSig <= '0';
-            flagSelectorSig <= '0';
-            flagEnableSig <= '0';
-            regFileEnableSig <= '0';
-            dataReadSig <= (others => '0');
-            flagsReadSig <= (others => '0');
-            RdAddressSig <= (others => '0');
-            ALU_ImmSig <= (others => '0');
-            newFlagsSig <= (others => '0');
-        elsif falling_edge(clk) then
+            -- reset the signals
+            dataSelectorOut <= '0';
+            inDataSelectorOut <= '0';
+            flagSelectorOut <= '0';
+            flagEnableOut <= '0';
+            regFileEnableOut <= '0';
+            memResult <= (others => '0');
+            memFlags <= (others => '0');
+            AluResult <= (others => '0');
+            ALUflags <= (others => '0');
+            wbAddress <= (others => '0');
+        elsif rising_edge(clk) then
             if writeEnable = '1' then
-                -- write the signals
-                dataSelectorSig <= dataSelector;
-                inDataSelectorSig <= inDataSelector;
-                flagSelectorSig <= flagSelector;
-                flagEnableSig <= flagEnable;
-                regFileEnableSig <= regFileEnable;
-                dataReadSig <= dataRead;
-                flagsReadSig <= flagsRead;
-                RdAddressSig <= RdAddress;
-                ALU_ImmSig <= ALU_Imm;
-                newFlagsSig <= newFlags;
+                -- write the inputs to the corresponding outputs
+                dataSelectorOut <= dataSelector;
+                inDataSelectorOut <= inDataSelector;
+                flagSelectorOut <= flagSelector;
+                flagEnableOut <= flagEnable;
+                regFileEnableOut <= regFileEnable;
+                memResult <= dataRead;
+                memFlags <= flagsRead;
+                AluResult <= ALU_Imm;
+                ALUflags <= newFlags;
+                wbAddress <= RdAddress;
             end if;
         end if;
     end process;
-    -- assign the signals
-    dataSelectorOut <= dataSelectorSig;
-    inDataSelectorOut <= inDataSelectorSig;
-    flagSelectorOut <= flagSelectorSig;
-    flagEnableOut <= flagEnableSig;
-    regFileEnableOut <= regFileEnableSig;
-    wbAddress <= RdAddressSig;
-    memResult <= dataReadSig;
-    memFlags <= flagsReadSig;
-    AluResult <= ALU_ImmSig;
-    ALUflags <= newFlagsSig;
 end Behavioral;
 
