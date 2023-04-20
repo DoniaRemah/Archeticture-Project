@@ -1010,3 +1010,87 @@ force -freeze sim:/fetch_decode_buffer/instruction_in 1065AB61 0
 force -freeze sim:/fetch_decode_buffer/new_pc_in 0001 0
 run
 run
+quit -sim
+# End time: 07:26:48 on Apr 20,2023, Elapsed time: 0:05:57
+# Errors: 0, Warnings: 4
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd failed with 3 errors.
+# Compile of pc_reg.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of fetch_decode_buffer.vhd was successful.
+# 8 compiles, 1 failed with 3 errors.
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of fetch_decode_buffer.vhd was successful.
+# 8 compiles, 0 failed with no errors.
+vsim -gui work.fetch
+# vsim -gui work.fetch 
+# Start time: 07:29:17 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+add wave -position end  sim:/fetch/clk
+add wave -position end  sim:/fetch/rst
+add wave -position end  sim:/fetch/propagated_ret_rti
+add wave -position end  sim:/fetch/current_ret_rti
+add wave -position end  sim:/fetch/Branching_sig
+add wave -position end  sim:/fetch/Call_sig
+add wave -position end  sim:/fetch/Hazard_sig
+add wave -position end  sim:/fetch/Instruction
+add wave -position end  sim:/fetch/old_pc
+add wave -position end  sim:/fetch/New_PC
+add wave -position end  sim:/fetch/Flush_sig
+add wave -position end  sim:/fetch/Freeze_sig
+add wave -position end  sim:/fetch/pc_rst_value
+add wave -position end  sim:/fetch/New_PC_mux_out
+add wave -position end  sim:/fetch/branching_call_sig
+add wave -position end  sim:/fetch/addition_value
+add wave -position end  sim:/fetch/pc_en
+Add wave -position end  sim:/fetch/buff_ins
+# ambiguous command name "Add": AddBookMarksMenu AddButtonPassiveUpdate AddCmdToQueue AddEditValueOkButton AddFileNewSourceItems AddFilesToTable AddHelpMenu AddMenu AddMenuCB AddMenuItem AddMenuLabel AddMenuRB AddPopupMenu AddSeparator AddSubMenu AddSystemMenu AddToMenu AddWindowMenu
+Add wave -position end  sim:/fetch/buff_pc
+# ambiguous command name "Add": AddBookMarksMenu AddButtonPassiveUpdate AddCmdToQueue AddEditValueOkButton AddFileNewSourceItems AddFilesToTable AddHelpMenu AddMenu AddMenuCB AddMenuItem AddMenuLabel AddMenuRB AddPopupMenu AddSeparator AddSubMenu AddSystemMenu AddToMenu AddWindowMenu
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /fetch/inst_cache/ram
+force -freeze sim:/fetch/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/fetch/rst 1 0
+force -freeze sim:/fetch/propagated_ret_rti 0 0
+force -freeze sim:/fetch/current_ret_rti 0 0
+force -freeze sim:/fetch/Branching_sig 0 0
+force -freeze sim:/fetch/Call_sig 0 0
+force -freeze sim:/fetch/Hazard_sig 0 0
+run 10ps
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+force -freeze sim:/fetch/rst 0 0
+run 360ps
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do fetch2.txt
+# ** Error: ambiguous command name "Add": AddBookMarksMenu AddButtonPassiveUpdate AddCmdToQueue AddEditValueOkButton AddFileNewSourceItems AddFilesToTable AddHelpMenu AddMenu AddMenuCB AddMenuItem AddMenuLabel AddMenuRB AddPopupMenu AddSeparator AddSubMenu AddSystemMenu AddToMenu AddWindowMenu
+# Error in macro ./fetch2.txt line 18
+# ambiguous command name "Add": AddBookMarksMenu AddButtonPassiveUpdate AddCmdToQueue AddEditValueOkButton AddFileNewSourceItems AddFilesToTable AddHelpMenu AddMenu AddMenuCB AddMenuItem AddMenuLabel AddMenuRB AddPopupMenu AddSeparator AddSubMenu AddSystemMenu AddToMenu AddWindowMenu
+#     while executing
+# "Add wave -position end  sim:/fetch/buff_ins"
+do fetch2.txt
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache

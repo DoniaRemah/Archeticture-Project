@@ -48,6 +48,9 @@ signal xor_value: std_logic;
 signal not_call_branching: std_logic;
 signal addition_value:std_logic_vector(15 downto 0);
 
+signal buff_ins: std_logic_vector(31 downto 0);
+signal buff_pc: std_logic_vector(15 downto 0);
+        
 begin
         -- // Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
@@ -55,7 +58,7 @@ begin
         pc_reg: entity work.pc_reg port map(clk,rst,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
         mux2x1: entity work.mux2x1 port map(x"0001",x"0002",instruction(25),addition_value);
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
-
+        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins);
         -- // signals
         branching_call_sig <= Branching_sig or Call_sig;
         xor_value <= propagated_ret_rti xor current_ret_rti;
