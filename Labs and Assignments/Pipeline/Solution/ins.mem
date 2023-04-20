@@ -1,8 +1,0 @@
-// memory data file (do not edit the following line - required for mem load use)
-// instance=/pipeline/inst_cache/ram
-// format=mti addressradix=d dataradix=b version=1.0 wordsperline=1
- 0: 1000000000000000
- 1: 1000010010010000
- 2: 1000100100100000
- 3: 0100000000000000
- 4: 0000000000000000
