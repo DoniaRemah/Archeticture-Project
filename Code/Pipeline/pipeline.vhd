@@ -70,6 +70,25 @@ signal Rd_data: std_logic_vector(15 downto 0);
 signal Rs1_data: std_logic_vector(15 downto 0);
 signal Rs2_data: std_logic_vector(15 downto 0);
 
+--// Decode Buffer
+
+signal dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut: std_logic;
+-- memory signals
+signal readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut:  std_logic;
+-- execute signals
+signal ALUEnableOut,Imm_Src_selectorOut,branchingOpOut,callOpOut:  std_logic;
+signal partSelectorOut:  std_logic_vector(1 downto 0);
+signal opSelectorOut:  std_logic_vector(2 downto 0);
+signal rdDataOut: std_logic_vector(15 downto 0);
+signal newPCAddressOut:  std_logic_vector(15 downto 0);
+signal rs1DataOut,rs2DataOut,offset_ImmOut:  std_logic_vector(15 downto 0);
+signal RdAddressOut:  std_logic_vector(2 downto 0);
+signal FlagsOut:  std_logic_vector(2 downto 0)
+
+
+
+
+
 begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
@@ -84,6 +103,14 @@ begin
         Reg_File: entity work.regFile port map(clk,rst,interrupt,buff_ins(24 downto 22),buff_ins(21 downto 19),buff_ins(18 downto 16),writeback_address,
         writeback_data,reg_file_en,Rd_data,Rs1_data,Rs2_data);
         -- // Decode Components
+
+        dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,'1',interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
+        read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,propagated_ret_rti,alu_enable,
+        buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,Rd_data,Rs1_data,Rs2_data,New_PC,
+        buff_ins(15 downto 0),buff_ins(18 downto 16),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,propagated_ret_rti,ALUEnableOut,
+        Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
+        offset_ImmOut,RdAddressOut,FlagsOut);
 
         control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),alu_enable,branching_operation,part_selector,op_selector, call_op,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,data_sel,flag_sel,in_data_sel,reg_file_en,flag_en);
