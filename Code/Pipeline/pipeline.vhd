@@ -38,7 +38,6 @@ signal Flush_sig:std_logic;
 signal Freeze_sig: std_logic;
 signal Hazard_sig: std_logic;
 signal Branching_sig: std_logic;
-signal Call_sig:std_logic;
 
 --// Control SIGNALS 
 
@@ -136,11 +135,11 @@ begin
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
 
         -- // fETCH signals
-        branching_call_sig <= Branching_sig or Call_sig;
+        branching_call_sig <= Branching_sig or call_op;
         xor_value <= propagated_ret_rti xor current_ret_rti;
         not_call_branching <= not branching_call_sig;
         Freeze_sig <= xor_value and not_call_branching;
-        Flush_sig <= Branching_sig or Call_sig;
+        Flush_sig <= Branching_sig or call_op;
         pc_en <= not Hazard_sig;
 
         fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins);
