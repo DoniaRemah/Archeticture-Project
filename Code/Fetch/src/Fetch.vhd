@@ -35,14 +35,30 @@ end Fetch;
 
 -- architecture for the 4*1 mux
 architecture Fetch_arch of Fetch is
+
+signal instruction1: std_logic_vector(15 downto 0);
+signal instruction2: std_logic_vector(15 downto 0);
+signal pc_value : std_logic_vector(15 downto 0);
+signal pc_en: std_logic;
+signal pc_rst_value: std_logic_vector(15 downto 0);
+signal old_pc: std_logic_vector(15 downto 0);
+signal New_PC_mux_out:  std_logic_vector(15 downto 0);
+
 begin
+        inst_cache: entity work.instCache port map (old_pc ,instruction1);
+        pc_reg: entity work.pc_reg port map(clk,rst,pc_en,pc_rst_value,New_PC_mux_out,old_pc);
         process (clk, rst)
                 
         begin
-
                 if rst ='1' then
+                        old_pc <= x"0000";
+                        pc_rst_value<= instruction1;
+
+                -- else if rising_edge(clk) then
 
 
+
+                end if;
         end process;
 end Fetch_arch;
 
