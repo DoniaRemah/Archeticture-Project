@@ -1001,10 +1001,10 @@ R156
 R12
 R13
 Epipeline
-Z158 w1681985413
+Z158 w1681985989
 R2
 R3
-!i122 176
+!i122 177
 R4
 Z159 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
 Z160 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
@@ -1014,9 +1014,9 @@ VJeUQFXP1NJQC;DDfYJAK93
 !s100 zZW^lLgN:g60SM`Oz_1QG1
 R7
 32
-Z161 !s110 1681985415
+Z161 !s110 1681986092
 !i10b 1
-Z162 !s108 1681985415.000000
+Z162 !s108 1681986092.000000
 Z163 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
 Z164 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
 !i113 1
@@ -1044,11 +1044,11 @@ R99
 R2
 R3
 Z167 DEx4 work 8 pipeline 0 22 JeUQFXP1NJQC;DDfYJAK93
-!i122 176
-l129
-L15 183
-VPLOW;GiE`9>Q>I3?2<IA41
-!s100 1oB[U[:a1Yco[k5hHT_Ha2
+!i122 177
+l131
+L15 185
+VjM2G853j`XZ^B2<RLR47J3
+!s100 al20gTQg:4BIKbPR_iLag1
 R7
 32
 R161
