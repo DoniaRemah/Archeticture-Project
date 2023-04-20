@@ -799,3 +799,59 @@ run
 quit -sim
 # End time: 09:36:29 on Apr 20,2023, Elapsed time: 0:03:37
 # Errors: 0, Warnings: 9
+# Compile of cache.mem failed with 1 errors.
+# Compile of Fetch.vhd failed with 6 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of EX_MEM1.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# 22 compiles, 3 failed with 8 errors.
+# Compile of pipeline.vhd failed with 3 errors.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of pipeline.vhd failed with 3 errors.
+# Compile of EX_MEM1.vhd was successful.
+# Compile of EX_MEM1.vhd was successful.
+# Compile of pipeline.vhd failed with 3 errors.
+# Compile of pipeline.vhd was successful.
+# Compile of cache.mem failed with 1 errors.
+# Compile of Fetch.vhd failed with 6 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# 23 compiles, 2 failed with 7 errors.
