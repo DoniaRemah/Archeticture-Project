@@ -256,3 +256,546 @@ run
 quit -sim
 # End time: 08:52:08 on Apr 20,2023, Elapsed time: 0:03:31
 # Errors: 0, Warnings: 6
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:02:10 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.regfile(behavioral)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position 2  sim:/pipeline/Hazard_sig
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+add wave -position 17  sim:/pipeline/writeback_address
+add wave -position end  sim:/pipeline/writeback_data
+add wave -position end  sim:/pipeline/Rd_data
+add wave -position end  sim:/pipeline/Rs1_data
+add wave -position end  sim:/pipeline/Rs2_data
+add wave -position 23  sim:/pipeline/reg_file_en
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+force -freeze sim:/pipeline/writeback_address 001 0
+force -freeze sim:/pipeline/writeback_data 7777 0
+force -freeze sim:/pipeline/writeback_address 101 0
+run
+run
+run
+run
+run
+add wave -position 9  sim:/pipeline/New_PC
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position 4  sim:/pipeline/New_PC_mux_out
+run
+add wave -position 3  sim:/pipeline/pc_en
+run
+add wave -position 9  sim:/pipeline/addition_value
+run
+add wave -position 5  sim:/pipeline/old_pc
+run
+quit -sim
+# End time: 09:13:48 on Apr 20,2023, Elapsed time: 0:11:38
+# Errors: 0, Warnings: 11
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:14:20 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.regfile(behavioral)
+# Loading work.control_unit(behavioral)
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/pc_en
+add wave -position end  sim:/pipeline/pc_rst_value
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC_mux_out
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/xor_value
+add wave -position end  sim:/pipeline/not_call_branching
+add wave -position end  sim:/pipeline/addition_value
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/buff_pc
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Jumped_call_address
+add wave -position end  sim:/pipeline/Memory_returned_address
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/current_ret_rti
+add wave -position end  sim:/pipeline/Flush_sig
+add wave -position end  sim:/pipeline/Freeze_sig
+add wave -position end  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Branching_sig
+add wave -position end  sim:/pipeline/Call_sig
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+add wave -position end  sim:/pipeline/interrupt
+add wave -position end  sim:/pipeline/writeback_address
+add wave -position end  sim:/pipeline/writeback_data
+add wave -position end  sim:/pipeline/Rd_data
+add wave -position end  sim:/pipeline/Rs1_data
+add wave -position end  sim:/pipeline/Rs2_data
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+noforce sim:/pipeline/propagated_ret_rti
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ps  Iteration: 0  Instance: /pipeline/Reg_File
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ps  Iteration: 0  Instance: /pipeline/Reg_File
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+mem load -filltype value -filldata 1234 -fillradix hexadecimal /pipeline/Reg_File/memory_array(0)
+mem load -filltype value -filldata 6666 -fillradix hexadecimal /pipeline/Reg_File/memory_array(1)
+mem load -filltype value -filldata 0000 -fillradix hexadecimal /pipeline/Reg_File/memory_array(0)
+mem load -filltype value -filldata 1111 -fillradix hexadecimal /pipeline/Reg_File/memory_array(1)
+mem load -filltype value -filldata {2222 } -fillradix hexadecimal /pipeline/Reg_File/memory_array(2)
+mem load -filltype value -filldata 3333 -fillradix hexadecimal /pipeline/Reg_File/memory_array(3)
+mem load -filltype value -filldata 4444 -fillradix hexadecimal /pipeline/Reg_File/memory_array(4)
+mem load -filltype value -filldata 5555 -fillradix hexadecimal /pipeline/Reg_File/memory_array(5)
+mem load -filltype value -filldata 6666 -fillradix hexadecimal /pipeline/Reg_File/memory_array(6)
+mem load -filltype value -filldata 7777 -fillradix hexadecimal /pipeline/Reg_File/memory_array(7)
+do initialzing pipeline.txt
+# Cannot open macro file: initialzing
+do initialzingpipeline.txt
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/writeback_address 101 0
+force -freeze sim:/pipeline/writeback_data 1111111111111111111111 0
+run
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+do initialzingpipeline.txt
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+do initialzingpipeline.txt
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+do initialzingpipeline.txt
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+quit -sim
+# End time: 09:25:49 on Apr 20,2023, Elapsed time: 0:11:29
+# Errors: 0, Warnings: 9
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:26:09 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.regfile(behavioral)
+# Loading work.control_unit(behavioral)
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/pc_en
+add wave -position end  sim:/pipeline/pc_rst_value
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC_mux_out
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/xor_value
+add wave -position end  sim:/pipeline/not_call_branching
+add wave -position end  sim:/pipeline/addition_value
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/buff_pc
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Jumped_call_address
+add wave -position end  sim:/pipeline/Memory_returned_address
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/current_ret_rti
+add wave -position end  sim:/pipeline/Flush_sig
+add wave -position end  sim:/pipeline/Freeze_sig
+add wave -position end  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Branching_sig
+add wave -position end  sim:/pipeline/Call_sig
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+add wave -position end  sim:/pipeline/interrupt
+add wave -position end  sim:/pipeline/writeback_address
+add wave -position end  sim:/pipeline/writeback_data
+add wave -position end  sim:/pipeline/Rd_data
+add wave -position end  sim:/pipeline/Rs1_data
+add wave -position end  sim:/pipeline/Rs2_data
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 15 ps  Iteration: 0  Instance: /pipeline/Reg_File
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 25 ps  Iteration: 0  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/writeback_address 1 0
+run
+run
+force -freeze sim:/pipeline/writeback_data 4321 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 09:32:41 on Apr 20,2023, Elapsed time: 0:06:32
+# Errors: 0, Warnings: 12
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 09:32:52 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.regfile(behavioral)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/pc_en
+add wave -position end  sim:/pipeline/pc_rst_value
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC_mux_out
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/xor_value
+add wave -position end  sim:/pipeline/not_call_branching
+add wave -position end  sim:/pipeline/addition_value
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/buff_pc
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Jumped_call_address
+add wave -position end  sim:/pipeline/Memory_returned_address
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/current_ret_rti
+add wave -position end  sim:/pipeline/Flush_sig
+add wave -position end  sim:/pipeline/Freeze_sig
+add wave -position end  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Branching_sig
+add wave -position end  sim:/pipeline/Call_sig
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+add wave -position end  sim:/pipeline/interrupt
+add wave -position end  sim:/pipeline/writeback_address
+add wave -position end  sim:/pipeline/writeback_data
+add wave -position end  sim:/pipeline/Rd_data
+add wave -position end  sim:/pipeline/Rs1_data
+add wave -position end  sim:/pipeline/Rs2_data
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+add wave -position 2  sim:/pipeline/Reg_File/memory_array
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+noforce sim:/pipeline/rst
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/branching_call_sig 0 0
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+force -freeze sim:/pipeline/rst 0 0
+force -freeze sim:/pipeline/writeback_address 1 0
+force -freeze sim:/pipeline/writeback_data 6666 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 09:36:29 on Apr 20,2023, Elapsed time: 0:03:37
+# Errors: 0, Warnings: 9

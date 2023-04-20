@@ -39,7 +39,7 @@ signal Hazard_sig: std_logic;
 signal Branching_sig: std_logic;
 signal Call_sig:std_logic;
 
---// ALU SIGNALS 
+--// Control SIGNALS 
 
 signal alu_enable: std_logic;
 signal branching_operation: std_logic;
@@ -59,6 +59,16 @@ signal in_data_sel:std_logic;
 signal reg_file_en:std_logic;
 signal flag_en:std_logic;
 
+--// Reg File Signals
+
+signal interrupt: std_logic;
+signal writeback_address:std_logic_vector(2 downto 0);
+signal writeback_data: std_logic_vector(15 downto 0);
+signal writeback_flags: std_logic_vector(2 downto 0);
+signal out_flags: std_logic_vector(2 downto 0);
+signal Rd_data: std_logic_vector(15 downto 0);
+signal Rs1_data: std_logic_vector(15 downto 0);
+signal Rs2_data: std_logic_vector(15 downto 0);
 
 begin
         -- // Fetching Components
@@ -68,7 +78,11 @@ begin
         mux2x1: entity work.mux2x1 port map(x"0001",x"0002",instruction(25),addition_value);
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
         fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins);
+        
+        flag_reg: entity work.flagReg port map (clk,rst,interrupt,flag_en,writeback_flags,out_flags);
 
+        Reg_File: entity work.regFile port map(clk,rst,interrupt,buff_ins(24 downto 22),buff_ins(21 downto 19),buff_ins(18 downto 16),writeback_address,
+        writeback_data,reg_file_en,Rd_data,Rs1_data,Rs2_data);
         -- // Decode Components
 
         control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),alu_enable,branching_operation,part_selector,op_selector, call_op,

@@ -407,10 +407,10 @@ R64
 R12
 R13
 Epipeline
-Z66 w1681971806
+Z66 w1681974097
 R2
 R3
-!i122 86
+!i122 91
 R4
 Z67 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
 Z68 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
@@ -420,9 +420,9 @@ V<fBU]i^S]M8LJ=LKKjDQk1
 !s100 k@9h79hc3jQz]G`g[_0GO1
 R7
 32
-Z69 !s110 1681971831
+Z69 !s110 1681975555
 !i10b 1
-Z70 !s108 1681971830.000000
+Z70 !s108 1681975555.000000
 Z71 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
 Z72 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd|
 !i113 1
@@ -430,6 +430,7 @@ R12
 R13
 Apipeline_arch
 R22
+Z73 DEx4 work 7 regfile 0 22 9?;@QY37UcR0a8LbiGYPi1
 R33
 R14
 R50
@@ -439,12 +440,12 @@ R1
 R43
 R2
 R3
-DEx4 work 8 pipeline 0 22 <fBU]i^S]M8LJ=LKKjDQk1
-!i122 86
-l63
-L14 74
-V:<@gj7[zn:7WC^W[3]PEH2
-!s100 4fRhizH46YUK=5gYja91E2
+Z74 DEx4 work 8 pipeline 0 22 <fBU]i^S]M8LJ=LKKjDQk1
+!i122 91
+l71
+Z75 L14 83
+Z76 VU:6JIMaVLZT8ce7nK?EnK0
+Z77 !s100 >E<OIZUXVon59TJelQTI13
 R7
 32
 R69
@@ -462,8 +463,8 @@ R2
 R3
 !i122 80
 R4
-Z73 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
-Z74 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
+Z78 8C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
+Z79 FC:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
 l0
 L5 1
 V9?;@QY37UcR0a8LbiGYPi1
@@ -473,8 +474,8 @@ R7
 R46
 !i10b 1
 R19
-Z75 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
-Z76 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
+Z80 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
+Z81 !s107 C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd|
 !i113 1
 R12
 R13
@@ -482,7 +483,7 @@ Abehavioral
 R1
 R2
 R3
-DEx4 work 7 regfile 0 22 9?;@QY37UcR0a8LbiGYPi1
+R73
 !i122 80
 l25
 L21 22
@@ -493,8 +494,8 @@ R7
 R46
 !i10b 1
 R19
-R75
-R76
+R80
+R81
 !i113 1
 R12
 R13
