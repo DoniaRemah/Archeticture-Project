@@ -980,3 +980,33 @@ run 10ps
 #    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
 force -freeze sim:/fetch/rst 0 0
 run 360ps
+quit -sim
+# End time: 07:19:35 on Apr 20,2023, Elapsed time: 0:22:58
+# Errors: 0, Warnings: 3
+# Compile of fetch_decode_buffer.vhd failed with 1 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+vsim -gui work.fetch_decode_buffer
+# vsim -gui work.fetch_decode_buffer 
+# Start time: 07:20:51 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+add wave -position end  sim:/fetch_decode_buffer/flush
+add wave -position end  sim:/fetch_decode_buffer/clk
+add wave -position end  sim:/fetch_decode_buffer/rst
+add wave -position end  sim:/fetch_decode_buffer/flush
+add wave -position end  sim:/fetch_decode_buffer/freeze
+add wave -position end  sim:/fetch_decode_buffer/hazard
+add wave -position end  sim:/fetch_decode_buffer/instruction_in
+add wave -position end  sim:/fetch_decode_buffer/new_pc_in
+add wave -position end  sim:/fetch_decode_buffer/new_pc_out
+add wave -position end  sim:/fetch_decode_buffer/instruction_out
+add wave -position end  sim:/fetch_decode_buffer/pc_out
+add wave -position end  sim:/fetch_decode_buffer/ins_out
+force -freeze sim:/fetch_decode_buffer/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/fetch_decode_buffer/hazard 0 0
+force -freeze sim:/fetch_decode_buffer/instruction_in 1065AB61 0
+force -freeze sim:/fetch_decode_buffer/new_pc_in 0001 0
+run
+run
