@@ -327,3 +327,34 @@ do do_fetch.txt
 #    Time: 10 ps  Iteration: 1  Instance: /fetch/inst_cache
 add wave -position end  sim:/fetch/pc_reg/we
 add wave -position end  sim:/fetch/pc_reg/data_out
+quit -sim
+# End time: 03:10:20 on Apr 20,2023, Elapsed time: 0:04:02
+# Errors: 0, Warnings: 3
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd failed with 2 errors.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 1 failed with 2 errors.
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:11:35 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 1  Instance: /fetch/inst_cache

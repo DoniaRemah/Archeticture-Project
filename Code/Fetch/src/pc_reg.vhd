@@ -1,27 +1,31 @@
 LIBRARY IEEE;
 USE IEEE.std_logic_1164.all;
 
-entity pc_reg is
-    port (
-        clk : in std_logic;
-        rst : in std_logic;
-        we : in std_logic;
-        reset_value : in std_logic_vector(15 downto 0);
-        data_in : in std_logic_vector(15 downto 0);
-        data_out : out std_logic_vector(15 downto 0)
-    );
-end pc_reg;
+-- This is a generic register with only one data in and one data out.
+-- VERY IMPORTANT 
+-- *********THIS REGISTER UPDATES ON FALLING CLOCK EDGE***********
 
-architecture Behavioral of pc_reg is
-begin
-    process (clk)
-    begin
-        if (rst = '1') then -- reset
-            data_out <= reset_value;
-        elsif rising_edge(clk) then -- on rising edge of clock
-            if (we = '1') then -- write
-                data_out <= data_in;
-            end if;
-        end if;
-    end process;
-end Behavioral;
+ENTITY pc_reg IS
+PORT( clk,rst : IN std_logic; 
+data_in: in std_logic_vector (15 downto 0);
+we: in  std_logic;
+reset_value: in std_logic_vector(15 downto 0);
+data_out: OUT std_logic_vector (15 downto 0));
+END pc_reg;
+
+ARCHITECTURE pc_reg_arch OF pc_reg IS
+signal data_out_sig: std_logic_vector(15 downto 0);
+BEGIN
+PROCESS(clk,rst,we)
+variable temp_reset_value:std_logic_vector(15 downto 0);
+variable temp_data_in:std_logic_vector(15 downto 0);
+BEGIN
+    temp_reset_value := reset_value;
+    temp_data_in := data_in;
+IF(rst = '1') THEN
+    data_out <= temp_reset_value;
+ELSIF rising_edge(clk) and we='1' THEN
+    data_out<= temp_data_in;
+END IF;
+END PROCESS;
+END pc_reg_arch;

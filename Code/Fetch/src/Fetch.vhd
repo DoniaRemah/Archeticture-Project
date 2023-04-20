@@ -46,9 +46,8 @@ signal New_PC_mux_out:  std_logic_vector(15 downto 0);
 
 begin
         inst_cache: entity work.instCache port map (old_pc ,instruction1);
-        pc_reg: entity work.pc_reg port map(clk,rst,pc_en,pc_rst_value,New_PC_mux_out,old_pc);
+        pc_reg: entity work.pc_reg port map(clk,rst,New_PC_mux_out,pc_en,pc_rst_value,old_pc);
         process (clk, rst)
-                
         begin
                 if rst ='1' then
                         old_pc <= x"0000";
