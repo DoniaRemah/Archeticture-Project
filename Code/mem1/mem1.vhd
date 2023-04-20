@@ -9,11 +9,12 @@ entity mem1 is
         -- --Do I need clk and reset here? 
         clk : in std_logic;         
         reset : in std_logic;
+        interrupt : in std_logic;
 
         -- input
 
         -- -- the write back signals
-        -- dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
+        dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
 
         -- memory signals
         readAddressSel,writeAddressSel,dataWrittenSel,memOp,memRead, memWrite, dataBusSelector, propRetRti: in std_logic;
@@ -22,12 +23,11 @@ entity mem1 is
         rdAddress: in std_logic_vector(2 downto 0);
 
         newFlags: in std_logic_vector(2 downto 0);
-        -- SP: in std_logic_vector(15 downto 0);
 
         -- -- output
-        -- dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut:out std_logic;
+        dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut:out std_logic;
 
-        -- readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut: out std_logic;
+        readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut: out std_logic;
 
         dataToBeWrittenOut, ALU_ImmOut, writeAddressOut, readAddressOut : out std_logic_vector(15 downto 0);
         RdAddressOut: out std_logic_vector(2 downto 0);
@@ -55,21 +55,21 @@ architecture Behavioral of mem1 is
         -- put the unassigned outputs to equal the inputs
 
         -- -- the write back signals
-        -- dataSelectorOut <= dataSelector;
-        -- inDataSelectorOut <= inDataSelector;
-        -- flagSelectorOut <= flagSelector;
-        -- flagEnableOut <= flagEnable;
-        -- regFileEnableOut <= regFileEnable;
+        dataSelectorOut <= dataSelector;
+        inDataSelectorOut <= inDataSelector;
+        flagSelectorOut <= flagSelector;
+        flagEnableOut <= flagEnable;
+        regFileEnableOut <= regFileEnable;
 
-        -- -- memory signals
-        -- readAddressSelOut <= readAddressSel;
-        -- writeAddressSelOut <= writeAddressSel;
-        -- dataWrittenSelOut <= dataWrittenSel;
-        -- memOpOut <= memOp;
-        -- memReadOut <= memRead;
-        -- memWriteOut <= memWrite;
-        -- dataBusSelectorOut <= dataBusSelector;
-        -- propRetRtiOut <= propRetRti;
+        -- memory signals
+        readAddressSelOut <= readAddressSel;
+        writeAddressSelOut <= writeAddressSel;
+        dataWrittenSelOut <= dataWrittenSel;
+        memOpOut <= memOp;
+        memReadOut <= memRead;
+        memWriteOut <= memWrite;
+        dataBusSelectorOut <= dataBusSelector;
+        propRetRtiOut <= propRetRti;
 
         -- the values that will be passed from the ex/mem1 buffer to the mem1/mem2 buffer
         ALU_ImmOut <= ALU_Imm;
@@ -77,10 +77,10 @@ architecture Behavioral of mem1 is
         newFlagsOut <= newFlags;
 
 
-        -- put the signals on the remaining outputs
-        dataToBeWrittenOut <= dataToBeWrittenOutSignal;
-        writeAddressOut <= writeAddressOutSignal;
-        readAddressOut <= readAddressOutSignal;
+        -- -- put the signals on the remaining outputs
+        -- dataToBeWrittenOut <= dataToBeWrittenOutSignal;
+        -- writeAddressOut <= writeAddressOutSignal;
+        -- readAddressOut <= readAddressOutSignal;
 
         mux2x1_1: entity work.mux2x1
             generic map (
@@ -137,57 +137,58 @@ architecture Behavioral of mem1 is
                 dataOut => readAddressOutSignal
             );
 
-        -- writeBuffer: entity work.mem1_mem2_buf
-        --     port map(
-        --         -- inputs
-        --         clk => clk,
-        --         reset => reset,
-        --         -- put the write enable for the buffer to be 1
-        --         -- Since there are no hazards yet
-        --         writeEnable => '1',
-        --         dataSelector => dataSelector,
-        --         inDataSelector => inDataSelector,
-        --         flagSelector => flagSelector,
-        --         flagEnable => flagEnable,
-        --         regFileEnable => regFileEnable,
-        --         readAddressSel => readAddressSel,
-        --         writeAddressSel => writeAddressSel,
-        --         dataWrittenSel => dataWrittenSel,
-        --         memOp => memOp,
-        --         memRead => memRead,
-        --         memWrite => memWrite,
-        --         dataBusSelector => dataBusSelector,
-        --         propRetRti => propRetRti,
+        writeBuffer: entity work.mem1_mem2_buf
+            port map(
+                -- inputs
+                clk => clk,
+                reset => reset,
+                interrupt => interrupt,
+                -- put the write enable for the buffer to be 1
+                -- Since there are no hazards yet
+                writeEnable => '1',
+                dataSelector => dataSelector,
+                inDataSelector => inDataSelector,
+                flagSelector => flagSelector,
+                flagEnable => flagEnable,
+                regFileEnable => regFileEnable,
+                readAddressSel => readAddressSel,
+                writeAddressSel => writeAddressSel,
+                dataWrittenSel => dataWrittenSel,
+                memOp => memOp,
+                memRead => memRead,
+                memWrite => memWrite,
+                dataBusSelector => dataBusSelector,
+                propRetRti => propRetRti,
 
-        --         dataToBeWritten => dataToBeWrittenOutSignal,
-        --         ALU_Imm => ALU_Imm,
-        --         writeAddress => writeAddressOutSignal,
-        --         readAddress => readAddressOutSignal,
-        --         RdAddress => RdAddress,
-        --         newFlags => newFlags,
+                dataToBeWritten => dataToBeWrittenOutSignal,
+                ALU_Imm => ALU_Imm,
+                writeAddress => writeAddressOutSignal,
+                readAddress => readAddressOutSignal,
+                RdAddress => RdAddress,
+                newFlags => newFlags,
 
-        --         -- outputs
-        --         dataSelectorOut => dataSelectorOut,
-        --         inDataSelectorOut => inDataSelectorOut,
-        --         flagSelectorOut => flagSelectorOut,
-        --         flagEnableOut => flagEnableOut,
-        --         regFileEnableOut => regFileEnableOut,
-        --         readAddressSelOut => readAddressSelOut,
-        --         writeAddressSelOut => writeAddressSelOut,
-        --         dataWrittenSelOut => dataWrittenSelOut,
-        --         memOpOut => memOpOut,
-        --         memReadOut => memReadOut,
-        --         memWriteOut => memWriteOut,
-        --         dataBusSelectorOut => dataBusSelectorOut,
-        --         propRetRtiOut => propRetRtiOut,
-        --         dataToBeWrittenOut => dataToBeWrittenOut,
-        --         ALU_ImmOut => ALU_ImmOut,
-        --         writeAddressOut => writeAddressOut,
-        --         readAddressOut => readAddressOut,
-        --         RdAddressOut => RdAddressOut,
-        --         newFlagsOut => newFlagsOut
+                -- outputs
+                dataSelectorOut => dataSelectorOut,
+                inDataSelectorOut => inDataSelectorOut,
+                flagSelectorOut => flagSelectorOut,
+                flagEnableOut => flagEnableOut,
+                regFileEnableOut => regFileEnableOut,
+                readAddressSelOut => readAddressSelOut,
+                writeAddressSelOut => writeAddressSelOut,
+                dataWrittenSelOut => dataWrittenSelOut,
+                memOpOut => memOpOut,
+                memReadOut => memReadOut,
+                memWriteOut => memWriteOut,
+                dataBusSelectorOut => dataBusSelectorOut,
+                propRetRtiOut => propRetRtiOut,
+                dataToBeWrittenOut => dataToBeWrittenOut,
+                ALU_ImmOut => ALU_ImmOut,
+                writeAddressOut => writeAddressOut,
+                readAddressOut => readAddressOut,
+                RdAddressOut => RdAddressOut,
+                newFlagsOut => newFlagsOut
 
-        --     );
+            );
 
 end Behavioral;
 

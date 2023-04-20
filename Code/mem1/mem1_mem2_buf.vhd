@@ -34,80 +34,57 @@ entity mem1_mem2_buf is
 end mem1_mem2_buf;
 
 architecture Behavioral of mem1_mem2_buf is
-    -- declare signals for all inputs
-    signal dataSelectorSig, inDataSelectorSig, flagSelectorSig, flagEnableSig, regFileEnableSig: std_logic;
-    signal readAddressSelSig, writeAddressSelSig, dataWrittenSelSig, memOpSig, memReadSig, memWriteSig, dataBusSelectorSig, propRetRtiSig: std_logic;
-    signal dataToBeWrittenSig, ALU_ImmSig, writeAddressSig, readAddressSig: std_logic_vector(15 downto 0);
-    signal RdAddressSig: std_logic_vector(2 downto 0);
-    signal newFlagsSig: std_logic_vector(2 downto 0);
+
 begin
     process (clk, reset)
     begin
         if reset = '1' then
-            -- set all signals to default values
-            dataSelectorSig <= '0';
-            inDataSelectorSig <= '0';
-            flagSelectorSig <= '0';
-            flagEnableSig <= '0';
-            regFileEnableSig <= '0';
-            readAddressSelSig <= '0';
-            writeAddressSelSig <= '0';
-            dataWrittenSelSig <= '0';
-            memOpSig <= '0';
-            memReadSig <= '0';
-            memWriteSig <= '0';
-            dataBusSelectorSig <= '0';
-            propRetRtiSig <= '0';
-            dataToBeWrittenSig <= (others => '0');
-            ALU_ImmSig <= (others => '0');
-            writeAddressSig <= (others => '0');
-            readAddressSig <= (others => '0');
-            RdAddressSig <= (others => '0');
-            newFlagsSig <= (others => '0');
+            -- put zero on all outputs
+            dataSelectorOut <= '0';
+            inDataSelectorOut <= '0';
+            flagSelectorOut <= '0';
+            flagEnableOut <= '0';
+            regFileEnableOut <= '0';
+            readAddressSelOut <= '0';
+            writeAddressSelOut <= '0';
+            dataWrittenSelOut <= '0';
+            memOpOut <= '0';
+            memReadOut <= '0';
+            memWriteOut <= '0';
+            dataBusSelectorOut <= '0';
+            propRetRtiOut <= '0';
+            dataToBeWrittenOut <= (others => '0');
+            ALU_ImmOut <= (others => '0');
+            writeAddressOut <= (others => '0');
+            readAddressOut <= (others => '0');
+            RdAddressOut <= (others => '0');
+            newFlagsOut <= (others => '0');
+        
             -- check on the falling edge of teh clock
-        elsif falling_edge(clk) then
+        elsif rising_edge(clk) then
             if writeEnable = '1' then
-            -- assign input signals to corresponding signals
-                dataSelectorSig <= dataSelector;
-                inDataSelectorSig <= inDataSelector;
-                flagSelectorSig <= flagSelector;
-                flagEnableSig <= flagEnable;
-                regFileEnableSig <= regFileEnable;
-                readAddressSelSig <= readAddressSel;
-                writeAddressSelSig <= writeAddressSel;
-                dataWrittenSelSig <= dataWrittenSel;
-                memOpSig <= memOp;
-                memReadSig <= memRead;
-                memWriteSig <= memWrite;
-                dataBusSelectorSig <= dataBusSelector;
-                propRetRtiSig <= propRetRti;
-                dataToBeWrittenSig <= dataToBeWritten;
-                ALU_ImmSig <= ALU_Imm;
-                writeAddressSig <= writeAddress;
-                readAddressSig <= readAddress;
-                RdAddressSig <= RdAddress;
-                newFlagsSig <= newFlags;
+            -- assign inputs to corresponding outputs
+            dataSelectorOut <= dataSelector;
+            inDataSelectorOut <= inDataSelector;
+            flagSelectorOut <= flagSelector;
+            flagEnableOut <= flagEnable;
+            regFileEnableOut <= regFileEnable;
+            readAddressSelOut <= readAddressSel;
+            writeAddressSelOut <= writeAddressSel;
+            dataWrittenSelOut <= dataWrittenSel;
+            memOpOut <= memOp;
+            memReadOut <= memRead;
+            memWriteOut <= memWrite;
+            dataBusSelectorOut <= dataBusSelector;
+            propRetRtiOut <= propRetRti;
+            dataToBeWrittenOut <= dataToBeWritten;
+            ALU_ImmOut <= ALU_Imm;
+            writeAddressOut <= writeAddress;
+            readAddressOut <= readAddress;
+            RdAddressOut <= RdAddress;
+            newFlagsOut <= newFlags;
             end if;
         end if;
     end process;
-    dataSelectorOut <= dataSelectorSig;
-    inDataSelectorOut <= inDataSelectorSig;
-    flagSelectorOut <= flagSelectorSig;
-    flagEnableOut <= flagEnableSig;
-    regFileEnableOut <= regFileEnableSig;
-    readAddressSelOut <= readAddressSelSig;
-    writeAddressSelOut <= writeAddressSelSig;
-    dataWrittenSelOut <= dataWrittenSelSig;
-    memOpOut <= memOpSig;
-    memReadOut <= memReadSig;
-    memWriteOut <= memWriteSig;
-    dataBusSelectorOut <= dataBusSelectorSig;
-    propRetRtiOut <= propRetRtiSig;
-    dataToBeWrittenOut <= dataToBeWrittenSig;
-    ALU_ImmOut <= ALU_ImmSig;
-    writeAddressOut <= writeAddressSig;
-    readAddressOut <= readAddressSig;
-    RdAddressOut <= RdAddressSig;
-    newFlagsOut <= newFlagsSig;
 end Behavioral;
 
