@@ -22,7 +22,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity fetch_decode_buffer
 -- Compiling architecture fetch_decode_buffer_arch of fetch_decode_buffer
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -32,13 +32,10 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling architecture Behavioral of mem1
 -- Loading entity mux2x1
 -- Loading entity mux8x1
-** Error: (vcom-11) Could not find work.sp_reg.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd(60): (vcom-1195) Cannot find expanded name "work.sp_reg".
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd(60): Unknown expanded name.
+-- Loading entity sp_reg
 -- Loading entity adder
-** Note: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd(150): VHDL Compiler exiting
 
-} {11.0 12.0 13.0 14.0} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -92,6 +89,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading package std_logic_1164
 -- Compiling entity mux2x1
 -- Compiling architecture mux2x1_arch of mux2x1
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sp_reg
+-- Compiling architecture Behavioral of sp_reg
 
 } {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020

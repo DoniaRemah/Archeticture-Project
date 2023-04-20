@@ -106,6 +106,17 @@ signal data_tobe_written_out_mem1: std_logic_vector(15 downto 0);
 signal write_adress_out_mem1: std_logic_vector(15 downto 0);
 signal read_address_out_mem1: std_logic_vector(15 downto 0);
 
+--// Mem2 Outputs
+
+signal dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, regFileEnableOut_mem2: std_logic;
+
+signal readAddressSelOut_mem2,writeAddressSelOut_mem2,dataWrittenSelOut_mem2,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2, propRetRtiOut_mem2:  std_logic;
+
+signal dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 :  std_logic_vector(15 downto 0);
+signal RdAddressOut_mem2:  std_logic_vector(2 downto 0);
+
+signal newFlagsOut_mem2:  std_logic_vector(2 downto 0);
+
 begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
@@ -154,6 +165,11 @@ begin
 
         mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
         rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
+
+        mem1_mem2_buffer: entity work.mem1_mem2_buf port map(clk,rst,'1',interrupt,dataSelectorOut_ex,inDataSelectorOut_ex,flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
+        readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex, data_tobe_written_out_mem1,
+        ALU_ImmOut_ex,write_adress_out_mem1,read_address_out_mem1,RdAddressOut_ex,newFlagsOut_ex,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, regFileEnableOut_mem2,readAddressSelOut_mem2,writeAddressSelOut_mem2,dataWrittenSelOut_mem2,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2, propRetRtiOut_mem2,dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 ,
+        RdAddressOut_mem2,newFlagsOut_mem2);
 
 
         

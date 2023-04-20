@@ -862,3 +862,6 @@ quit -sim
 # Compile of pipeline.vhd failed with 1 errors.
 # Compile of pipeline.vhd failed with 2 errors.
 # Compile of pipeline.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd was successful.
