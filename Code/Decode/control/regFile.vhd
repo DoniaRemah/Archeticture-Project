@@ -6,6 +6,7 @@ entity regFile is
     port (
         clk: in std_logic;
         reset: in std_logic;
+        interrupt: in std_logic;
 
         rs1Address,rs2Address,rdAddress,WBAddress: in std_logic_vector(2 downto 0);
 

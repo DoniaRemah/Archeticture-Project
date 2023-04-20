@@ -5,7 +5,10 @@ use IEEE.numeric_std.all;
 entity flagReg is
     port (
         clk : in std_logic;         
-        reset : in std_logic;       
+        reset : in std_logic;
+        interrupt : in std_logic;
+
+
         flagEnable : in std_logic;    
 
         WBFlags : in std_logic_vector(2 downto 0);  
