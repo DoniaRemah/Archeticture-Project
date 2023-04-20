@@ -12,6 +12,7 @@ add wave -position end  sim:/mux4x1/dataIn3
 add wave -position end  sim:/mux4x1/selector0
 add wave -position end  sim:/mux4x1/selector1
 add wave -position end  sim:/mux4x1/dataOut
+add wave -position end  sim:/mux4x1/selector1
 force -freeze sim:/mux4x1/dataIn0 FFFF 0
 force -freeze sim:/mux4x1/dataIn1 EEEE 0
 force -freeze sim:/mux4x1/dataIn2 AAAA 0
