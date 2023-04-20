@@ -51,107 +51,70 @@ entity ID_EX_buf is
 end ID_EX_buf;
 
 architecture Behavioral of ID_EX_buf is
-    -- declare signals for all inputs
-    signal dataSelectorSig, inDataSelectorSig, flagSelectorSig, flagEnableSig, regFileEnableSig: std_logic;
-    signal readAddressSelSig,writeAddressSelSig,dataWrittenSelSig,memOpSig,memReadSig, memWriteSig, dataBusSelectorSig, propRetRtiSig: std_logic;
-    signal ALUEnableSig,Imm_Src_selectorSig,branchingOpSig,callOpSig: std_logic;
-    signal partSelectorSig: std_logic_vector(1 downto 0);
-    signal opSelectorSig: std_logic_vector(2 downto 0);
-    signal newPCAddressSig: std_logic_vector(15 downto 0);
-    signal jumped_call_addressSig: std_logic_vector(15 downto 0);
-    signal rs1DataSig,rs2DataSig,offset_ImmSig: std_logic_vector(15 downto 0);
-    signal RdAddressSig: std_logic_vector(2 downto 0);
-    signal FlagsSig: std_logic_vector(2 downto 0);
 begin
     process (clk, reset)
     begin
         if reset = '1' then
-            -- set all signals to default values
-            dataSelectorSig <= '0';
-            inDataSelectorSig <= '0';
-            flagSelectorSig <= '0';
-            flagEnableSig <= '0';
-            regFileEnableSig <= '0';
-            readAddressSelSig <= '0';
-            writeAddressSelSig <= '0';
-            dataWrittenSelSig <= '0';
-            memOpSig <= '0';
-            memReadSig <= '0';
-            memWriteSig <= '0';
-            dataBusSelectorSig <= '0';
-            propRetRtiSig <= '0';
-            ALUEnableSig <= '0';
-            Imm_Src_selectorSig <= '0';
-            branchingOpSig <= '0';
-            callOpSig <= '0';
-            partSelectorSig <= "00";
-            opSelectorSig <= "000";
-            newPCAddressSig <= (others => '0');
-            jumped_call_addressSig <= (others => '0');
-            rs1DataSig <= (others => '0');
-            rs2DataSig <= (others => '0');
-            offset_ImmSig <= (others => '0');
-            RdAddressSig <= (others => '0');
-            FlagsSig <= (others => '0');
+        -- make all outputs to 0
+        dataSelectorOut <= '0';
+        inDataSelectorOut <= '0';
+        flagSelectorOut <= '0';
+        flagEnableOut <= '0';
+        regFileEnableOut <= '0';
+        readAddressSelOut <= '0';
+        writeAddressSelOut <= '0';
+        dataWrittenSelOut <= '0';
+        memOpOut <= '0';
+        memReadOut <= '0';
+        memWriteOut <= '0';
+        dataBusSelectorOut <= '0';
+        propRetRtiOut <= '0';
+        ALUEnableOut <= '0';
+        Imm_Src_selectorOut <= '0';
+        branchingOpOut <= '0';
+        callOpOut <= '0';
+        partSelectorOut <= "00";
+        opSelectorOut <= "000";
+        newPCAddressOut <= "0000000000000000";
+        jumped_call_address <= "0000000000000000";
+        rs1DataOut <= "0000000000000000";
+        rs2DataOut <= "0000000000000000";
+        offset_ImmOut <= "0000000000000000";
+        RdAddressOut <= "000";
+        FlagsOut <= "000";
             -- check on the falling edge of teh clock
-        elsif falling_edge(clk) then
+        elsif rising_edge(clk) then
             if writeEnable = '1' then
-            -- assign input signals to corresponding signals
-                dataSelectorSig <= dataSelector;
-                inDataSelectorSig <= inDataSelector;
-                flagSelectorSig <= flagSelector;
-                flagEnableSig <= flagEnable;
-                regFileEnableSig <= regFileEnable;
-                readAddressSelSig <= readAddressSel;
-                writeAddressSelSig <= writeAddressSel;
-                dataWrittenSelSig <= dataWrittenSel;
-                memOpSig <= memOp;
-                memReadSig <= memRead;
-                memWriteSig <= memWrite;
-                dataBusSelectorSig <= dataBusSelector;
-                propRetRtiSig <= propRetRti;
-                ALUEnableSig <= ALUEnable;
-                Imm_Src_selectorSig <= Imm_Src_selector;
-                branchingOpSig <= branchingOp;
-                callOpSig <= callOp;
-                partSelectorSig <= partSelector;
-                opSelectorSig <= opSelector;
-                newPCAddressSig <= newPCAddress;
-                jumped_call_addressSig <= rdData;
-                rs1DataSig <= rs1Data;
-                rs2DataSig <= rs2Data;
-                offset_ImmSig <= offset_Imm;
-                RdAddressSig <= RdAddress;
-                FlagsSig <= Flags;
-
+            -- write output to corresponding input
+            dataSelectorOut <= dataSelector;
+            inDataSelectorOut <= inDataSelector;
+            flagSelectorOut <= flagSelector;
+            flagEnableOut <= flagEnable;
+            regFileEnableOut <= regFileEnable;
+            readAddressSelOut <= readAddressSel;
+            writeAddressSelOut <= writeAddressSel;
+            dataWrittenSelOut <= dataWrittenSel;
+            memOpOut <= memOp;
+            memReadOut <= memRead;
+            memWriteOut <= memWrite;
+            dataBusSelectorOut <= dataBusSelector;
+            propRetRtiOut <= propRetRti;
+            ALUEnableOut <= ALUEnable;
+            Imm_Src_selectorOut <= Imm_Src_selector;
+            branchingOpOut <= branchingOP;
+            callOpOut <= callOp;
+            partSelectorOut <= partSelector;
+            opSelectorOut <= opSelector;
+            newPCAddressOut <= newPCAddress;
+            jumped_call_address <= offset_Imm;
+            rs1DataOut <= rs1Data;
+            rs2DataOut <= rs2Data;
+            jumped_call_address<= rdData;
+            offset_ImmOut <= offset_Imm;
+            RdAddressOut <= RdAddress;
+            FlagsOut <= Flags;
             end if;
         end if;
     end process;
-    dataSelectorOut <= dataSelectorSig;
-    inDataSelectorOut <= inDataSelectorSig;
-    flagSelectorOut <= flagSelectorSig;
-    flagEnableOut <= flagEnableSig;
-    regFileEnableOut <= regFileEnableSig;
-    readAddressSelOut <= readAddressSelSig;
-    writeAddressSelOut <= writeAddressSelSig;
-    dataWrittenSelOut <= dataWrittenSelSig;
-    memOpOut <= memOpSig;
-    memReadOut <= memReadSig;
-    memWriteOut <= memWriteSig;
-    dataBusSelectorOut <= dataBusSelectorSig;
-    propRetRtiOut <= propRetRtiSig;
-    ALUEnableOut <= ALUEnableSig;
-    Imm_Src_selectorOut <= Imm_Src_selectorSig;
-    branchingOpOut <= branchingOpSig;
-    callOpOut <= callOpSig;
-    partSelectorOut <= partSelectorSig;
-    opSelectorOut <= opSelectorSig;
-    newPCAddressOut <= newPCAddressSig;
-    jumped_call_address <= jumped_call_addressSig;
-    rs1DataOut <= rs1DataSig;
-    rs2DataOut <= rs2DataSig;
-    offset_ImmOut <= offset_ImmSig;
-    RdAddressOut <= RdAddressSig;
-    FlagsOut <= FlagsSig;
 end Behavioral;
 
