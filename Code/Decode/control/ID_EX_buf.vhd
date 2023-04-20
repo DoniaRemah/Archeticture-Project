@@ -45,7 +45,9 @@ entity ID_EX_buf is
         jumped_call_address: out std_logic_vector(15 downto 0);
         rs1DataOut,rs2DataOut,offset_ImmOut: out std_logic_vector(15 downto 0);
         RdAddressOut: out std_logic_vector(2 downto 0);
-        FlagsOut: out std_logic_vector(2 downto 0)
+        FlagsOut: out std_logic_vector(2 downto 0);
+        inport : in std_logic_vector(15 downto 0);
+inportOut : out std_logic_vector(15 downto 0)
 
     );
 end ID_EX_buf;
@@ -82,6 +84,7 @@ begin
         offset_ImmOut <= "0000000000000000";
         RdAddressOut <= "000";
         FlagsOut <= "000";
+        inportOut <= (others => '0');
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -113,6 +116,7 @@ begin
             offset_ImmOut <= offset_Imm;
             RdAddressOut <= RdAddress;
             FlagsOut <= Flags;
+            inportOut <= inport;
             end if;
         end if;
     end process;

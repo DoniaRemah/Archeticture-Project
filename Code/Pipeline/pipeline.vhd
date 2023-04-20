@@ -127,6 +127,8 @@ signal memFlags_wb,ALUflags_wb,wbAddress_wb: std_logic_vector(2 downto 0);
 
 signal control_prop: std_logic;
 
+signal inportOUTde , inportOUTex , inportOUTmem1 , inportOUTmem2 , inportOUTwb:std_logic_vector(15 downto 0);
+
 
 begin
         -- // Fetching Components
@@ -144,7 +146,7 @@ begin
         Flush_sig <= Branching_sig or call_op;
         pc_en <= not Hazard_sig;
 
-        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins);
+        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
         
         flag_reg: entity work.flagReg port map (clk,rst,interrupt,flag_en,writeback_flags,out_flags);
 
@@ -158,7 +160,7 @@ begin
         buff_ins(15 downto 0),buff_ins(18 downto 16),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,ALUEnableOut,
         Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
-        offset_ImmOut,RdAddressOut,FlagsOut);
+        offset_ImmOut,RdAddressOut,FlagsOut,inportOUTde,inportOUTex);
 
         control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),alu_enable,branching_operation,part_selector,op_selector, call_op,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,data_sel,flag_sel,in_data_sel,reg_file_en,flag_en,control_prop,current_ret_rti);
@@ -171,7 +173,7 @@ begin
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,rs1DataOut,rs2DataOut,
         newPCAddressOut,RdAddressOut,FlagsOut,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
-        ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex);
+        ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex,inportOUTex,inportOUTmem1);
 
 
         mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
@@ -182,7 +184,7 @@ begin
         ALU_ImmOut_ex,write_adress_out_mem1,read_address_out_mem1,RdAddressOut_ex,newFlagsOut_ex,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, 
         regFileEnableOut_mem2,readAddressSelOut_mem2,writeAddressSelOut_mem2,dataWrittenSelOut_mem2,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2, propagated_ret_rti,
         dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 ,
-        RdAddressOut_mem2,newFlagsOut_mem2);
+        RdAddressOut_mem2,newFlagsOut_mem2,inportOUTmem1,inportOUTmem2);
 
         memory: entity work.memory port map (clk,rst,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
         dataread_memory,flagsread_memory);
@@ -191,9 +193,9 @@ begin
 
         mem2_Wb_Buffer: entity work.mem2_WB_buf port map (clk,rst,'1',interrupt,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, 
         regFileEnableOut_mem2,dataread_memory,ALU_ImmOut_mem2,RdAddressOut_mem2,newFlagsOut_mem2,flagsread_memory,dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb, flag_en, reg_file_en_wb,
-        memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address);
+        memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address,inportOUTmem2,inportOUTwb);
 
-        wb: entity work.WB port map (dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb,memResult_wb,AluResult_wb,inport,memFlags_wb,ALUflags_wb,writeback_data,writeback_flags);
+        wb: entity work.WB port map (dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb,memResult_wb,AluResult_wb,inportOUTwb,memFlags_wb,ALUflags_wb,writeback_data,writeback_flags);
 
         
 end pipeline_arch;

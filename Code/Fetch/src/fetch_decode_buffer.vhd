@@ -10,7 +10,9 @@ PORT( clk,flush,freeze,hazard : IN std_logic;
 instruction_in: in std_logic_vector(31 downto 0);
 new_pc_in: in std_logic_vector(15 downto 0);
 new_pc_out: out std_logic_vector(15 downto 0);
-instruction_out: out std_logic_vector(31 downto 0)
+instruction_out: out std_logic_vector(31 downto 0);
+inport : in std_logic_vector(15 downto 0);
+inportOut : out std_logic_vector(15 downto 0)
 );
 END fetch_decode_buffer;
 
@@ -26,6 +28,7 @@ IF rising_edge(clk) THEN
         -- ins_out <= instruction_in;
         new_pc_out <= new_pc_in;
         instruction_out <=instruction_in;
+        inportOut <= inport;
     end if;
 END IF;
 END PROCESS;

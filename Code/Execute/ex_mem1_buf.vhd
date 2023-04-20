@@ -29,7 +29,9 @@ entity ex_mem1_buf is
         ALU_ImmOut, rs1_data_Out, rs2_data_Out ,newPC_address_out : out std_logic_vector(15 downto 0);
         RdAddressOut: out std_logic_vector(2 downto 0);
         
-        newFlagsOut: out std_logic_vector(2 downto 0)
+        newFlagsOut: out std_logic_vector(2 downto 0);
+        inport : in std_logic_vector(15 downto 0);
+inportOut : out std_logic_vector(15 downto 0)
     );
 end ex_mem1_buf;
 
@@ -84,6 +86,7 @@ begin
             newPC_address_out  <=  (others => '0');
             RdAddressOut <= (others => '0');
             newFlagsOut <= (others => '0');
+            inportOut <= (others => '0');
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -127,6 +130,7 @@ begin
             newPC_address_out  <=  newPC_address;
             RdAddressOut <= RdAddress;
             newFlagsOut <= newFlags;
+            inportOut <= inport;
             end if;
         end if;
     end process;
