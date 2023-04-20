@@ -855,3 +855,10 @@ quit -sim
 # Compile of ID_EX_buf.vhd was successful.
 # Compile of ex_mem1_buf.vhd was successful.
 # 23 compiles, 2 failed with 7 errors.
+# Compile of mem1.vhd failed with 3 errors.
+# Compile of mem1.vhd failed with 3 errors.
+# Compile of sp_reg.vhd was successful.
+# Compile of mem1.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# Compile of pipeline.vhd failed with 2 errors.
+# Compile of pipeline.vhd was successful.

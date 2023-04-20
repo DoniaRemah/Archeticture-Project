@@ -100,7 +100,11 @@ signal RdAddressOut_ex:  std_logic_vector(2 downto 0);
 
 signal newFlagsOut_ex:  std_logic_vector(2 downto 0);
 
+--// Mem1 outputs
 
+signal data_tobe_written_out_mem1: std_logic_vector(15 downto 0);
+signal write_adress_out_mem1: std_logic_vector(15 downto 0);
+signal read_address_out_mem1: std_logic_vector(15 downto 0);
 
 begin
         -- // Fetching Components
@@ -146,6 +150,10 @@ begin
         newPCAddressOut,RdAddressOut,FlagsOut,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
         ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex);
+
+
+        mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
+        rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
 
 
         
