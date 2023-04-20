@@ -9,23 +9,25 @@ ENTITY pc_reg IS
 PORT( clk,rst : IN std_logic; 
 data_in: in std_logic_vector (15 downto 0);
 we: in  std_logic;
-reset_value: in std_logic_vector(15 downto 0);
-data_out: OUT std_logic_vector (15 downto 0));
+data_out: OUT std_logic_vector (15 downto 0);
+reset_value: in std_logic_vector(15 downto 0)
+);
 END pc_reg;
 
 ARCHITECTURE pc_reg_arch OF pc_reg IS
 signal data_out_sig: std_logic_vector(15 downto 0);
 BEGIN
-PROCESS(clk,rst,we)
-variable temp_reset_value:std_logic_vector(15 downto 0);
-variable temp_data_in:std_logic_vector(15 downto 0);
+PROCESS(clk,rst)
 BEGIN
-    temp_reset_value := reset_value;
-    temp_data_in := data_in;
 IF(rst = '1') THEN
-    data_out <= temp_reset_value;
-ELSIF rising_edge(clk) and we='1' THEN
-    data_out<= temp_data_in;
+    data_out_sig <= reset_value;
+ELSIF rising_edge(clk) THEN
+    if (we='1') then
+        data_out_sig<= data_in;
+    end if;
+else 
+    data_out_sig <= data_out_sig;
 END IF;
 END PROCESS;
+    data_out <= data_out_sig;
 END pc_reg_arch;

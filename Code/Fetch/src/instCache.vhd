@@ -5,7 +5,7 @@ USE IEEE.numeric_std.all;
 ENTITY instCache IS
 	PORT(
 		address : IN  std_logic_vector(15 DOWNTO 0);
-		dataout : OUT std_logic_vector(15 DOWNTO 0));
+		dataout,reset_value : OUT std_logic_vector(15 DOWNTO 0));
 END ENTITY instCache;
 
 ARCHITECTURE cache_arc OF instCache IS
@@ -17,4 +17,5 @@ ARCHITECTURE cache_arc OF instCache IS
 	BEGIN
 		-- insturction that this is its turn
 		dataout <= ram(to_integer(unsigned(address)));
+		reset_value <= ram(0);
 END cache_arc;

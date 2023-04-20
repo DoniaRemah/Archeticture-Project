@@ -358,3 +358,157 @@ do do_fetch.txt
 #    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 10 ps  Iteration: 1  Instance: /fetch/inst_cache
+quit -sim
+# End time: 03:34:28 on Apr 20,2023, Elapsed time: 0:22:53
+# Errors: 0, Warnings: 5
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:34:48 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 1  Instance: /fetch/inst_cache
+add wave -position end  sim:/fetch/pc_reg/reset_value
+run
+# Break in Process line__19 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd line 23
+step
+step
+step
+step
+run
+# Break in Process line__19 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd line 23
+quit -sim
+# End time: 03:38:43 on Apr 20,2023, Elapsed time: 0:03:55
+# Errors: 0, Warnings: 4
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful with warnings.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:40:00 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+quit -sim
+# End time: 03:41:15 on Apr 20,2023, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 3
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:42:17 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 2  Instance: /fetch/inst_cache
+add wave -position end sim:/fetch/pc_reg/*
+run
+noforce sim:/fetch/pc_reg/data_out
+run
+run
+run
+quit -sim
+# End time: 03:47:24 on Apr 20,2023, Elapsed time: 0:05:07
+# Errors: 0, Warnings: 4
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:48:30 on Apr 20,2023
+# Loading std.standard
+# ** Error: (vsim-13) Recompile work.fetch(fetch_arch) because work.pc_reg has changed.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./do_fetch.txt PAUSED at line 1
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:48:30 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 2  Instance: /fetch/inst_cache
+quit -sim
+# End time: 03:59:13 on Apr 20,2023, Elapsed time: 0:10:43
+# Errors: 1, Warnings: 8
+# Compile of mux4x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of generic_reg.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of Fetch.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# 6 compiles, 0 failed with no errors.
+do do_fetch.txt
+# vsim -gui work.fetch 
+# Start time: 03:59:39 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fetch(fetch_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.pc_reg(pc_reg_arch)
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
