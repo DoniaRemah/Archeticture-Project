@@ -44,7 +44,7 @@ end component;
 
     component branchingOp is 
 port  (
-    alu_enable:in std_logic;
+
     op_sel : in std_logic_vector (2 downto 0);
 	flags : in std_logic_vector (2 downto 0); 
     branching_res : out std_logic;
@@ -54,7 +54,7 @@ end component;
 
 component carryOp is 
 port  (
-    alu_enable:in std_logic;
+
     op_sel : in std_logic_vector (2 downto 0);
 	flags : in std_logic_vector (2 downto 0); 
     new_flags : out std_logic_vector (2 downto 0)
@@ -63,7 +63,6 @@ end component;
 
 component movOp is 
 port  (
-    alu_enable:in std_logic;
     op_sel : in std_logic_vector (2 downto 0);
     first_src : in std_logic_vector (15 downto 0); 
 	second_src : in std_logic_vector (15 downto 0); 
@@ -73,16 +72,27 @@ port  (
 );
 end component;
 
+component aluOp is 
+port  (
+    op_sel : in std_logic_vector (2 downto 0);
+    first_src : in std_logic_vector (15 downto 0); 
+	second_src : in std_logic_vector (15 downto 0); 
+	flags : in std_logic_vector (2 downto 0); 
+    aluOp_res : out std_logic_vector (15 downto 0);
+    new_flags : out std_logic_vector (2 downto 0)
+);
+end component;
+
     signal movOp_res_data , aluOp_res_data , final_res_data : std_logic_vector (15 downto 0);
     signal branchingOp_res_flags , carryOp_res_flags , movOp_res_flags , aluOp_res_flags ,  final_res_flags : std_logic_vector (2 downto 0);
     signal branch_cond : std_logic;
 
 begin
-    branching : branchingOp PORT MAP (alu_enable , op_sel , flags , branch_cond , branchingOp_res_flags);
-    carry : carryOp PORT MAP (alu_enable , op_sel , flags ,  carryOp_res_flags);
-    mov : movOp PORT MAP (alu_enable , op_sel , first_src , second_src, flags , movOp_res_data, movOp_res_flags);
+    branching : branchingOp PORT MAP ( op_sel , flags , branch_cond , branchingOp_res_flags);
+    carry : carryOp PORT MAP ( op_sel , flags ,  carryOp_res_flags);
+    mov : movOp PORT MAP ( op_sel , first_src , second_src, flags , movOp_res_data, movOp_res_flags);
+    aluoperation : aluOp PORT MAP ( op_sel , first_src , second_src, flags , aluOp_res_data, aluOp_res_flags);
 
-    
     data_res_mux21 : mux2x1 generic map(16) PORT MAP (movOp_res_data , aluOp_res_data , part_sel(0) , final_res_data);
     flags_res_mux41 : mux4x1 generic map(3) PORT MAP ( branchingOp_res_flags , carryOp_res_flags , movOp_res_flags , aluOp_res_flags , part_sel(1), part_sel(0) ,  final_res_flags);
 	
