@@ -10,7 +10,7 @@ entity mux4x1 is
         -- input data and output data are 16 bits 
         dataIn0, dataIn1,dataIn2,dataIn3 : in std_logic_vector(DATA_WIDTH-1 downto 0);
         -- selector is 1 bit
-        selector0, selector1: in std_logic;
+        selector1, selector0: in std_logic;
         dataOut : out std_logic_vector(DATA_WIDTH -1 downto 0));
 end mux4x1;
 
@@ -21,7 +21,7 @@ begin
         process (dataIn0, dataIn1,dataIn2,dataIn3, selector0,selector1)
         variable selector:std_logic_vector(1 downto 0);
         begin
-                selector := selector0 & selector1;
+                selector := selector1 & selector0;
                 if (selector = "00") then
                     dataOut <= dataIn0;
                 elsif (selector = "01") then
