@@ -512,3 +512,7 @@ do do_fetch.txt
 # Loading work.pc_reg(pc_reg_arch)
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /fetch/inst_cache
+quit -sim
+# End time: 04:14:32 on Apr 20,2023, Elapsed time: 0:14:53
+# Errors: 0, Warnings: 3
+# Compile of mux4x1.vhd was successful.

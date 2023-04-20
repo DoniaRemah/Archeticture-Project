@@ -43,15 +43,12 @@ signal pc_en: std_logic;
 signal pc_rst_value: std_logic_vector(15 downto 0);
 signal old_pc: std_logic_vector(15 downto 0);
 signal New_PC_mux_out:  std_logic_vector(15 downto 0);
+signal branching_call_sig: std_logic;
 
 begin
         inst_cache: entity work.instCache port map (old_pc ,instruction1,pc_rst_value);
         pc_reg: entity work.pc_reg port map(clk,rst,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
-        process (clk, rst)
-                
-        begin
-                
-
-        end process;
+        mux4x1: entity work.mux4x1 port map(New_PC,Jumped_call_address,Memory_returned_address,x"0000",branching_call_sig,propagated_ret_rti,New_PC_mux_out);
+        branching_call_sig <= Branching_sig or Call_sig;
 end Fetch_arch;
 
