@@ -3,12 +3,15 @@ USE IEEE.std_logic_1164.all;
 
 -- entity for dataIn0 4*1 mux
 entity mux4x1 is
+    generic (
+        DATA_WIDTH : integer := 16
+        );
         port (
         -- input data and output data are 16 bits 
-        dataIn0, dataIn1,dataIn2,dataIn3 : in std_logic_vector(15 downto 0);
+        dataIn0, dataIn1,dataIn2,dataIn3 : in std_logic_vector(DATA_WIDTH-1 downto 0);
         -- selector is 1 bit
         selector0, selector1: in std_logic;
-        dataOut : out std_logic_vector(15 downto 0));
+        dataOut : out std_logic_vector(DATA_WIDTH -1 downto 0));
 end mux4x1;
 
 
