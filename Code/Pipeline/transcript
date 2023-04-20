@@ -1,0 +1,258 @@
+# Compile of cache.mem failed with 1 errors.
+# Compile of Fetch.vhd failed with 6 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd failed with 1 errors.
+# 13 compiles, 3 failed with 8 errors.
+# Compile of cache.mem failed with 1 errors.
+# Compile of Fetch.vhd failed with 6 errors.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# 13 compiles, 2 failed with 7 errors.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:21:24 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/Hazard_sig
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position 4  sim:/pipeline/old_pc
+quit -sim
+# End time: 08:23:46 on Apr 20,2023, Elapsed time: 0:02:22
+# Errors: 0, Warnings: 3
+# Compile of pipeline.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:24:00 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/alu_enable
+add wave -position end  sim:/pipeline/branching_operation
+add wave -position end  sim:/pipeline/part_selector
+add wave -position end  sim:/pipeline/op_selector
+add wave -position end  sim:/pipeline/call_op
+add wave -position end  sim:/pipeline/read_address_sel
+add wave -position end  sim:/pipeline/write_address_sel
+add wave -position end  sim:/pipeline/data_written_sel
+add wave -position end  sim:/pipeline/mem_op
+add wave -position end  sim:/pipeline/mem_read
+add wave -position end  sim:/pipeline/mem_write
+add wave -position end  sim:/pipeline/data_bus_sel
+add wave -position end  sim:/pipeline/data_sel
+add wave -position end  sim:/pipeline/flag_sel
+add wave -position end  sim:/pipeline/in_data_sel
+add wave -position end  sim:/pipeline/reg_file_en
+add wave -position end  sim:/pipeline/flag_en
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+quit -sim
+# End time: 08:35:50 on Apr 20,2023, Elapsed time: 0:11:50
+# Errors: 0, Warnings: 3
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:36:04 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Hazard_sig
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+# WARNING: No extended dataflow license exists
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/propagated_ret_rti
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+quit -sim
+# End time: 08:47:38 on Apr 20,2023, Elapsed time: 0:11:34
+# Errors: 0, Warnings: 3
+# Compile of fetch_decode_buffer.vhd was successful.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 08:48:37 on Apr 20,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.control_unit(behavioral)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/buff_ins
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/branching_call_sig
+add wave -position end  sim:/pipeline/Hazard_sig
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+force -freeze sim:/pipeline/propagated_ret_rti 0 0
+force -freeze sim:/pipeline/branching_call_sig 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 2  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 10 ps  Iteration: 2  Instance: /pipeline/inst_cache
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 08:52:08 on Apr 20,2023, Elapsed time: 0:03:31
+# Errors: 0, Warnings: 6

@@ -22,11 +22,13 @@ PROCESS(clk)
 BEGIN
 IF rising_edge(clk) THEN
     if (hazard /='1' ) then
-        pc_out <= new_pc_in;
-        ins_out <= instruction_in;
+        -- pc_out <= new_pc_in;
+        -- ins_out <= instruction_in;
+        new_pc_out <= new_pc_in;
+        instruction_out <=instruction_in;
     end if;
 END IF;
 END PROCESS;
-    new_pc_out <= pc_out;
-    instruction_out <= ins_out;
+    -- new_pc_out <= pc_out;
+    -- instruction_out <= ins_out;
 END fetch_decode_buffer_arch;
