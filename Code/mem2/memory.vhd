@@ -60,8 +60,8 @@ begin
         if memOp = '1' then
             if memWrite = '1' then
                     -- write dataToBeWritten to writeAddress
-                    write_address_internal <= unsigned(writeAddress);
-                    memory_array(to_integer(write_address_internal)) <= dataToBeWritten;
+                    -- write_address_internal <= unsigned(writeAddress);
+                    memory_array(to_integer(unsigned(writeAddress))) <= dataToBeWritten;
                 -- interrupt
                 -- elsif dataBusSelector = '1' then
                 --     -- write dataToBeWritten to writeAddress and update flags

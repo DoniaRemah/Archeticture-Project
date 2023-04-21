@@ -24,7 +24,7 @@ begin
     begin
         if reset = '1' then   
             storedData <= (others => '0');
-        elsif rising_edge(clk) then     
+        elsif falling_edge(clk) then     
             if flagEnable = '1' then            
                 storedData <= WBFlags;          
             end if;
