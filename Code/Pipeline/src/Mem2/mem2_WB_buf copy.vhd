@@ -25,7 +25,9 @@ entity mem2_WB_buf is
         -- the mem flags are the read flags from the memory
         -- the alu flags are the new flags
         -- note: when reading the flags from the memory, take the most significant 3 bit
-        memFlags,ALUflags,wbAddress:out std_logic_vector(2 downto 0)
+        memFlags,ALUflags,wbAddress:out std_logic_vector(2 downto 0);
+        inport : in std_logic_vector(15 downto 0);
+        inportOut : out std_logic_vector(15 downto 0)
     );
 end mem2_WB_buf;
 
@@ -45,6 +47,7 @@ begin
             AluResult <= (others => '0');
             ALUflags <= (others => '0');
             wbAddress <= (others => '0');
+            inportOut <= (others => '0');
         elsif rising_edge(clk) then
             if writeEnable = '1' then
                 -- write the inputs to the corresponding outputs
@@ -58,6 +61,7 @@ begin
                 AluResult <= ALU_Imm;
                 ALUflags <= newFlags;
                 wbAddress <= RdAddress;
+                inportOut <= inport;
             end if;
         end if;
     end process;
