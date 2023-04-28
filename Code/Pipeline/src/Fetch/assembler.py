@@ -113,17 +113,14 @@ def main():
 # corresponding machine code to the output file.
 def toMachineCode(command, operands):
 
-    checkImmediate(command)
+    immediate_bit=checkImmediate(command)
     dst_bits=checkDst(command,operands)
     rs1_bits = checkRs1(command,operands)
     rs2_bits = checkRs2(command,operands)
 
-    immediate_bit = "0"
-    if immd == True:
-        immediate_bit = "1"
-
     cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
     cache_file.write(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+    # cache_file.write(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
 
 # This function takes in the command and checks whether the command
 # has an Rdst and which one it is.
@@ -176,6 +173,12 @@ def checkImmediate(command):
         immd = True
     else:
         immd = False
+
+    immediate_bit = "0"
+    if immd == True:
+        immediate_bit = "1"
+    return immediate_bit
+    
 
 
 if __name__ == "__main__":
