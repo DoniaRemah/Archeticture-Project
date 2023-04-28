@@ -57,15 +57,8 @@ dict_commands = {
 # This variable contains whether the current command has an rdst or not (whether it's the first op or not)
 first_rdst = True
 
-# This variable contains whether the current command has an rs1 or not.
-has_rs1 = False
-
-# This variable contains whether the current command has an rs2 or not.
-has_rs2 = False
-
 # This variable contains whether the current command has an immediate value or not.
 immd = False
-
 
 #Dictionary containing our Registers and their corresponding bit representations
 Registers={
@@ -78,8 +71,6 @@ Registers={
     "R6":"110",
     "R7":"111"
 }
-
-
 
 def main():
 
@@ -117,7 +108,6 @@ def main():
             #         print(operands)
             # else:
             #     print("NOP")
-
 
 # This function takes in the command, destination, rs1 and rs2 and outputs the
 # corresponding machine code to the output file.
