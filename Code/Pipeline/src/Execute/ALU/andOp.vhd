@@ -21,7 +21,7 @@ begin
 
     tempres <= first_src and second_src ;
 
-    zeroflag <= '1' when tempres <= x"0000" else '0' ;
+    zeroflag <= '1' when tempres = x"0000" else '0' ;
 
     carryflag <= flags(2);
 
