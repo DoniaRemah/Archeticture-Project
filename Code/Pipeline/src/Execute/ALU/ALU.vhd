@@ -32,14 +32,14 @@ end component;
 
     component mux4x1 is
         generic (
-            DATA_WIDTH : integer := 16
-            );
-            port (
-            -- input data and output data are 16 bits 
-            dataIn0, dataIn1,dataIn2,dataIn3 : in std_logic_vector(DATA_WIDTH-1 downto 0);
-            -- selector is 1 bit
-            selector0, selector1: in std_logic;
-            dataOut : out std_logic_vector(DATA_WIDTH -1 downto 0));
+        DATA_WIDTH : integer := 16
+        );
+        port (
+        -- input data and output data are 16 bits 
+        dataIn0, dataIn1,dataIn2,dataIn3 : in std_logic_vector(DATA_WIDTH-1 downto 0);
+        -- selector is 1 bit
+        selector1, selector0: in std_logic;
+        dataOut : out std_logic_vector(DATA_WIDTH -1 downto 0));
     end component;
 
     component branchingOp is 

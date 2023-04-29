@@ -11,8 +11,12 @@ end carryOp;
 
 Architecture ArchcarryOp of carryOp is
 
+signal  carryflag : std_logic ;
+
 begin
 
-    new_flags <= flags;
+    carryflag <= '1' when op_sel = "000" else '0' ;
+
+    new_flags <= carryflag & flags(1) & flags (0);
 
 end ArchcarryOp;
