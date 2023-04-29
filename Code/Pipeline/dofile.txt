@@ -1,0 +1,155 @@
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 11:34:38 on Apr 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# WARNING: No extended dataflow license exists
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/cache.mem /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/flag_reg/outFlags
+add wave -position 2  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Reg_File/memory_array
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/buff_ins
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/inport FFFE 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/pipeline/inport 0001 0
+run
+force -freeze sim:/pipeline/inport 000F 0
+run
+force -freeze sim:/pipeline/inport 00C8 0
+run
+force -freeze sim:/pipeline/inport 001F 0
+run
+force -freeze sim:/pipeline/inport 00FC 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run

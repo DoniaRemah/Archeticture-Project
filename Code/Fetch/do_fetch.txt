@@ -1,9 +1,0 @@
-vsim -gui work.fetch
-add wave -position end  sim:/fetch/clk
-add wave -position end  sim:/fetch/rst
-add wave -position end  sim:/fetch/pc_rst_value
-add wave -position end  sim:/fetch/old_pc
-force -freeze sim:/fetch/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/fetch/rst 1 0
-mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem /fetch/inst_cache/ram
-run 10ps

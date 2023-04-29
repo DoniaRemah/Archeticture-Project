@@ -1,8 +1,0 @@
-force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/pipeline/rst 1 0
-force -freeze sim:/pipeline/branching_call_sig 0 0
-noforce sim:/pipeline/propagated_ret_rti
-force -freeze sim:/pipeline/propagated_ret_rti 0 0
-force -freeze sim:/pipeline/Hazard_sig 0 0
-force -freeze sim:/pipeline/writeback_address 101 0
-force -freeze sim:/pipeline/writeback_data 1111111111111111111111 0

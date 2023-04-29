@@ -1,9 +1,0 @@
-mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem -update_properties /pipeline/inst_cache/ram
-mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem -update_properties /pipeline/memory/memory_array
-add wave -position end sim:/pipeline/*
-force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/pipeline/rst 1 0
-force -freeze sim:/pipeline/inport FFFE 0
-force -freeze sim:/pipeline/Hazard_sig 0 0
-run 10ps
-force -freeze sim:/pipeline/rst 0 0

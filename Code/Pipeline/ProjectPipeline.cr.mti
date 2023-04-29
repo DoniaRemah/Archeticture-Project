@@ -1,4 +1,73 @@
-C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/ALU.vhd
+C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/control.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/control.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Control_Unit
+-- Compiling architecture Behavioral of Control_Unit
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/WB/WB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/WB/WB.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity WB
+-- Compiling architecture Behavioral of WB
+-- Loading entity mux2x1
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ex_mem1_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ex_mem1_buf.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ex_mem1_buf
+-- Compiling architecture Behavioral of ex_mem1_buf
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/carryOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/carryOp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity carryOp
+-- Compiling architecture ArchcarryOp of carryOp
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/instCache.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/instCache.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity instCache
+-- Compiling architecture cache_arc of instCache
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/mem1_mem2_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/mem1_mem2_buf.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mem1_mem2_buf
+-- Compiling architecture Behavioral of mem1_mem2_buf
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/movOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/movOp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity movOp
+-- Compiling architecture ArchmovOp of movOp
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux8x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux8x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux8x1
+-- Compiling architecture mux8x1_arch of mux8x1
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/ALU.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/ALU.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -6,7 +75,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity ALU
 -- Compiling architecture ArchALU of ALU
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/execute.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/execute.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/execute.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,15 +83,42 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity execute
 -- Compiling architecture Archexecute of execute
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/fetch_decode_buffer.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/regFile.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/regFile.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity fetch_decode_buffer
--- Compiling architecture fetch_decode_buffer_arch of fetch_decode_buffer
+-- Loading package NUMERIC_STD
+-- Compiling entity regFile
+-- Compiling architecture behavioral of regFile
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/pipeline.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/pipeline.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pipeline
+-- Compiling architecture pipeline_arch of pipeline
+-- Loading package NUMERIC_STD
+-- Loading entity instCache
+-- Loading entity mux4x1
+-- Loading entity pc_reg
+-- Loading entity mux2x1
+-- Loading entity adder
+-- Loading entity fetch_decode_buffer
+-- Loading entity flagReg
+-- Loading entity regFile
+-- Loading entity ID_EX_buf
+-- Loading entity Control_Unit
+-- Loading entity execute
+-- Loading entity ex_mem1_buf
+-- Loading entity mem1
+-- Loading entity mem1_mem2_buf
+-- Loading entity memory
+-- Loading entity mem2_WB_buf
+-- Loading entity WB
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/mem1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/mem1.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -35,176 +131,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Loading entity sp_reg
 -- Loading entity adder
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/ID_EX_buf.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/fetch_decode_buffer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/fetch_decode_buffer.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ID_EX_buf
--- Compiling architecture Behavioral of ID_EX_buf
+-- Compiling entity fetch_decode_buffer
+-- Compiling architecture fetch_decode_buffer_arch of fetch_decode_buffer
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem2/memory.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity memory
--- Compiling architecture behavioral of memory
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem {0 {vlog -work work -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-** Error: (vlog-13069) C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/cache.mem(4): near "0": syntax error, unexpected INTEGER NUMBER, expecting class.
-
-} {3.0 4.0} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/aluOp.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity aluOp
--- Compiling architecture ArchaluOp of aluOp
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/control.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Control_Unit
--- Compiling architecture Behavioral of Control_Unit
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/inc.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity inc
--- Compiling architecture Archinc of inc
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/andOp.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity andOp
--- Compiling architecture ArchandOp of andOp
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux2x1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mux2x1
--- Compiling architecture mux2x1_arch of mux2x1
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/sp_reg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity sp_reg
--- Compiling architecture Behavioral of sp_reg
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/branching.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity branchingOp
--- Compiling architecture ArchbranchingOp of branchingOp
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/adder/adder.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity adder
--- Compiling architecture Behavioral of adder
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/pc_reg.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity pc_reg
--- Compiling architecture pc_reg_arch of pc_reg
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux4x1.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity mux4x1
--- Compiling architecture mux4x1_arch of mux4x1
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/WB/WB.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity WB
--- Compiling architecture Behavioral of WB
--- Loading entity mux2x1
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/regFile.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity regFile
--- Compiling architecture behavioral of regFile
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/mem2_WB_buf.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mem2_WB_buf
--- Compiling architecture Behavioral of mem2_WB_buf
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ex_mem1_buf.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity ex_mem1_buf
--- Compiling architecture Behavioral of ex_mem1_buf
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Fetch/src/instCache.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity instCache
--- Compiling architecture cache_arc of instCache
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/mem1/mem1_mem2_buf.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity mem1_mem2_buf
--- Compiling architecture Behavioral of mem1_mem2_buf
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/carryOp.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity carryOp
--- Compiling architecture ArchcarryOp of carryOp
-
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Decode/control/flagReg.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/flagReg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/flagReg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -213,20 +148,107 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity flagReg
 -- Compiling architecture Behavioral of flagReg
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Execute/ALU/movOp.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/pc_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Fetch/pc_reg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity movOp
--- Compiling architecture ArchmovOp of movOp
+-- Compiling entity pc_reg
+-- Compiling architecture pc_reg_arch of pc_reg
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/muxes/mux8x1.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
--- Compiling entity mux8x1
--- Compiling architecture mux8x1_arch of mux8x1
+-- Loading package NUMERIC_STD
+-- Compiling entity memory
+-- Compiling architecture behavioral of memory
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity aluOp
+-- Compiling architecture ArchaluOp of aluOp
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/ID_EX_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/ID_EX_buf.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ID_EX_buf
+-- Compiling architecture Behavioral of ID_EX_buf
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/inc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/inc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity inc
+-- Compiling architecture Archinc of inc
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/andOp.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/andOp.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity andOp
+-- Compiling architecture ArchandOp of andOp
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux2x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux2x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux2x1
+-- Compiling architecture mux2x1_arch of mux2x1
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/adder/adder.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/adder/adder.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity adder
+-- Compiling architecture Behavioral of adder
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/branching.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/branching.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity branchingOp
+-- Compiling architecture ArchbranchingOp of branchingOp
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity sp_reg
+-- Compiling architecture Behavioral of sp_reg
+
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux4x1.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/muxes/mux4x1.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mux4x1
+-- Compiling architecture mux4x1_arch of mux4x1
+
+} {} {}} {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/mem2_WB_buf copy.vhd} {1 {vcom -work work -2002 -explicit -stats=none {C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/mem2_WB_buf copy.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity mem2_WB_buf
+-- Compiling architecture Behavioral of mem2_WB_buf
 
 } {} {}}
