@@ -72,8 +72,11 @@ Registers={
     "R7":"111"
 }
 
+Location_Counter=0
+
 def main():
 
+    global Location_Counter
     # Removing the target file if already existing
     if os.path.exists("Code\Pipeline\src\Fetch\Testcache.mem"):
         os.remove("Code\Pipeline\src\Fetch\Testcache.mem")
@@ -87,20 +90,27 @@ def main():
     for line in assembly_ins:
 
         # checking if line is a comment or space
-        if ord(line[0]) < 65 or ord(line[0]) > 90:
+        if line[0] ==".":
+            ord_split = line.split(" ", 2)
+            while Location_Counter != int(ord_split[1]):
+                cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
+                cache_file.write("\n")
+                Location_Counter = Location_Counter+1
+            continue
+                
+        elif ord(line[0]) < 65 or ord(line[0]) > 90:
             continue
 
+        # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
+        line_split = line.split(" ", 2)
+        command = line_split[0]
+        
+        if len(line_split) > 1:
+            operands = line_split[1].split(',')
         else:
-            # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
-            line_split = line.split(" ", 2)
-            command = line_split[0]
-            
-            if len(line_split) > 1:
-                operands = line_split[1].split(',')
-            else:
-                operands = [""]
+            operands = [""]
 
-            toMachineCode(command,operands)
+        toMachineCode(command,operands)
             # if len(operands) > 0:
             #     if operands[0] == "":
             #         print("NOP")
@@ -120,6 +130,16 @@ def toMachineCode(command, operands):
 
     cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
     cache_file.write(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+    if immd == True:
+        
+        if command == "LDM":
+            hex_value = operands[1]
+        elif command == "IADD":
+            hex_value = operands[2]
+
+        immediate_Value = bin(int(hex_value, 16)).zfill(16)
+        cache_file.write(immediate_Value.split('b')[1]+"\n")
+
     # cache_file.write(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
 
 # This function takes in the command and checks whether the command
