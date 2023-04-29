@@ -73,17 +73,18 @@ Registers={
 }
 
 Location_Counter=0
-
+org_memory_value=0
 def main():
 
     global Location_Counter
+    global org_memory_value
     # Removing the target file if already existing
     if os.path.exists("Code\Pipeline\src\Fetch\Testcache.mem"):
         os.remove("Code\Pipeline\src\Fetch\Testcache.mem")
 
     # Opening assembly instructions
     assembly_ins = open(
-        "Code\Pipeline\src\Fetch\TestcasesPhaseOne.txt", encoding='utf-8-sig')
+        "Code\Pipeline\src\Fetch\TestcasesPhaseTwo.txt", encoding='utf-8-sig')
 
     # Looping over each line
 
@@ -91,22 +92,27 @@ def main():
 
         # checking if line is a comment or space
         if line[0] ==".":
-            ord_split = line.split(" ", 2)
-            while Location_Counter != int(ord_split[1]):
+            ord_split = line.split(" ", 1)
+            ord_split_value = ord_split[1].split("\t", 1)
+            while Location_Counter != int(ord_split_value[0]):
                 cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
                 cache_file.write("\n")
                 Location_Counter = Location_Counter+1
             continue
-                
+        elif ord(line[0]) >= 48 and ord(line[0]) <=57:
+            address_value = bin(int(line.split("\t")[0], 16)).zfill(16)
+            cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
+            cache_file.write(address_value.split('b')[1]+"\n")
         elif ord(line[0]) < 65 or ord(line[0]) > 90:
             continue
 
         # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
-        line_split = line.split(" ", 2)
+        line_split = line.split(" ", 1)
         command = line_split[0]
         
         if len(line_split) > 1:
-            operands = line_split[1].split(',')
+            pre_operands = line_split[1].split("\t")
+            operands = pre_operands[0].split(',')
         else:
             operands = [""]
 
