@@ -1,4 +1,15 @@
-﻿.org 0						#means the next line is at address 0 (hex)
+﻿#########################################################
+#        All numbers are in hex format   				#
+#########################################################
+#########################################################
+#        We always start by reset signal 				#
+#########################################################
+#         This is a commented line
+#        You should ignore empty lines and commented ones
+# ---------- Don't forget to Reset before you start anything ---------- #
+
+
+.org 0						#means the next line is at address 0 (hex)
 100							# data value 100hex so memory content M[0]=100h
 .org 1
 20							# data value 20hex so memory content M[1]=20h

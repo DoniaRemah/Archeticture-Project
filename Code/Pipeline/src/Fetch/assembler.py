@@ -137,11 +137,11 @@ def main():
         line_split = line.split(" ", 1)
 
         #Splitting command on t if it's a command with no operands
-        command = line_split[0].split("\t",1)[0]
+        command = line_split[0].split("\t",1)[0].strip()
         
         if command not in no_Operands:
-            pre_operands = line_split[1].split("\t")
-            operands = pre_operands[0].split(',')
+            pre_operands = line_split[1].split("\t")[0]
+            operands = pre_operands.strip().split(',')
         else:
             operands = [""]
 
@@ -164,12 +164,14 @@ def toMachineCode(command, operands):
     with open("Code\Pipeline\src\Fetch\Testcache.mem", "r", encoding='utf-8') as file:
         data = file.readlines()
         if org_memory_value <= len(data)-1:
-            data[org_memory_value]= dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n"
+            # data[org_memory_value]= dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n"
+            data[org_memory_value]= dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n"
             with open('Code\Pipeline\src\Fetch\Testcache.mem', 'w', encoding='utf-8') as file:
                 file.writelines(data)
         else:
             with open('Code\Pipeline\src\Fetch\Testcache.mem', 'a', encoding='utf-8') as file:
-                file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
         Lines_Counter = Lines_Counter+1
         org_memory_value = org_memory_value+1
     
@@ -204,15 +206,13 @@ def toMachineCode(command, operands):
                         org_memory_value = org_memory_value+1
             else:
                 with open('Code\Pipeline\src\Fetch\Testcache.mem', 'a', encoding='utf-8') as file:
-                    file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                    # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                    file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
                     Lines_Counter = Lines_Counter+1
                     org_memory_value = org_memory_value+1
         
         
 
-
-
-    # cache_file.write(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
 
 # This function takes in the command and checks whether the command
 # has an Rdst and which one it is.
