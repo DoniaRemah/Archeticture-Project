@@ -238,10 +238,10 @@ begin
         );
         spwe_circuit_inst: entity work.spWE_circuit
         port map (
-            readAddressSelector  => readAddressSelOut_mem2,
-            writeAddressSelector => writeAddressSelOut_mem2,
-            memOP                => memOpOut_mem2,
-            spWE                 => sp_write_en_after_circuit
+                readAddressSelector  => readAddressSelOut_mem2,
+                writeAddressSelector => writeAddressSelOut_mem2,
+                memOP                => memOpOut_mem2,
+                spWE                 => sp_write_en_after_circuit
         );
 
         mem1_mem2_buffer: entity work.mem1_mem2_buf port map(clk,rst,'1',interrupt,dataSelectorOut_ex,inDataSelectorOut_ex,flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
@@ -251,7 +251,7 @@ begin
         dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 ,
         RdAddressOut_mem2,newFlagsOut_mem2,inportOUTmem1,inportOUTmem2);
 
-        memory: entity work.memory port map (clk,rst,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
+        memory: entity work.memory port map (clk,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
         dataread_memory,flagsread_memory);
         
 
