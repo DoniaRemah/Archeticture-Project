@@ -106,6 +106,8 @@ signal data_tobe_written_out_mem1: std_logic_vector(15 downto 0);
 signal write_adress_out_mem1: std_logic_vector(15 downto 0);
 signal read_address_out_mem1: std_logic_vector(15 downto 0);
 
+signal Stack_Op: std_logic;
+
 --// Mem2 Outputs
 
 signal dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, regFileEnableOut_mem2: std_logic;
@@ -251,11 +253,11 @@ begin
         dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 ,
         RdAddressOut_mem2,newFlagsOut_mem2,inportOUTmem1,inportOUTmem2);
 
-        memory: entity work.memory port map (clk,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
+        Stack_Op <= readAddressSelOut_mem2 or writeAddressSelOut_mem2;
+
+        memory: entity work.memory port map (clk,Stack_Op,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
         dataread_memory,flagsread_memory);
         
-
-
         mem2_Wb_Buffer: entity work.mem2_WB_buf port map (clk,rst,'1',interrupt,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, 
         regFileEnableOut_mem2,dataread_memory,ALU_ImmOut_mem2,RdAddressOut_mem2,newFlagsOut_mem2,flagsread_memory,dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb, flag_en_wb, reg_file_en_wb,
         memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address,inportOUTmem2,inportOUTwb);

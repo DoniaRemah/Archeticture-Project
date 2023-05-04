@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity memory is
     port (
         clk: in std_logic;
-
+        Stack_Op: in std_logic;
         memOp: in std_logic;
         memRead: in std_logic;
         memWrite: in std_logic;
@@ -44,7 +44,9 @@ begin
     end if;
 end process;
 
-    dataRead <= memory_array(to_integer(unsigned(readAddress))) when memOp = '1' and memRead = '1' and dataBusSelector = '0' else (others => '0');
+    dataRead <= memory_array(to_integer(unsigned(readAddress))) when memOp = '1' and memRead = '1' and dataBusSelector = '0' and Stack_Op = '0' else 
+    memory_array(to_integer(unsigned(readAddress))+2) when memOp = '1' and memRead = '1' and dataBusSelector = '1' and Stack_Op = '1'
+    else (others => '0');
     
-    flagsRead <= memory_array(to_integer(unsigned(readAddress))+1) when memOp = '1' and memRead = '1' and dataBusSelector = '1' else (others => '0');
+    flagsRead <= memory_array(to_integer(unsigned(readAddress))+1)(15 downto 13) when memOp = '1' and memRead = '1' and dataBusSelector = '1' else (others => '0');
 end architecture behavioral;

@@ -1,14 +1,12 @@
-# Compile of pipeline.vhd failed with 5 errors.
 # Compile of WB.vhd was successful.
 # Compile of mux2x1.vhd was successful.
 # Compile of mux4x1.vhd was successful.
 # Compile of mux8x1.vhd was successful.
 # Compile of mem2_WB_buf copy.vhd was successful.
-# Compile of memory.vhd was successful.
+# Compile of memory.vhd was successful with warnings.
 # Compile of mem1.vhd was successful.
 # Compile of mem1_mem2_buf.vhd was successful.
 # Compile of sp_reg.vhd was successful.
-# Compile of Fetch.vhd failed with 6 errors.
 # Compile of fetch_decode_buffer.vhd was successful.
 # Compile of instCache.vhd was successful.
 # Compile of pc_reg.vhd was successful.
@@ -22,353 +20,413 @@
 # Compile of inc.vhd was successful.
 # Compile of movOp.vhd was successful.
 # Compile of control.vhd was successful.
-# Compile of decode.vhd failed with 1 errors.
 # Compile of flagReg.vhd was successful.
 # Compile of ID_EX_buf.vhd was successful.
 # Compile of regFile.vhd was successful.
-# Compile of regFile_tb.vhd failed with 21 errors.
 # Compile of adder.vhd was successful.
-# 30 compiles, 4 failed with 33 errors.
 # Compile of pipeline.vhd was successful.
-# Compile of WB.vhd was successful.
-# Compile of mux2x1.vhd was successful.
-# Compile of mux4x1.vhd was successful.
-# Compile of mux8x1.vhd was successful.
-# Compile of mem2_WB_buf copy.vhd was successful.
-# Compile of memory.vhd was successful.
-# Compile of mem1.vhd was successful.
-# Compile of mem1_mem2_buf.vhd was successful.
-# Compile of sp_reg.vhd was successful.
-# Compile of Fetch.vhd failed with 7 errors.
-# Compile of fetch_decode_buffer.vhd was successful.
-# Compile of instCache.vhd was successful.
-# Compile of pc_reg.vhd was successful.
-# Compile of ex_mem1_buf.vhd was successful.
-# Compile of execute.vhd was successful.
-# Compile of ALU.vhd was successful.
-# Compile of aluOp.vhd was successful.
-# Compile of andOp.vhd was successful.
-# Compile of branching.vhd was successful.
-# Compile of carryOp.vhd was successful.
-# Compile of inc.vhd was successful.
-# Compile of movOp.vhd was successful.
-# Compile of control.vhd was successful.
-# Compile of decode.vhd failed with 1 errors.
-# Compile of flagReg.vhd was successful.
-# Compile of ID_EX_buf.vhd was successful.
-# Compile of regFile.vhd was successful.
-# Compile of adder.vhd was successful.
-# 29 compiles, 2 failed with 8 errors.
-# Compile of pipeline.vhd was successful.
-# Compile of WB.vhd was successful.
-# Compile of mux2x1.vhd was successful.
-# Compile of mux4x1.vhd was successful.
-# Compile of mux8x1.vhd was successful.
-# Compile of mem2_WB_buf copy.vhd was successful.
-# Compile of memory.vhd was successful.
-# Compile of mem1.vhd was successful.
-# Compile of mem1_mem2_buf.vhd was successful.
-# Compile of sp_reg.vhd was successful.
-# Compile of fetch_decode_buffer.vhd was successful.
-# Compile of instCache.vhd was successful.
-# Compile of pc_reg.vhd was successful.
-# Compile of ex_mem1_buf.vhd was successful.
-# Compile of execute.vhd was successful.
-# Compile of ALU.vhd was successful.
-# Compile of aluOp.vhd was successful.
-# Compile of andOp.vhd was successful.
-# Compile of branching.vhd was successful.
-# Compile of carryOp.vhd was successful.
-# Compile of inc.vhd was successful.
-# Compile of movOp.vhd was successful.
-# Compile of control.vhd was successful.
-# Compile of flagReg.vhd was successful.
-# Compile of ID_EX_buf.vhd was successful.
-# Compile of regFile.vhd was successful.
-# Compile of adder.vhd was successful.
-# 27 compiles, 0 failed with no errors.
-do dofile.txt
-# vsim -gui work.pipeline 
-# Start time: 03:16:34 on Apr 29,2023
+# Compile of spWE_circuit.vhd was successful.
+# 28 compiles, 0 failed with no errors.
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 21:51:53 on May 04,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.pipeline(pipeline_arch)
-# Loading work.instcache(cache_arc)
-# Loading work.mux4x1(mux4x1_arch)
-# Loading work.pc_reg(pc_reg_arch)
-# Loading work.mux2x1(mux2x1_arch)
-# Loading work.adder(behavioral)
-# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
-# Loading work.flagreg(behavioral)
-# Loading work.regfile(behavioral)
-# Loading work.id_ex_buf(behavioral)
-# Loading work.control_unit(behavioral)
-# Loading work.execute(archexecute)
-# Loading work.alu(archalu)
-# Loading work.branchingop(archbranchingop)
-# Loading work.carryop(archcarryop)
-# Loading work.movop(archmovop)
-# Loading work.aluop(archaluop)
-# Loading work.inc(archinc)
-# Loading work.andop(archandop)
-# Loading work.ex_mem1_buf(behavioral)
-# Loading work.mem1(behavioral)
-# Loading work.mux8x1(mux8x1_arch)
-# Loading work.sp_reg(behavioral)
-# Loading work.mem1_mem2_buf(behavioral)
 # Loading work.memory(behavioral)
-# Loading work.mem2_wb_buf(behavioral)
-# Loading work.wb(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlft406zz2".
+#           Attempting to use alternate WLF file "./wlftngbf2d".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft406zz2
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Fatal: (vsim-3734) Index value 65534 is out of range 0 to 1023.
-#    Time: 315 ps  Iteration: 0  Process: /pipeline/memory/line__39 File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd
-# Fatal error in Process line__39 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 64
+#           Using alternate file: ./wlftngbf2d
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/dataBusSelector 0 0
+force -freeze sim:/memory/memRead 0 0
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/dataToBeWritten AAAA 0
+force -freeze sim:/memory/writeAddress 0000 0
+force -freeze sim:/memory/newFlags 1 0
+run
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/memWrite 0 0
+force -freeze sim:/memory/readAddress 0000 0
+run
+force -freeze sim:/memory/dataBusSelector 1 0
+force -freeze sim:/memory/dataToBeWritten BBBB 0
+force -freeze sim:/memory/writeAddress 0001 0
+force -freeze sim:/memory/memRead 0 0
+force -freeze sim:/memory/memWrite 1 0
+run
+force -freeze sim:/memory/memRead {} 0
+# ** UI-Msg: (vsim-4026) Value "" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: {} 0.
 # 
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd 64 Process line__39
-# 
-do dofile.txt
-# End time: 03:17:40 on Apr 29,2023, Elapsed time: 0:01:06
-# Errors: 1, Warnings: 29
-# vsim -gui work.pipeline 
-# Start time: 03:17:40 on Apr 29,2023
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/memWrite 0 0
+quit -sim
+# End time: 22:11:03 on May 04,2023, Elapsed time: 0:19:10
+# Errors: 0, Warnings: 4
+# Compile of memory.vhd was successful with warnings.
+# Compile of pipeline.vhd was successful.
+# Compile of memory.vhd was successful with warnings.
+# Compile of memory.vhd was successful.
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 22:17:32 on May 04,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.pipeline(pipeline_arch)
-# Loading work.instcache(cache_arc)
-# Loading work.mux4x1(mux4x1_arch)
-# Loading work.pc_reg(pc_reg_arch)
-# Loading work.mux2x1(mux2x1_arch)
-# Loading work.adder(behavioral)
-# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
-# Loading work.flagreg(behavioral)
-# Loading work.regfile(behavioral)
-# Loading work.id_ex_buf(behavioral)
-# Loading work.control_unit(behavioral)
-# Loading work.execute(archexecute)
-# Loading work.alu(archalu)
-# Loading work.branchingop(archbranchingop)
-# Loading work.carryop(archcarryop)
-# Loading work.movop(archmovop)
-# Loading work.aluop(archaluop)
-# Loading work.inc(archinc)
-# Loading work.andop(archandop)
-# Loading work.ex_mem1_buf(behavioral)
-# Loading work.mem1(behavioral)
-# Loading work.mux8x1(mux8x1_arch)
-# Loading work.sp_reg(behavioral)
-# Loading work.mem1_mem2_buf(behavioral)
 # Loading work.memory(behavioral)
-# Loading work.mem2_wb_buf(behavioral)
-# Loading work.wb(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/Stack_Op
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlftg4jr0h".
+#           Attempting to use alternate WLF file "./wlft6ztm5v".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg4jr0h
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# End time: 03:21:17 on Apr 29,2023, Elapsed time: 0:03:37
-# Errors: 0, Warnings: 19
+#           Using alternate file: ./wlft6ztm5v
+force -freeze sim:/memory/clk {} 0
+# ** UI-Msg: (vsim-4026) Value "" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: {} 0.
+# 
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/dataBusSelector 0 0
+force -freeze sim:/memory/dataToBeWritten AAAA 0
+force -freeze sim:/memory/writeAddress 0000 0
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10PS
+force -freeze sim:/memory/clk 10ps 0
+# ** UI-Msg: (vsim-4026) Value "10ps" does not represent a literal of the enumeration type.
+# ** UI-Msg: (vsim-4011) Invalid force value: 10ps 0.
+# 
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 0 0
+run
+run
+quit -sim
+# End time: 22:20:10 on May 04,2023, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 7
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 22:20:23 on May 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/Stack_Op
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftna83qt".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftna83qt
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 0 0
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/dataBusSelector 0 0
+force -freeze sim:/memory/dataToBeWritten AAAA 0
+force -freeze sim:/memory/writeAddress 0000 0
+run
+run
+# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 32
+step
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+run
+# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 32
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+run
+# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 34
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 5 ps.
+step -over
+step -over -current
+# Break key hit
+quit -sim
+# End time: 22:27:16 on May 04,2023, Elapsed time: 0:06:53
+# Errors: 0, Warnings: 3
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 22:27:53 on May 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/Stack_Op
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft8hggs0".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft8hggs0
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 0 0
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/dataBusSelector 0 0
+force -freeze sim:/memory/dataToBeWritten AAAA 0
+force -freeze sim:/memory/writeAddress 0000 0
+run
+# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 37
+step
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step -current
+# ** UI-Msg: (vsim-12081) The specified scope, sim:/memory, is not a process or thread.
+# 
+run
+# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 37
+step
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 0 0
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/dataBusSelector 0 0
+force -freeze sim:/memory/dataToBeWritten AAAA 0
+force -freeze sim:/memory/writeAddress 0000 0
+run
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/memWrite 0 0
+force -freeze sim:/memory/readAddress 0000 0
+step
+step
+step -over
+# Next activity is in 5 ps.
+step
+restart -f
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(9)
+mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(10)
+force -freeze sim:/memory/Stack_Op 1 0
+quit -sim
+# End time: 22:35:27 on May 04,2023, Elapsed time: 0:07:34
+# Errors: 0, Warnings: 1
+# Compile of memory.vhd was successful.
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 22:36:12 on May 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/Stack_Op
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftvnehny".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftvnehny
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 1 0
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/dataBusSelector 1 0
+force -freeze sim:/memory/readAddress 0008 0
+mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(9)
+mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(10)
+run
+quit -sim
+# End time: 22:38:23 on May 04,2023, Elapsed time: 0:02:11
+# Errors: 0, Warnings: 4
+# Compile of memory.vhd was successful.
+vsim -gui work.memory
+# vsim -gui work.memory 
+# Start time: 22:38:39 on May 04,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.memory(behavioral)
+add wave -position end  sim:/memory/clk
+add wave -position end  sim:/memory/Stack_Op
+add wave -position end  sim:/memory/memOp
+add wave -position end  sim:/memory/memRead
+add wave -position end  sim:/memory/memWrite
+add wave -position end  sim:/memory/dataBusSelector
+add wave -position end  sim:/memory/dataToBeWritten
+add wave -position end  sim:/memory/writeAddress
+add wave -position end  sim:/memory/readAddress
+add wave -position end  sim:/memory/newFlags
+add wave -position end  sim:/memory/dataRead
+add wave -position end  sim:/memory/flagsRead
+add wave -position end  sim:/memory/memory_array
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft6y14e3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft6y14e3
+force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/memory/Stack_Op 1 0
+force -freeze sim:/memory/memOp 1 0
+force -freeze sim:/memory/memRead 1 0
+force -freeze sim:/memory/dataBusSelector 1 0
+force -freeze sim:/memory/readAddress 0008 0
+mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(9)
+mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(10)
+run
+force -freeze sim:/memory/memWrite 1 0
+force -freeze sim:/memory/memRead 0 0
+force -freeze sim:/memory/dataToBeWritten BBBB 0
+force -freeze sim:/memory/writeAddress 0009 0
+force -freeze sim:/memory/newFlags 3 0
+run
