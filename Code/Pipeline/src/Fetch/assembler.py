@@ -1,4 +1,5 @@
 import os
+import sys
 
 # This is an assembler that converts assembly code into machine language in accordance with
 # our designs contained within this project.
@@ -72,64 +73,116 @@ Registers={
     "R7":"111"
 }
 
-Location_Counter=0
+no_Operands={"RTI","RET","NOP","SETC","CLRC"}
 
+Lines_Counter=0
+org_memory_value=0
 def main():
 
-    global Location_Counter
+    global Lines_Counter
+    global org_memory_value
     # Removing the target file if already existing
-    if os.path.exists("Code\Pipeline\src\Fetch\Testcache.mem"):
-        os.remove("Code\Pipeline\src\Fetch\Testcache.mem")
+    if os.path.exists("Testcache.mem"):
+        os.remove("Testcache.mem")
 
     # Opening assembly instructions
-    assembly_ins = open(
-        "Code\Pipeline\src\Fetch\TestcasesPhaseOne.txt", encoding='utf-8-sig')
-
+    assembly_file_dir = "TestcasesPhaseTwo.asm"
+    assembly_ins = open(assembly_file_dir, encoding='utf-8-sig')
+    
+    #Creating File to write in
+    with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+        cache_file.write("xxxxxxxxxxxxxxxx\n")
+        Lines_Counter = Lines_Counter+1
     # Looping over each line
 
     for line in assembly_ins:
 
-        # checking if line is a comment or space
+        #Checking if command is .org and looping till we reach the required location
         if line[0] ==".":
-            ord_split = line.split(" ", 2)
-            while Location_Counter != int(ord_split[1]):
-                cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
-                cache_file.write("\n")
-                Location_Counter = Location_Counter+1
-            continue
-                
-        elif ord(line[0]) < 65 or ord(line[0]) > 90:
+            ord_split = line.split(" ", 1)
+            ord_split_value = ord_split[1].split("\t", 1)
+            while org_memory_value != int(ord_split_value[0],16):
+                if org_memory_value <= int(ord_split_value[0],16):
+                    with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+                        cache_file.write("xxxxxxxxxxxxxxxx\n")
+                    Lines_Counter = Lines_Counter+1
+                    org_memory_value = org_memory_value+1
+                else:
+                    org_memory_value = int(ord_split_value[0],16)
             continue
 
-        # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
-        line_split = line.split(" ", 2)
-        command = line_split[0]
+        #Checking if the value is a hex number 
+        elif ord(line[0]) >= 48 and ord(line[0]) <=57:
+            address_value = bin(int(line.split("\t")[0], 16))[2:].zfill(16)
+
+            #Writing in the specified memory location
+            with open("Testcache.mem", "r", encoding='utf-8') as file:
+                data = file.readlines()
+                data[org_memory_value]= address_value+"\n"
+            
+            with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                file.writelines(data)
+            
+            with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+                cache_file.write("xxxxxxxxxxxxxxxx\n")
+                Lines_Counter = Lines_Counter+1
+                org_memory_value = org_memory_value+1
+            continue
+
+        # checking if line is a comment or space
+        elif ord(line[0]) < 65 or ord(line[0]) > 90:
+            continue
         
-        if len(line_split) > 1:
-            operands = line_split[1].split(',')
+        # NORMAL INSTRUCTION
+        # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
+        line_split = line.split(" ", 1)
+
+        #Splitting command on t if it's a command with no operands
+        command = line_split[0].split("\t",1)[0].strip()
+        
+        if command not in no_Operands:
+            pre_operands = line_split[1].split("\t")[0]
+            operands = pre_operands.strip().split(',')
         else:
             operands = [""]
 
         toMachineCode(command,operands)
-            # if len(operands) > 0:
-            #     if operands[0] == "":
-            #         print("NOP")
-            #     else:
-            #         print(operands)
-            # else:
-            #     print("NOP")
+    cache_file.close
+
 
 # This function takes in the command, destination, rs1 and rs2 and outputs the
 # corresponding machine code to the output file.
 def toMachineCode(command, operands):
 
+    global Lines_Counter
+    global org_memory_value 
     immediate_bit=checkImmediate(command)
     dst_bits=checkDst(command,operands)
     rs1_bits = checkRs1(command,operands)
     rs2_bits = checkRs2(command,operands)
 
-    cache_file = open("Code\Pipeline\src\Fetch\Testcache.mem", "a")
-    cache_file.write(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+        #Writing in the specified memory location
+    with open("Testcache.mem", "r", encoding='utf-8') as file:
+        data = file.readlines()
+        if org_memory_value <= len(data)-1:
+            # data[org_memory_value]= di"\n""xxxxxxxxxxxxxxxx\n"ct_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n"
+            data[org_memory_value]= dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n"
+            with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                file.writelines(data)
+        else:
+            with open("Testcache.mem", 'a', encoding='utf-8') as file:
+                # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
+        Lines_Counter = Lines_Counter+1
+        org_memory_value = org_memory_value+1
+    
+    
+
+    # cache_file = open("Testcache.mem", "a")
+    # cache_file.write(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+    # Lines_Counter = Lines_Counter+1
+    # org_memory_value = org_memory_value+1
+
     if immd == True:
         
         if command == "LDM":
@@ -137,10 +190,30 @@ def toMachineCode(command, operands):
         elif command == "IADD":
             hex_value = operands[2]
 
-        immediate_Value = bin(int(hex_value, 16)).zfill(16)
-        cache_file.write(immediate_Value.split('b')[1]+"\n")
+        immediate_Value = bin(int(hex_value, 16))[2:].zfill(16)
+        #Writing in the specified memory location
+        
 
-    # cache_file.write(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
+        with open("Testcache.mem", "r", encoding='utf-8') as file:
+            data = file.readlines()
+
+            if org_memory_value <= len(data)-1:
+                data[org_memory_value]= immediate_Value+"\n"
+                with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                    file.writelines(data)
+                    with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                        file.writelines(data)
+                        Lines_Counter = Lines_Counter+1
+                        org_memory_value = org_memory_value+1
+            else:
+                with open("Testcache.mem", 'a', encoding='utf-8') as file:
+                    # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
+                    file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
+                    Lines_Counter = Lines_Counter+1
+                    org_memory_value = org_memory_value+1
+        
+        
+
 
 # This function takes in the command and checks whether the command
 # has an Rdst and which one it is.
@@ -157,7 +230,9 @@ def checkDst(command,operands):
         first_rdst = True
 
     if first_rdst == True and operands[0]!= "":
+        first_rdst = False
         return Registers[operands[0]]
+        first_rdst = False
     else:
         return "000"
 

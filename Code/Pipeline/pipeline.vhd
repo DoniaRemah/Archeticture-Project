@@ -106,6 +106,8 @@ signal data_tobe_written_out_mem1: std_logic_vector(15 downto 0);
 signal write_adress_out_mem1: std_logic_vector(15 downto 0);
 signal read_address_out_mem1: std_logic_vector(15 downto 0);
 
+signal Stack_Op: std_logic;
+
 --// Mem2 Outputs
 
 signal dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, regFileEnableOut_mem2: std_logic;
@@ -131,6 +133,19 @@ signal inportOUTde , inportOUTex , inportOUTmem1 , inportOUTmem2 , inportOUTwb:s
 
 signal flag_en_wb : std_logic;
 
+-- mux 8x1 signals
+signal mux8x1_out: std_logic_vector(15 downto 0);
+
+-- adder
+signal newSPfromAdder: std_logic_vector(15 downto 0);
+signal oldSPtoAdder: std_logic_vector(15 downto 0);
+
+-- sp write enable signal
+signal sp_write_en_after_circuit: std_logic;
+
+-- mux8x1 selector
+signal mux8x1_selector: std_logic_vector(2 downto 0);
+
 
 begin
         -- // Fetching Components
@@ -147,6 +162,10 @@ begin
         Freeze_sig <= xor_value and not_call_branching;
         Flush_sig <= Branching_sig or call_op;
         pc_en <= not Hazard_sig;
+
+
+        -- mux 8x1
+        mux8x1_selector<=dataBusSelectorOut_mem2&readAddressSelOut_mem2&writeAddressSelOut_mem2;
 
         fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
         
@@ -178,8 +197,54 @@ begin
         ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex,inportOUTex,inportOUTmem1);
 
 
-        mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
-        rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
+        -- mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
+        -- rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
+        mem1: entity work.mem1
+        port map(
+                readAddressSel => readAddressSelOut_ex,
+                writeAddressSel => writeAddressSelOut_ex,
+                dataWrittenSel => dataWrittenSelOut_ex,
+                newPCAddress=> newPC_address_out_ex,
+                rs1Data => rs1_data_Out_ex,
+                rs2Data => rs2_data_Out_ex,
+                -- The sp will be taken from the sp register
+                SP=>oldSPtoAdder,
+                dataToBeWrittenOut => data_tobe_written_out_mem1,
+                writeAddressOut => write_adress_out_mem1,
+                readAddressOut => read_address_out_mem1
+        );
+
+        mux8x1: entity work.mux8x1 
+        port map(
+                selector=>mux8x1_selector,
+                dataOut=>mux8x1_out
+        );
+
+        adderAftermux8x1: entity work.adder
+        port map(
+                A=>mux8x1_out,
+                -- old sp from sp reg
+                B=>oldSPtoAdder,
+                -- new sp to sp reg
+                C=>newSPfromAdder
+        );
+
+        sp_reg: entity work.sp_reg
+        port map(
+                clk=>clk,
+                reset=>rst,
+                -- circuit from mem2
+                writeEnable=>sp_write_en_after_circuit,
+                dataIn=>newSPfromAdder,
+                dataOut=>oldSPtoAdder
+        );
+        spwe_circuit_inst: entity work.spWE_circuit
+        port map (
+                readAddressSelector  => readAddressSelOut_mem2,
+                writeAddressSelector => writeAddressSelOut_mem2,
+                memOP                => memOpOut_mem2,
+                spWE                 => sp_write_en_after_circuit
+        );
 
         mem1_mem2_buffer: entity work.mem1_mem2_buf port map(clk,rst,'1',interrupt,dataSelectorOut_ex,inDataSelectorOut_ex,flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex, data_tobe_written_out_mem1,
@@ -188,11 +253,11 @@ begin
         dataToBeWrittenOut_mem2, ALU_ImmOut_mem2, writeAddressOut_mem2, readAddressOut_mem2 ,
         RdAddressOut_mem2,newFlagsOut_mem2,inportOUTmem1,inportOUTmem2);
 
-        memory: entity work.memory port map (clk,rst,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
+        Stack_Op <= readAddressSelOut_mem2 or writeAddressSelOut_mem2;
+
+        memory: entity work.memory port map (clk,Stack_Op,memOpOut_mem2,memReadOut_mem2, memWriteOut_mem2, dataBusSelectorOut_mem2,dataToBeWrittenOut_mem2,writeAddressOut_mem2, readAddressOut_mem2,newFlagsOut_mem2,
         dataread_memory,flagsread_memory);
         
-
-
         mem2_Wb_Buffer: entity work.mem2_WB_buf port map (clk,rst,'1',interrupt,dataSelectorOut_mem2, inDataSelectorOut_mem2, flagSelectorOut_mem2, flagEnableOut_mem2, 
         regFileEnableOut_mem2,dataread_memory,ALU_ImmOut_mem2,RdAddressOut_mem2,newFlagsOut_mem2,flagsread_memory,dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb, flag_en_wb, reg_file_en_wb,
         memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address,inportOUTmem2,inportOUTwb);
