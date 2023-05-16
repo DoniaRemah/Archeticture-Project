@@ -15,9 +15,6 @@ architecture spWE_circuit_arch of spWE_circuit is
 signal out_of_or: std_logic;
 
 begin
-    process(readAddressSelector, writeAddressSelector,memOP)
-    begin
     out_of_or <= readAddressSelector or writeAddressSelector;
     spWE <= out_of_or and memOP;
-    end process;
 end spWE_circuit_arch;
