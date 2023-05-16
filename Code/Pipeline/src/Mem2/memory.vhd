@@ -46,6 +46,7 @@ begin
 end process;
 
     dataRead <= memory_array(to_integer(unsigned(readAddress))) when memOp = '1' and memRead = '1' and dataBusSelector = '0' and Stack_Op = '0' else 
+    memory_array(to_integer(unsigned(readAddress))+1) when memOp = '1' and memRead = '1' and dataBusSelector = '0' and Stack_Op = '1' else
     memory_array(to_integer(unsigned(readAddress))+2) when memOp = '1' and memRead = '1' and dataBusSelector = '1' and Stack_Op = '1'
     else (others => '0');
     
