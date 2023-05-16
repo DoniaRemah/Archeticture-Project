@@ -130,13 +130,14 @@ signal control_prop: std_logic;
 signal inportOUTde , inportOUTex , inportOUTmem1 , inportOUTmem2 , inportOUTwb:std_logic_vector(15 downto 0);
 
 signal flag_en_wb : std_logic;
+signal hdu_signal: std_logic;
 
 
 begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
         mux4x1: entity work.mux4x1 port map(New_PC,Jumped_call_address,Memory_returned_address,x"0000",propagated_ret_rti,branching_call_sig,New_PC_mux_out);
-        pc_reg: entity work.pc_reg port map(clk,rst,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
+        pc_reg: entity work.pc_reg port map(clk,rst,hdu_signal,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
         mux2x1: entity work.mux2x1 port map(x"0001",x"0002",instruction(25),addition_value);
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
 
@@ -148,7 +149,7 @@ begin
         Flush_sig <= Branching_sig or call_op;
         pc_en <= not Hazard_sig;
 
-        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
+        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,Flush_sig,Freeze_sig,hdu_signal,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
         
         flag_reg: entity work.flagReg port map (clk,rst,interrupt,flag_en_wb,writeback_flags,out_flags);
 
@@ -156,7 +157,7 @@ begin
         writeback_data,reg_file_en_wb,Rd_data,Rs1_data,Rs2_data);
         -- // Decode Components
 
-        dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,'1',interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
+        dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,'1',hdu_signal,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,control_prop,alu_enable,
         buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,Rd_data,Rs1_data,Rs2_data,New_PC,
         buff_ins(15 downto 0),buff_ins(18 downto 16),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
@@ -171,13 +172,13 @@ begin
         execute: entity work.execute port map(ALUEnableOut,partSelectorOut,opSelectorOut,Imm_Src_selectorOut,branchingOpOut,rs1DataOut,rs2DataOut,
         offset_ImmOut,FlagsOut,Branching_sig,alu_res,alu_flags_res);
 
-        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',interrupt,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',hdu_signal,interrupt,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,rs1DataOut,rs2DataOut,
         newPCAddressOut,RdAddressOut,alu_flags_res,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
         ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex,inportOUTex,inportOUTmem1);
 
-
+        HDU: entity work.HDU port map(memOpOut_ex,memOpOut,hdu_signal);
         mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
         rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
 

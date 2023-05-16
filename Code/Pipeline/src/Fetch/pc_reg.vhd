@@ -7,6 +7,7 @@ USE IEEE.std_logic_1164.all;
 
 ENTITY pc_reg IS
 PORT( clk,rst : IN std_logic; 
+hdu_signal:in std_logic;
 data_in: in std_logic_vector (15 downto 0);
 we: in  std_logic;
 data_out: OUT std_logic_vector (15 downto 0);

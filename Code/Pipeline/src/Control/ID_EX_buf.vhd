@@ -7,6 +7,7 @@ entity ID_EX_buf is
         clk : in std_logic;         
         reset : in std_logic;       
         writeEnable : in std_logic; 
+        hdu_signal:in std_logic;
         interrupt : in std_logic;     
 
         -- the write back signals
