@@ -18,7 +18,7 @@ end alumux8x1;
 -- architecture for the 4*1 mux
 architecture alumux8x1_arch of alumux8x1 is
 begin
-        process (dataIn0, dataIn1,dataIn2,dataIn3, selector0,selector1)
+        process (dataIn0, dataIn1,dataIn2,dataIn3,dataIn4, dataIn5,dataIn6,dataIn7,selector2, selector0,selector1)
         variable selector:std_logic_vector(2 downto 0);
         begin
                 selector := selector2 & selector1 & selector0;

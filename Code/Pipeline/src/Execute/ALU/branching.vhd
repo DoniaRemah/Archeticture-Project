@@ -11,10 +11,13 @@ port  (
 end branchingOp;
 
 Architecture ArchbranchingOp of branchingOp is
-
+signal zeroflag , carryflag , negativeflag : std_logic ;
 begin
 
-    branching_res <= '0';
-    new_flags <= flags;
+    branching_res <= '1' when op_sel = "010" else flags(0) when op_sel = "000" else flags(2) when op_sel = "001" else '0';
+    zeroflag <= '0'  when op_sel = "000" and flags(0) = '1' else flags(0);
+    carryflag  <= '0'  when op_sel = "001" and flags(2) = '1' else flags(2);
+    negativeflag <= flags(1);
+    new_flags <= carryflag & negativeflag & zeroflag;
 
 end ArchbranchingOp;

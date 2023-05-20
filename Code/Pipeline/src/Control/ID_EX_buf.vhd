@@ -110,7 +110,7 @@ begin
             partSelectorOut <= partSelector;
             opSelectorOut <= opSelector;
             newPCAddressOut <= newPCAddress;
-            jumped_call_address <= offset_Imm;
+            -- jumped_call_address <= offset_Imm;
             rs1DataOut <= rs1Data;
             rs2DataOut <= rs2Data;
             jumped_call_address<= rdData;

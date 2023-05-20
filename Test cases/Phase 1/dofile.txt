@@ -33,8 +33,10 @@ vsim -gui work.pipeline
 # Loading work.mem2_wb_buf(behavioral)
 # Loading work.wb(behavioral)
 # WARNING: No extended dataflow license exists
-mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
-mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/cache.mem /pipeline/inst_cache/ram
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
 add wave -position end  sim:/pipeline/clk
 add wave -position end  sim:/pipeline/rst
 add wave -position end  sim:/pipeline/inport
