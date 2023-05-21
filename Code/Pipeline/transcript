@@ -674,3 +674,1044 @@ quit -sim
 # Compile of hdu.vhd was successful.
 # Compile of Fdu.vhd was successful.
 # 30 compiles, 0 failed with no errors.
+# Compile of WB.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of mem2_WB_buf copy.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mem1.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of spWE_circuit.vhd was successful.
+# Compile of hdu.vhd was successful.
+# Compile of Fdu.vhd was successful.
+# 30 compiles, 0 failed with no errors.
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 20:46:02 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# ** Warning: (vsim-3473) Component instance "nott : notOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.inc(archinc)
+# ** Warning: (vsim-3473) Component instance "dec : decOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.andop(archandop)
+# ** Warning: (vsim-3473) Component instance "oring : orOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "adder_sub : add_sub" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "data_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "flags_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.hdu(logicofhdu)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.spwe_circuit(spwe_circuit_arch)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+vsim -gui work.pipeline
+# End time: 20:46:31 on May 21,2023, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 9
+# vsim -gui work.pipeline 
+# Start time: 20:46:31 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# ** Warning: (vsim-3473) Component instance "nott : notOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.inc(archinc)
+# ** Warning: (vsim-3473) Component instance "dec : decOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.andop(archandop)
+# ** Warning: (vsim-3473) Component instance "oring : orOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "adder_sub : add_sub" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "data_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "flags_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.hdu(logicofhdu)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.spwe_circuit(spwe_circuit_arch)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# vsim -gui work.pipeline 
+# Start time: 11:34:38 on Apr 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# WARNING: No extended dataflow license exists
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/cache.mem /pipeline/inst_cache/ram
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/cache.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/flag_reg/outFlags
+add wave -position 2  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Reg_File/memory_array
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftbimzan".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftbimzan
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/buff_ins
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/inport FFFE 0
+# Invalid decimal digit: F.
+# ** UI-Msg: (vsim-4011) Invalid force value: FFFE 0.
+# 
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 2  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 2  Instance: /pipeline/inst_cache
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/pipeline/inport 0001 0
+run
+force -freeze sim:/pipeline/inport 000F 0
+# Invalid decimal digit: F.
+# ** UI-Msg: (vsim-4011) Invalid force value: 000F 0.
+# 
+run
+force -freeze sim:/pipeline/inport 00C8 0
+# Invalid decimal digit: C.
+# ** UI-Msg: (vsim-4011) Invalid force value: 00C8 0.
+# 
+run
+force -freeze sim:/pipeline/inport 001F 0
+# Invalid decimal digit: F.
+# ** UI-Msg: (vsim-4011) Invalid force value: 001F 0.
+# 
+run
+force -freeze sim:/pipeline/inport 00FC 0
+# Invalid decimal digit: F.
+# ** UI-Msg: (vsim-4011) Invalid force value: 00FC 0.
+# 
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+vsim -gui work.pipeline
+# End time: 20:47:15 on May 21,2023, Elapsed time: 0:00:44
+# Errors: 0, Warnings: 19
+# vsim -gui work.pipeline 
+# Start time: 20:47:15 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# ** Warning: (vsim-3473) Component instance "nott : notOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.inc(archinc)
+# ** Warning: (vsim-3473) Component instance "dec : decOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.andop(archandop)
+# ** Warning: (vsim-3473) Component instance "oring : orOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "adder_sub : add_sub" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "data_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "flags_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.hdu(logicofhdu)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.spwe_circuit(spwe_circuit_arch)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# vsim -gui work.pipeline 
+# Start time: 11:34:38 on Apr 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# WARNING: No extended dataflow license exists
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Fetch/src/cache.mem /pipeline/inst_cache/ram
+# mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/project_code/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/cache.mem /pipeline/inst_cache/ram
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/cache.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+# ** UI-Msg: (vsim-7) Failed to open mem file "E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem" in read mode.
+# No such file or directory. (errno = ENOENT)
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/flag_reg/outFlags
+add wave -position 2  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Reg_File/memory_array
+add wave -position end  sim:/pipeline/old_pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlfttcxiqz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfttcxiqz
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/buff_ins
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/inport FFFE 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 2  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 20 ps  Iteration: 2  Instance: /pipeline/inst_cache
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/pipeline/inport 0001 0
+run
+force -freeze sim:/pipeline/inport 000F 0
+run
+force -freeze sim:/pipeline/inport 00C8 0
+run
+force -freeze sim:/pipeline/inport 001F 0
+run
+force -freeze sim:/pipeline/inport 00FC 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+vsim -gui work.pipeline
+# End time: 20:50:08 on May 21,2023, Elapsed time: 0:02:53
+# Errors: 0, Warnings: 19
+# vsim -gui work.pipeline 
+# Start time: 20:50:08 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# ** Warning: (vsim-3473) Component instance "nott : notOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.inc(archinc)
+# ** Warning: (vsim-3473) Component instance "dec : decOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.andop(archandop)
+# ** Warning: (vsim-3473) Component instance "oring : orOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "adder_sub : add_sub" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "data_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "flags_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.hdu(logicofhdu)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.spwe_circuit(spwe_circuit_arch)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# vsim -gui work.pipeline 
+# Start time: 11:34:38 on Apr 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# WARNING: No extended dataflow license exists
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/cache.mem /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/flag_reg/outFlags
+add wave -position 2  sim:/pipeline/Hazard_sig
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft29qwbm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft29qwbm
+add wave -position end  sim:/pipeline/Reg_File/memory_array
+add wave -position end  sim:/pipeline/old_pc
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/buff_ins
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/inport FFFE 0
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/pipeline/inport 0001 0
+run
+force -freeze sim:/pipeline/inport 000F 0
+run
+force -freeze sim:/pipeline/inport 00C8 0
+run
+force -freeze sim:/pipeline/inport 001F 0
+run
+force -freeze sim:/pipeline/inport 00FC 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+# End time: 21:02:20 on May 21,2023, Elapsed time: 0:12:12
+# Errors: 0, Warnings: 17
+# Load canceled
+vsim -gui work.pipeline
+# vsim -gui work.pipeline 
+# Start time: 21:03:03 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# ** Warning: (vsim-3473) Component instance "nott : notOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.inc(archinc)
+# ** Warning: (vsim-3473) Component instance "dec : decOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.andop(archandop)
+# ** Warning: (vsim-3473) Component instance "oring : orOp" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "adder_sub : add_sub" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "data_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# ** Warning: (vsim-3473) Component instance "flags_res_mux81 : alumux8x1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/execute/theALU/aluoperation File: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/aluOp.vhd
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.hdu(logicofhdu)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.spwe_circuit(spwe_circuit_arch)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# vsim -gui work.pipeline 
+# Start time: 11:34:38 on Apr 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.pipeline(pipeline_arch)
+# Loading work.instcache(cache_arc)
+# Loading work.mux4x1(mux4x1_arch)
+# Loading work.pc_reg(pc_reg_arch)
+# Loading work.mux2x1(mux2x1_arch)
+# Loading work.adder(behavioral)
+# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
+# Loading work.flagreg(behavioral)
+# Loading work.regfile(behavioral)
+# Loading work.id_ex_buf(behavioral)
+# Loading work.control_unit(behavioral)
+# Loading work.execute(archexecute)
+# Loading work.alu(archalu)
+# Loading work.branchingop(archbranchingop)
+# Loading work.carryop(archcarryop)
+# Loading work.movop(archmovop)
+# Loading work.aluop(archaluop)
+# Loading work.inc(archinc)
+# Loading work.andop(archandop)
+# Loading work.ex_mem1_buf(behavioral)
+# Loading work.mem1(behavioral)
+# Loading work.mux8x1(mux8x1_arch)
+# Loading work.sp_reg(behavioral)
+# Loading work.mem1_mem2_buf(behavioral)
+# Loading work.memory(behavioral)
+# Loading work.mem2_wb_buf(behavioral)
+# Loading work.wb(behavioral)
+# WARNING: No extended dataflow license exists
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/cache.mem /pipeline/inst_cache/ram
+mem load -i C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/datamemory.mem /pipeline/memory/memory_array
+add wave -position end  sim:/pipeline/clk
+add wave -position end  sim:/pipeline/rst
+add wave -position end  sim:/pipeline/inport
+add wave -position end  sim:/pipeline/flag_reg/outFlags
+add wave -position 2  sim:/pipeline/Hazard_sig
+add wave -position end  sim:/pipeline/Reg_File/memory_array
+add wave -position end  sim:/pipeline/old_pc
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft9j84is".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9j84is
+add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/Instruction
+add wave -position end  sim:/pipeline/buff_ins
+force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
+force -freeze sim:/pipeline/rst 1 0
+force -freeze sim:/pipeline/Hazard_sig 0 0
+force -freeze sim:/pipeline/inport FFFE 0
+add wave -position end  sim:/pipeline/execute/alu_enable
+add wave -position end  sim:/pipeline/execute/part_sel
+add wave -position end  sim:/pipeline/execute/op_sel
+add wave -position end  sim:/pipeline/execute/rs1_data
+add wave -position end  sim:/pipeline/execute/rs2_data
+add wave -position end  sim:/pipeline/execute/alu_res
+add wave -position end  sim:/pipeline/execute/new_flags
+add wave -position end  sim:/pipeline/execute/branching_op
+add wave -position end  sim:/pipeline/wb/WBData
+add wave -position end  sim:/pipeline/wb/WBFlags
+add wave -position end  sim:/pipeline/mem2_Wb_Buffer/wbAddress
+add wave -position end  sim:/pipeline/mem2_Wb_Buffer/regFileEnableOut
+add wave -position end  sim:/pipeline/mem2_Wb_Buffer/memResult
+add wave -position end  sim:/pipeline/mem2_Wb_Buffer/AluResult
+add wave -position end  sim:/pipeline/wb/WBData
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
+force -freeze sim:/pipeline/rst 0 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+force -freeze sim:/pipeline/inport 0001 0
+run
+force -freeze sim:/pipeline/inport 000F 0
+run
+force -freeze sim:/pipeline/inport 00C8 0
+run
+force -freeze sim:/pipeline/inport 001F 0
+run
+force -freeze sim:/pipeline/inport 00FC 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 340 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 355 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 380 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 395 ps  Iteration: 1  Instance: /pipeline/Reg_File
+run
+run
