@@ -185,7 +185,7 @@ begin
         dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,pc_en,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,control_prop,alu_enable,
         buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,Rd_data,Rs1_data,Rs2_data,New_PC,
-        buff_ins(15 downto 0),buff_ins(21 downto 19),buff_ins(18 downto 16),buff_ins(22 downto 20),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        buff_ins(15 downto 0),buff_ins(18 downto 16),buff_ins(24 downto 22),buff_ins(21 downto 19),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,ALUEnableOut,
         Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
         offset_ImmOut,RdAddressOut,rs1AddressOut,rs2AddressOut,FlagsOut,inportOUTde,inportOUTex);

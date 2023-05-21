@@ -87,7 +87,7 @@ def main():
         os.remove("Testcache.mem")
 
     # Opening assembly instructions
-    assembly_file_dir = "Phase2\Control Hazard.asm"
+    assembly_file_dir = "Phase2\TestingFDU.asm"
     assembly_ins = open(assembly_file_dir, encoding='utf-8-sig')
     
     #Creating File to write in
