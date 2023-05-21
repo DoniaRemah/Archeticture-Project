@@ -1,7 +1,7 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-entity FDU is
+entity FDU_FLAGS is
     port (
     FLAGS_in:in std_logic_vector (2 downto 0);
     Mem1_Alu_flags:in std_logic_vector (2 downto 0);
@@ -12,9 +12,9 @@ entity FDU is
     Mem1_Wb_Signal:in std_logic;
     Flags_Out:out std_logic_vector (2 downto 0)  
     );
-end FDU;
+end FDU_FLAGS;
 
-architecture logicofFDU of FDU is 
+architecture logicofFDU of FDU_FLAGS is 
 begin
 
 process (FLAGS_in, flag_Enable,Execution_WB_Signal,Mem1_Wb_Signal)
