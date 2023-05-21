@@ -643,3 +643,34 @@ run
 quit -sim
 # End time: 19:57:25 on May 21,2023, Elapsed time: 0:09:07
 # Errors: 0, Warnings: 4
+# Compile of WB.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of mem2_WB_buf copy.vhd was successful.
+# Compile of memory.vhd was successful.
+# Compile of mem1.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd was successful.
+# Compile of spWE_circuit.vhd was successful.
+# Compile of hdu.vhd was successful.
+# Compile of Fdu.vhd was successful.
+# 30 compiles, 0 failed with no errors.

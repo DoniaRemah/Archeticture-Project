@@ -151,7 +151,7 @@ begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
         mux4x1: entity work.mux4x1 port map(New_PC,Jumped_call_address,Memory_returned_address,x"0000",propagated_ret_rti,branching_call_sig,New_PC_mux_out);
-        pc_reg: entity work.pc_reg port map(clk,rst,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
+        pc_reg: entity work.pc_reg port map(clk,rst,Hazard_sig,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
         mux2x1: entity work.mux2x1 port map(x"0001",x"0002",instruction(25),addition_value);
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
 
@@ -190,12 +190,13 @@ begin
         execute: entity work.execute port map(ALUEnableOut,partSelectorOut,opSelectorOut,Imm_Src_selectorOut,branchingOpOut,rs1DataOut,rs2DataOut,
         offset_ImmOut,FlagsOut,Branching_sig,alu_res,alu_flags_res);
 
-        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',interrupt,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',Hazard_sig,interrupt,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,rs1DataOut,rs2DataOut,
         newPCAddressOut,RdAddressOut,alu_flags_res,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
         ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex,inportOUTex,inportOUTmem1);
-
+        
+        HDU: entity work.HDU port map(memOpOut_ex,memOpOut,Hazard_sig);
 
         -- mem1: entity work.mem1 port map(clk,rst,dataBusSelectorOut_ex,readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,newPC_address_out_ex,
         -- rs1_data_Out_ex,rs2_data_Out_ex,data_tobe_written_out_mem1,write_adress_out_mem1,read_address_out_mem1);
