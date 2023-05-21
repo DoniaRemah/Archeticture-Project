@@ -23,12 +23,14 @@ BEGIN
 PROCESS(clk)
 BEGIN
 IF rising_edge(clk) THEN
-    if (hazard /='1' ) then
+    if (hazard /='1' and freeze /= '1') then
         -- pc_out <= new_pc_in;
         -- ins_out <= instruction_in;
         new_pc_out <= new_pc_in;
         instruction_out <=instruction_in;
         inportOut <= inport;
+    elsif (hazard /='1' and freeze = '1') then
+        instruction_out <= "11100100000000000000000000000000";
     end if;
 END IF;
 END PROCESS;

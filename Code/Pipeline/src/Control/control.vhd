@@ -48,4 +48,6 @@ begin
     flag_enable <= '1' when (opcode = "000000" or opcode = "000001" or opcode = "111111" or opcode(5 downto 3) = "011" or opcode(5 downto 3) = "001") else '0';
     propagated_ret_rti <= '0' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
     current_ret_rti <= '1' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
+    -- current_ret_rti <= '1' when opcode = "111001" else '0';
+    
 end Behavioral;
