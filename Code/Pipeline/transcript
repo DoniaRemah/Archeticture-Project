@@ -3,7 +3,7 @@
 # Compile of mux4x1.vhd was successful.
 # Compile of mux8x1.vhd was successful.
 # Compile of mem2_WB_buf copy.vhd was successful.
-# Compile of memory.vhd was successful with warnings.
+# Compile of memory.vhd was successful.
 # Compile of mem1.vhd was successful.
 # Compile of mem1_mem2_buf.vhd was successful.
 # Compile of sp_reg.vhd was successful.
@@ -24,409 +24,622 @@
 # Compile of ID_EX_buf.vhd was successful.
 # Compile of regFile.vhd was successful.
 # Compile of adder.vhd was successful.
-# Compile of pipeline.vhd was successful.
+# Compile of pipeline.vhd failed with 21 errors.
 # Compile of spWE_circuit.vhd was successful.
-# 28 compiles, 0 failed with no errors.
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 21:51:53 on May 04,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlftngbf2d".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftngbf2d
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/dataBusSelector 0 0
-force -freeze sim:/memory/memRead 0 0
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/dataToBeWritten AAAA 0
-force -freeze sim:/memory/writeAddress 0000 0
-force -freeze sim:/memory/newFlags 1 0
-run
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/memWrite 0 0
-force -freeze sim:/memory/readAddress 0000 0
-run
-force -freeze sim:/memory/dataBusSelector 1 0
-force -freeze sim:/memory/dataToBeWritten BBBB 0
-force -freeze sim:/memory/writeAddress 0001 0
-force -freeze sim:/memory/memRead 0 0
-force -freeze sim:/memory/memWrite 1 0
-run
-force -freeze sim:/memory/memRead {} 0
-# ** UI-Msg: (vsim-4026) Value "" does not represent a literal of the enumeration type.
-# ** UI-Msg: (vsim-4011) Invalid force value: {} 0.
-# 
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/memWrite 0 0
-quit -sim
-# End time: 22:11:03 on May 04,2023, Elapsed time: 0:19:10
-# Errors: 0, Warnings: 4
-# Compile of memory.vhd was successful with warnings.
-# Compile of pipeline.vhd was successful.
-# Compile of memory.vhd was successful with warnings.
+# 28 compiles, 1 failed with 21 errors.
+# Load canceled
+# Compile of WB.vhd was successful.
+# Compile of mux2x1.vhd was successful.
+# Compile of mux4x1.vhd was successful.
+# Compile of mux8x1.vhd was successful.
+# Compile of mem2_WB_buf copy.vhd was successful.
 # Compile of memory.vhd was successful.
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 22:17:32 on May 04,2023
+# Compile of mem1.vhd was successful.
+# Compile of mem1_mem2_buf.vhd was successful.
+# Compile of sp_reg.vhd was successful.
+# Compile of fetch_decode_buffer.vhd was successful.
+# Compile of instCache.vhd was successful.
+# Compile of pc_reg.vhd was successful.
+# Compile of ex_mem1_buf.vhd was successful.
+# Compile of execute.vhd was successful.
+# Compile of ALU.vhd was successful.
+# Compile of aluOp.vhd was successful.
+# Compile of andOp.vhd was successful.
+# Compile of branching.vhd was successful.
+# Compile of carryOp.vhd was successful.
+# Compile of inc.vhd was successful.
+# Compile of movOp.vhd was successful.
+# Compile of control.vhd was successful.
+# Compile of flagReg.vhd was successful.
+# Compile of ID_EX_buf.vhd was successful.
+# Compile of regFile.vhd was successful.
+# Compile of adder.vhd was successful.
+# Compile of pipeline.vhd failed with 21 errors.
+# Compile of spWE_circuit.vhd was successful.
+# Compile of hdu.vhd was successful.
+# Compile of Fdu.vhd failed with 1 errors.
+# 30 compiles, 2 failed with 22 errors.
+vsim -gui work.hdu
+# vsim -gui work.hdu 
+# Start time: 18:08:39 on May 21,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/Stack_Op
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
+# Loading work.hdu(logicofhdu)
+add wave -position end  sim:/hdu/MEM1_MEM2_OP
+add wave -position end  sim:/hdu/EX_MEM_OP
+add wave -position end  sim:/hdu/HAZARD_SIGNAL
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlft6ztm5v".
+#           Attempting to use alternate WLF file "./wlft5arinm".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft6ztm5v
-force -freeze sim:/memory/clk {} 0
+#           Using alternate file: ./wlft5arinm
+force -freeze sim:/hdu/MEM1_MEM2_OP 0 0
+force -freeze sim:/hdu/EX_MEM_OP 0 0
+run
+force -freeze sim:/hdu/MEM1_MEM2_OP 1 0
+run
+force -freeze sim:/hdu/EX_MEM_OP 1 0
+run
+force -freeze sim:/hdu/MEM1_MEM2_OP {} 0
 # ** UI-Msg: (vsim-4026) Value "" does not represent a literal of the enumeration type.
 # ** UI-Msg: (vsim-4011) Invalid force value: {} 0.
 # 
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/dataBusSelector 0 0
-force -freeze sim:/memory/dataToBeWritten AAAA 0
-force -freeze sim:/memory/writeAddress 0000 0
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10PS
-force -freeze sim:/memory/clk 10ps 0
-# ** UI-Msg: (vsim-4026) Value "10ps" does not represent a literal of the enumeration type.
-# ** UI-Msg: (vsim-4011) Invalid force value: 10ps 0.
-# 
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 0 0
 run
+force -freeze sim:/hdu/MEM1_MEM2_OP 0 0
 run
 quit -sim
-# End time: 22:20:10 on May 04,2023, Elapsed time: 0:02:38
+# End time: 18:10:07 on May 21,2023, Elapsed time: 0:01:28
 # Errors: 0, Warnings: 7
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 22:20:23 on May 04,2023
+# Compile of Fdu.vhd was successful.
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 18:58:20 on May 21,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/Stack_Op
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlftna83qt".
+#           Attempting to use alternate WLF file "./wlftznvckm".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftna83qt
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 0 0
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/dataBusSelector 0 0
-force -freeze sim:/memory/dataToBeWritten AAAA 0
-force -freeze sim:/memory/writeAddress 0000 0
+#           Using alternate file: ./wlftznvckm
+force -freeze sim:/fdu/RS1_Address 0 0
+force -freeze sim:/fdu/ALU_Rdst 0 0
+force -freeze sim:/fdu/RS1_Data 10 0
+step
+step -out -current
+# Requested step location(s) not found!
 run
+force -freeze sim:/fdu/MEM1_Rd_Address 0 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 3 0
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
 run
-# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 32
-step
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
+force -freeze sim:/fdu/RS1_Data 7 0
 run
-# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 32
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
+force -freeze sim:/fdu/RS1_Data 7 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
 run
-# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 34
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over
-step -over
-step -over
-# Next activity is in 5 ps.
-step -over
-step -over -current
-# Break key hit
-quit -sim
-# End time: 22:27:16 on May 04,2023, Elapsed time: 0:06:53
-# Errors: 0, Warnings: 3
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 22:27:53 on May 04,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/Stack_Op
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlft8hggs0".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft8hggs0
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 0 0
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/dataBusSelector 0 0
-force -freeze sim:/memory/dataToBeWritten AAAA 0
-force -freeze sim:/memory/writeAddress 0000 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
 run
-# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 37
-step
-step
-step
-step
-step
-# Next activity is in 5 ps.
-step -current
-# ** UI-Msg: (vsim-12081) The specified scope, sim:/memory, is not a process or thread.
-# 
-run
-# Break in Process line__32 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem2/memory.vhd line 37
-step
 restart -f
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 0 0
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/dataBusSelector 0 0
-force -freeze sim:/memory/dataToBeWritten AAAA 0
-force -freeze sim:/memory/writeAddress 0000 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/RS1_Data 10 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
 run
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/memWrite 0 0
-force -freeze sim:/memory/readAddress 0000 0
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
 step
+# Nothing left to do.
+step -over
+# Nothing left to do.
+step
+# Nothing left to do.
+run
+step -over
+# Nothing left to do.
+step -over
+# Nothing left to do.
+run
+step
+# Nothing left to do.
+step
+# Nothing left to do.
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+run
+step
+# Nothing left to do.
+run
+step
+# Nothing left to do.
+restart -f
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+step
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+step -over
+step -over
+step -over
+quit -sim
+# End time: 19:14:38 on May 21,2023, Elapsed time: 0:16:18
+# Errors: 0, Warnings: 1
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:15:04 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft284mgq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft284mgq
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
 step
 step -over
-# Next activity is in 5 ps.
-step
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Nothing left to do.
+run
 restart -f
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(9)
-mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(10)
-force -freeze sim:/memory/Stack_Op 1 0
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+restart -f
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
 quit -sim
-# End time: 22:35:27 on May 04,2023, Elapsed time: 0:07:34
+# End time: 19:17:15 on May 21,2023, Elapsed time: 0:02:11
 # Errors: 0, Warnings: 1
-# Compile of memory.vhd was successful.
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 22:36:12 on May 04,2023
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:17:27 on May 21,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/Stack_Op
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlftvnehny".
+#           Attempting to use alternate WLF file "./wlftstmncx".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvnehny
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 1 0
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/dataBusSelector 1 0
-force -freeze sim:/memory/readAddress 0008 0
-mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(9)
-mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(10)
+#           Using alternate file: ./wlftstmncx
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+noforce sim:/fdu/Execution_WB_Signal
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
 run
 quit -sim
-# End time: 22:38:23 on May 04,2023, Elapsed time: 0:02:11
+# End time: 19:22:43 on May 21,2023, Elapsed time: 0:05:16
 # Errors: 0, Warnings: 4
-# Compile of memory.vhd was successful.
-vsim -gui work.memory
-# vsim -gui work.memory 
-# Start time: 22:38:39 on May 04,2023
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:22:55 on May 21,2023
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
 # Loading ieee.numeric_std(body)
-# Loading work.memory(behavioral)
-add wave -position end  sim:/memory/clk
-add wave -position end  sim:/memory/Stack_Op
-add wave -position end  sim:/memory/memOp
-add wave -position end  sim:/memory/memRead
-add wave -position end  sim:/memory/memWrite
-add wave -position end  sim:/memory/dataBusSelector
-add wave -position end  sim:/memory/dataToBeWritten
-add wave -position end  sim:/memory/writeAddress
-add wave -position end  sim:/memory/readAddress
-add wave -position end  sim:/memory/newFlags
-add wave -position end  sim:/memory/dataRead
-add wave -position end  sim:/memory/flagsRead
-add wave -position end  sim:/memory/memory_array
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: donia  Hostname: DONIA  ProcessID: 9128
-#           Attempting to use alternate WLF file "./wlft6y14e3".
+#           Attempting to use alternate WLF file "./wlft4cs95a".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft6y14e3
-force -freeze sim:/memory/clk 1 0, 0 {5 ps} -r 10ps
-force -freeze sim:/memory/Stack_Op 1 0
-force -freeze sim:/memory/memOp 1 0
-force -freeze sim:/memory/memRead 1 0
-force -freeze sim:/memory/dataBusSelector 1 0
-force -freeze sim:/memory/readAddress 0008 0
-mem load -filltype value -filldata 2000 -fillradix hexadecimal /memory/memory_array(9)
-mem load -filltype value -filldata AAAA -fillradix hexadecimal /memory/memory_array(10)
+#           Using alternate file: ./wlft4cs95a
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
 run
-force -freeze sim:/memory/memWrite 1 0
-force -freeze sim:/memory/memRead 0 0
-force -freeze sim:/memory/dataToBeWritten BBBB 0
-force -freeze sim:/memory/writeAddress 0009 0
-force -freeze sim:/memory/newFlags 3 0
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
 run
+quit -sim
+# End time: 19:25:33 on May 21,2023, Elapsed time: 0:02:38
+# Errors: 0, Warnings: 4
+# Load canceled
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:25:51 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftm9qqs3".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftm9qqs3
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+quit -sim
+# End time: 19:36:31 on May 21,2023, Elapsed time: 0:10:40
+# Errors: 0, Warnings: 4
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:36:44 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftj25wih".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftj25wih
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+# Break in Process line__27 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Regs_FDU/Fdu.vhd line 33
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Nothing left to do.
+step
+# Nothing left to do.
+run
+restart -f
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+# Break in Process line__27 at C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Regs_FDU/Fdu.vhd line 33
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+restart -f
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+restart -f
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+restart
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+restart
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+quit -sim
+# End time: 19:43:37 on May 21,2023, Elapsed time: 0:06:53
+# Errors: 0, Warnings: 1
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:43:50 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlft1fck87".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft1fck87
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 0 0
+force -freeze sim:/fdu/Reg_File_Enable 1 0
+quit -sim
+# End time: 19:48:06 on May 21,2023, Elapsed time: 0:04:16
+# Errors: 0, Warnings: 4
+# Compile of Fdu.vhd was successful.
+vsim -gui work.fdu
+# vsim -gui work.fdu 
+# Start time: 19:48:18 on May 21,2023
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fdu(logicoffdu)
+add wave -position end  sim:/fdu/RS1_Address
+add wave -position end  sim:/fdu/RS2_Address
+add wave -position end  sim:/fdu/WB_Address
+add wave -position end  sim:/fdu/ALU_Rdst
+add wave -position end  sim:/fdu/MEM1_Rd_Address
+add wave -position end  sim:/fdu/RS1_Data
+add wave -position end  sim:/fdu/RS2_Data
+add wave -position end  sim:/fdu/Mem1_Alu_Result_Immd
+add wave -position end  sim:/fdu/Alu_Result_Immd
+add wave -position end  sim:/fdu/WB_Data
+add wave -position end  sim:/fdu/Reg_File_Enable
+add wave -position end  sim:/fdu/Execution_WB_Signal
+add wave -position end  sim:/fdu/Mem1_Wb_Signal
+add wave -position end  sim:/fdu/RS1_DATA_Out
+add wave -position end  sim:/fdu/RS2_DATA_Out
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: donia  Hostname: DONIA  ProcessID: 9128
+#           Attempting to use alternate WLF file "./wlftmvn1v7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmvn1v7
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/RS1_Address 1 0
+force -freeze sim:/fdu/ALU_Rdst 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+force -freeze sim:/fdu/Alu_Result_Immd 7 0
+force -freeze sim:/fdu/RS1_Data 2 0
+run
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/MEM1_Rd_Address 1 0
+force -freeze sim:/fdu/Mem1_Alu_Result_Immd 6 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 0 0
+force -freeze sim:/fdu/Reg_File_Enable 1 0
+force -freeze sim:/fdu/Mem1_Wb_Signal 0 0
+force -freeze sim:/fdu/Reg_File_Enable 1 0
+force -freeze sim:/fdu/WB_Data 3 0
+force -freeze sim:/fdu/WB_Address 1 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+run
+force -freeze sim:/fdu/RS2_Data 8 0
+force -freeze sim:/fdu/RS2_Address 4 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+step
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 0 0
+force -freeze sim:/fdu/Execution_WB_Signal 0 0
+force -freeze sim:/fdu/Reg_File_Enable 0 0
+run
+force -freeze sim:/fdu/RS2_Address 4 0
+force -freeze sim:/fdu/MEM1_Rd_Address 4 0
+force -freeze sim:/fdu/Mem1_Wb_Signal 1 0
+force -freeze sim:/fdu/Execution_WB_Signal 1 0
+run
+force -freeze sim:/fdu/Reg_File_Enable 1 0
+force -freeze sim:/fdu/WB_Address 4 0
+run
+force -freeze sim:/fdu/Mem1_Wb_Signal 0 0
+run
+quit -sim
+# End time: 19:57:25 on May 21,2023, Elapsed time: 0:09:07
+# Errors: 0, Warnings: 4
