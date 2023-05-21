@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 
 # This is an assembler that converts assembly code into machine language in accordance with
 # our designs contained within this project.
@@ -51,7 +52,7 @@ dict_commands = {
     "PUSH": "110001",
     # ROUTINE (111)
     "CALL": "111000",
-    "RETURN": "111100",
+    "RET": "111100",
     "RTI": "111111"
 }
 
@@ -86,7 +87,7 @@ def main():
         os.remove("Testcache.mem")
 
     # Opening assembly instructions
-    assembly_file_dir = "TestcasesPhaseTwo.asm"
+    assembly_file_dir = "Phase2\Control Hazard.asm"
     assembly_ins = open(assembly_file_dir, encoding='utf-8-sig')
     
     #Creating File to write in
@@ -99,8 +100,8 @@ def main():
 
         #Checking if command is .org and looping till we reach the required location
         if line[0] ==".":
-            ord_split = line.split(" ", 1)
-            ord_split_value = ord_split[1].split("\t", 1)
+            ord_split = re.split(r'\s+', line)
+            ord_split_value = re.split(r'\s+', ord_split[1]) 
             while org_memory_value != int(ord_split_value[0],16):
                 if org_memory_value <= int(ord_split_value[0],16):
                     with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
@@ -113,7 +114,7 @@ def main():
 
         #Checking if the value is a hex number 
         elif ord(line[0]) >= 48 and ord(line[0]) <=57:
-            address_value = bin(int(line.split("\t")[0], 16))[2:].zfill(16)
+            address_value = bin(int(re.split(r'\s+', line)[0], 16))[2:].zfill(16)
 
             #Writing in the specified memory location
             with open("Testcache.mem", "r", encoding='utf-8') as file:
@@ -135,13 +136,13 @@ def main():
         
         # NORMAL INSTRUCTION
         # splitting the line on space, to get rid of each line's comment, actual command in loc[0]
-        line_split = line.split(" ", 1)
+        line_split = re.split(r'\s+', line)
 
         #Splitting command on t if it's a command with no operands
-        command = line_split[0].split("\t",1)[0].strip()
+        command = re.split(r'\s+', line_split[0])[0].strip()
         
         if command not in no_Operands:
-            pre_operands = line_split[1].split("\t")[0]
+            pre_operands = re.split(r'\s+', line_split[1])[0]
             operands = pre_operands.strip().split(',')
         else:
             operands = [""]
@@ -208,7 +209,7 @@ def toMachineCode(command, operands):
             else:
                 with open("Testcache.mem", 'a', encoding='utf-8') as file:
                     # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
-                    file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
+                    file.writelines(immediate_Value+"\n")
                     Lines_Counter = Lines_Counter+1
                     org_memory_value = org_memory_value+1
         
@@ -240,7 +241,6 @@ def checkDst(command,operands):
 def checkRs1(command, operands):
 
     no_rs1 = {"IN","POP","LDM","JZ","JC","JMP","CALL"}
-
     if command == "OUT" or  command == "PUSH":
         return Registers[operands[0]]
     elif command in no_rs1 or operands[0]== "":
