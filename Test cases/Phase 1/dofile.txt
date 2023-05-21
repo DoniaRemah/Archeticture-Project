@@ -13,11 +13,22 @@ add wave -position end  sim:/pipeline/old_pc
 add wave -position end  sim:/pipeline/New_PC
 add wave -position end  sim:/pipeline/Instruction
 add wave -position end  sim:/pipeline/buff_ins
-add wave -position end  sim:/pipeline/memOpOut
-add wave -position end  sim:/pipeline/memOpOut_ex
-add wave -position end  sim:/pipeline/HDU/HAZARD_SIGNAL
-add wave -position end  sim:/pipeline/HDU/EX_MEM_OP
-add wave -position end  sim:/pipeline/HDU/MEM1_MEM2_OP
+add wave -position end  sim:/pipeline/Freeze_sig
+add wave -position end  sim:/pipeline/propagated_ret_rti
+add wave -position end  sim:/pipeline/current_ret_rti
+add wave -position end  sim:/pipeline/New_PC_mux_out
+add wave -position end  sim:/pipeline/memory/readAddress
+add wave -position end  sim:/pipeline/memory/memOp
+add wave -position end  sim:/pipeline/memory/memRead
+add wave -position end  sim:/pipeline/memory/dataBusSelector
+add wave -position end  sim:/pipeline/memory/dataRead
+add wave -position end  sim:/pipeline/mux4x1/dataIn0
+add wave -position end  sim:/pipeline/mux4x1/dataIn1
+add wave -position end  sim:/pipeline/mux4x1/dataIn2
+add wave -position end  sim:/pipeline/mux4x1/dataIn3
+add wave -position end  sim:/pipeline/mux4x1/selector1
+add wave -position end  sim:/pipeline/mux4x1/selector0
+add wave -position end  sim:/pipeline/mux4x1/dataOut
 force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
 force -freeze sim:/pipeline/rst 1 0
 
