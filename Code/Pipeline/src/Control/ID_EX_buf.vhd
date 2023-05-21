@@ -29,7 +29,7 @@ entity ID_EX_buf is
         -- the data in
         rdData,rs1Data,rs2Data,newPCAddress : in std_logic_vector(15 downto 0);  
         offset_Imm: in std_logic_vector(15 downto 0);
-        RdAddress: in std_logic_vector(2 downto 0);
+        RdAddress,rs1Address,rs2Address: in std_logic_vector(2 downto 0);
         Flags: in std_logic_vector(2 downto 0);
         
         -- wb signals
@@ -44,7 +44,7 @@ entity ID_EX_buf is
         newPCAddressOut: out std_logic_vector(15 downto 0);
         jumped_call_address: out std_logic_vector(15 downto 0);
         rs1DataOut,rs2DataOut,offset_ImmOut: out std_logic_vector(15 downto 0);
-        RdAddressOut: out std_logic_vector(2 downto 0);
+        RdAddressOut,rs1AddressOut,rs2AddressOut: out std_logic_vector(2 downto 0);
         FlagsOut: out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
 inportOut : out std_logic_vector(15 downto 0)
@@ -83,6 +83,8 @@ begin
         rs2DataOut <= "0000000000000000";
         offset_ImmOut <= "0000000000000000";
         RdAddressOut <= "000";
+        rs1AddressOut <= "000";
+        rs2AddressOut <= "000";
         FlagsOut <= "000";
         inportOut <= (others => '0');
             -- check on the falling edge of teh clock
@@ -115,6 +117,8 @@ begin
             jumped_call_address<= rdData;
             offset_ImmOut <= offset_Imm;
             RdAddressOut <= RdAddress;
+            rs1AddressOut <= rs1Address;
+            rs2AddressOut <= rs2Address;
             FlagsOut <= Flags;
             inportOut <= inport;
             end if;

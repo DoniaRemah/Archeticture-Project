@@ -83,6 +83,7 @@ signal rdDataOut: std_logic_vector(15 downto 0);
 signal newPCAddressOut:  std_logic_vector(15 downto 0);
 signal rs1DataOut,rs2DataOut,offset_ImmOut:  std_logic_vector(15 downto 0);
 signal RdAddressOut:  std_logic_vector(2 downto 0);
+signal rs1AddressOut,rs2AddressOut:  std_logic_vector(2 downto 0);
 signal FlagsOut:  std_logic_vector(2 downto 0);
 signal prop_ret_rti_out:std_logic;
 
@@ -146,6 +147,12 @@ signal sp_write_en_after_circuit: std_logic;
 -- mux8x1 selector
 signal mux8x1_selector: std_logic_vector(2 downto 0);
 
+-- register fdu signals
+signal RS1_DATA_Out_FDU,RS2_DATA_Out_FDU: std_logic_vector(15 downto 0);
+
+-- flags fdu signals
+signal Flags_Out_FDU: std_logic_vector(2 downto 0);
+
 
 begin
         -- // Fetching Components
@@ -178,20 +185,20 @@ begin
         dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,pc_en,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,control_prop,alu_enable,
         buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,Rd_data,Rs1_data,Rs2_data,New_PC,
-        buff_ins(15 downto 0),buff_ins(18 downto 16),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        buff_ins(15 downto 0),buff_ins(21 downto 19),buff_ins(18 downto 16),buff_ins(22 downto 20),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,ALUEnableOut,
         Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
-        offset_ImmOut,RdAddressOut,FlagsOut,inportOUTde,inportOUTex);
+        offset_ImmOut,RdAddressOut,rs1AddressOut,rs2AddressOut,FlagsOut,inportOUTde,inportOUTex);
 
         control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),alu_enable,branching_operation,part_selector,op_selector, call_op,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,data_sel,flag_sel,in_data_sel,reg_file_en,flag_en,control_prop,current_ret_rti);
 
 
-        execute: entity work.execute port map(ALUEnableOut,partSelectorOut,opSelectorOut,Imm_Src_selectorOut,branchingOpOut,rs1DataOut,rs2DataOut,
-        offset_ImmOut,FlagsOut,Branching_sig,alu_res,alu_flags_res);
+        execute: entity work.execute port map(ALUEnableOut,partSelectorOut,opSelectorOut,Imm_Src_selectorOut,branchingOpOut,RS1_DATA_Out_FDU,RS2_DATA_Out_FDU,
+        offset_ImmOut,Flags_Out_FDU,Branching_sig,alu_res,alu_flags_res);
 
         execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',Hazard_sig,interrupt,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
-        readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,rs1DataOut,rs2DataOut,
+        readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,RS1_DATA_Out_FDU,RS2_DATA_Out_FDU,
         newPCAddressOut,RdAddressOut,alu_flags_res,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
         ALU_ImmOut_ex, rs1_data_Out_ex, rs2_data_Out_ex ,newPC_address_out_ex,RdAddressOut_ex,newFlagsOut_ex,inportOUTex,inportOUTmem1);
@@ -264,6 +271,39 @@ begin
         memResult_wb,AluResult_wb,memFlags_wb,ALUflags_wb,writeback_address,inportOUTmem2,inportOUTwb);
 
         wb: entity work.WB port map (dataSelectorOut_wb, inDataSelectorOut_wb, flagSelectorOut_wb,memResult_wb,AluResult_wb,inportOUTwb,memFlags_wb,ALUflags_wb,writeback_data,writeback_flags);
+
+        -- the fdu of registers
+        fdu_reg: entity work.FDU
+        port map (
+                RS1_Address => rs1AddressOut,
+                RS2_Address => rs2AddressOut,
+                WB_Address=> writeback_address,
+                ALU_Rdst=> RdAddressOut_ex,
+                MEM1_Rd_Address=>RdAddressOut_mem2,
+                RS1_Data=>rs1DataOut,
+                RS2_Data=>rs2DataOut,
+                Mem1_Alu_Result_Immd=>ALU_ImmOut_mem2,
+                Alu_Result_Immd=>ALU_ImmOut_ex,
+                WB_Data=>writeback_data,
+                Reg_File_Enable=>reg_file_en_wb,
+                Execution_WB_Signal=>regFileEnableOut_ex,
+                Mem1_Wb_Signal=>regFileEnableOut_mem2,
+                RS1_DATA_Out=>RS1_DATA_Out_FDU,
+                RS2_DATA_Out=>RS2_DATA_Out_FDU
+        );
+
+        -- the fdu of flags
+        fdu_flags: entity work.FDU_FLAGS
+        port map (
+                FLAGS_in=>out_flags,
+                Mem1_Alu_flags=>newFlagsOut_mem2,
+                Alu_Result_flags=>newFlagsOut_ex,
+                Writeback_Flags=>writeback_flags,
+                flag_Enable=>flag_en_wb,
+                Execution_WB_Signal=>flagEnableOut_ex,
+                Mem1_Wb_Signal=>flagEnableOut_mem2,
+                Flags_Out=>Flags_Out_FDU
+        );
 
         
 end pipeline_arch;
