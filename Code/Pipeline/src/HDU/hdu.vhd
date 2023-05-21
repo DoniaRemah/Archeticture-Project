@@ -10,11 +10,12 @@ entity HDU is
 end HDU;
 
 architecture logicofhdu of HDU is
+signal tempand: std_logic;
 
 begin
 
-    process( MEM1_MEM2_OP,  EX_MEM_OP)
-    begin
-    HAZARD_SIGNAL <= MEM1_MEM2_OP and EX_MEM_OP;
-    end process;
+    tempand <= (MEM1_MEM2_OP and EX_MEM_OP);
+
+    HAZARD_SIGNAL <= tempand;
+
 end logicofhdu;

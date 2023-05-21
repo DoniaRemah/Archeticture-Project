@@ -21,7 +21,7 @@ begin
         if reset = '1' then   
             -- the reset value of the register is 1023 in decimal
             storedData <= std_logic_vector(to_signed(1023, 16));
-        elsif rising_edge(clk) then     
+        elsif falling_edge(clk) then     
             if writeEnable = '1' then            
                 storedData <= dataIn;          
             end if;
