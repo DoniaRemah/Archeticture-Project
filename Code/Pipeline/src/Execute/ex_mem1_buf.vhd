@@ -90,7 +90,29 @@ begin
             inportOut <= (others => '0');
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
-            if writeEnable = '1' then
+
+            if hdu_signal = '1' then
+                dataSelectorOut <= '0';
+                inDataSelectorOut <= '0';
+                flagSelectorOut <= '0';
+                flagEnableOut <= '0';
+                regFileEnableOut <= '0';
+                readAddressSelOut <= '0';
+                writeAddressSelOut <= '0';
+                dataWrittenSelOut <= '0';
+                memOpOut <= '0';
+                memReadOut <= '0';
+                memWriteOut <= '0';
+                dataBusSelectorOut <= '0';
+                propRetRtiOut <= '0';
+                ALU_ImmOut <= (others => '0');
+                rs1_data_Out<= (others => '0');
+                rs2_data_Out  <= (others => '0') ;
+                newPC_address_out  <=  (others => '0');
+                RdAddressOut <= (others => '0');
+                newFlagsOut <= (others => '0');
+                inportOut <= (others => '0');
+            elsif writeEnable = '1' then
             -- assign input signals to corresponding signals
                 -- dataSelectorSig <= dataSelector;
                 -- inDataSelectorSig <= inDataSelector;

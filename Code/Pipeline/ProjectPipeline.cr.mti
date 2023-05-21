@@ -171,6 +171,15 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity aluOp
 -- Compiling architecture ArchaluOp of aluOp
 
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/ID_EX_buf.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Control/ID_EX_buf.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity ID_EX_buf
+-- Compiling architecture Behavioral of ID_EX_buf
+
 } {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/inc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Execute/ALU/inc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
@@ -197,58 +206,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity mux2x1
 -- Compiling architecture mux2x1_arch of mux2x1
 
-} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd {0 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity pipeline
--- Compiling architecture pipeline_arch of pipeline
--- Loading package NUMERIC_STD
--- Loading entity instCache
--- Loading entity mux4x1
--- Loading entity pc_reg
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(154): Signal "New_PC_mux_out" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(154): Signal "pc_en" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(154): Signal "old_pc" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(154): (vcom-1035) Formal port "reset_value" has OPEN or no actual associated with it.
--- Loading entity mux2x1
--- Loading entity adder
--- Loading entity fetch_decode_buffer
--- Loading entity flagReg
--- Loading entity regFile
--- Loading entity ID_EX_buf
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(180): Signal "part_selector" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(180): Signal "Flush_sig" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(180): Signal "Rd_data" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(181): Signal "dataSelectorOut" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(183): Signal "partSelectorOut" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
--- Loading entity Control_Unit
--- Loading entity execute
--- Loading entity ex_mem1_buf
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(194): Signal "alu_res" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(195): Signal "dataSelectorOut_ex" is type ieee.std_logic_1164.STD_LOGIC; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-** Error: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(197): Signal "ALU_ImmOut_ex" is type ieee.std_logic_1164.STD_LOGIC_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC.
--- Loading entity mem1
--- Loading entity mux8x1
--- Loading entity sp_reg
--- Loading entity spWE_circuit
--- Loading entity mem1_mem2_buf
--- Loading entity memory
--- Loading entity mem2_WB_buf
--- Loading entity WB
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(180): (vcom-1272) Length of formal "partSelector" is 2; length of actual is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(181): (vcom-1272) Length of formal "offset_Imm" is 16; length of slice name is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(183): (vcom-1272) Length of formal "partSelectorOut" is 2; length of actual is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(183): (vcom-1272) Length of formal "opSelectorOut" is 3; length of actual is 16.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(184): (vcom-1272) Length of formal "offset_ImmOut" is 16; length of actual is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(184): (vcom-1272) Length of formal "FlagsOut" is 3; length of actual is 16.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(195): (vcom-1272) Length of formal "newPC_address" is 16; length of actual is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(197): (vcom-1272) Length of formal "newPC_address_out" is 16; length of actual is 3.
-** Error (suppressible): C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(197): (vcom-1272) Length of formal "newFlagsOut" is 3; length of actual is 16.
-** Note: C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/pipeline.vhd(268): VHDL Compiler exiting
-
-} {12.0 16.0 22.0 27.0 30.0 33.0} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd
+} {} {}} C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/donia/Uni/Senior-1/Spring/Architecture/Project/Code/Pipeline/src/Mem1/sp_reg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
