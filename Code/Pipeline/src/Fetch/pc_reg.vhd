@@ -6,12 +6,13 @@ USE IEEE.std_logic_1164.all;
 -- *********THIS REGISTER UPDATES ON FALLING CLOCK EDGE***********
 
 ENTITY pc_reg IS
-PORT( clk,rst : IN std_logic; 
+PORT( clk,rst,interrupt : IN std_logic; 
 hdu_signal:in std_logic;
 data_in: in std_logic_vector (15 downto 0);
 we: in  std_logic;
 data_out: OUT std_logic_vector (15 downto 0);
-reset_value: in std_logic_vector(15 downto 0)
+reset_value: in std_logic_vector(15 downto 0);
+interrupt_value: in std_logic_vector(15 downto 0)
 );
 END pc_reg;
 
@@ -23,7 +24,9 @@ BEGIN
 IF(rst = '1') THEN
     data_out_sig <= reset_value;
 ELSIF rising_edge(clk) THEN
-    if (we='1') then
+    if(interrupt = '1') then
+        data_out_sig <= interrupt_value;
+    elsif (we='1') then
         data_out_sig<= data_in;
     end if;
 else 

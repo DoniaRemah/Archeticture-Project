@@ -37,7 +37,8 @@ entity mem1_mem2_buf is
 inportOut : out std_logic_vector(15 downto 0);
 outport_ins_out :  out std_logic;
         outport_ins_data_out :  out std_logic_vector(15 downto 0);
-        load_ins_out: out std_logic
+        load_ins_out: out std_logic;
+        interruptOut : out std_logic 
     );
 end mem1_mem2_buf;
 
@@ -71,6 +72,7 @@ begin
             outport_ins_out <= '0' ;
             outport_ins_data_out <= (others => '0');
             load_ins_out <= '0'; 
+             interruptOut <='0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -98,6 +100,7 @@ begin
             outport_ins_out <= outport_ins ;
             outport_ins_data_out <= outport_ins_data;
             load_ins_out <= load_ins;
+            interruptOut <=interrupt;
             end if;
         end if;
     end process;

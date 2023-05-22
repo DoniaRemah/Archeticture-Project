@@ -54,7 +54,8 @@ entity ID_EX_buf is
         inport : in std_logic_vector(15 downto 0);
 inportOut : out std_logic_vector(15 downto 0);
 outport_ins_out : OUT std_logic;
-ins_load:out std_logic
+ins_load:out std_logic;
+interruptOut :out std_logic
     );
 end ID_EX_buf;
 
@@ -95,6 +96,7 @@ begin
         inportOut <= (others => '0');
         outport_ins_out <= '0';
         ins_load <='0';
+        interruptOut <='0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if (flush = '1' and writeEnable = '1') then
@@ -129,6 +131,7 @@ begin
         inportOut <= (others => '0');
         outport_ins_out <= '0';
         ins_load <='0';
+        interruptOut <='0';
             elsif writeEnable = '1' then
             -- write output to corresponding input
             dataSelectorOut <= dataSelector;
@@ -163,6 +166,7 @@ begin
             inportOut <= inport;
             outport_ins_out <= outport_ins;
             ins_load <= load_input;
+            interruptOut <=interrupt;
             end if;
         end if;
     end process;

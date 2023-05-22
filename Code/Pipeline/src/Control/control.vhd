@@ -48,8 +48,8 @@ begin
     in_port_data_selector<='1' when (opcode="100001") else '0';
     reg_file_enable <= '1' when (opcode(5 downto 3) = "010" or opcode(5 downto 3) = "011" or opcode = "100001" or opcode = "101000" or opcode = "110000") else '0';
     flag_enable <= '1' when (opcode = "000000" or opcode = "000001" or opcode = "111111" or opcode(5 downto 3) = "011" or opcode(5 downto 3) = "001") else '0';
-    propagated_ret_rti <= '0' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
-    current_ret_rti <= '1' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
+    propagated_ret_rti <= '0' when (opcode = "111001" or opcode="111110") else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
+    current_ret_rti <= '1' when opcode = "111001" else '0' when opcode="111110" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
     outport_ins <= '1' when opcode = "100010" else '0';
     load_INS <= '1' when opcode="110000" or opcode="101000" else '0';
 end Behavioral;

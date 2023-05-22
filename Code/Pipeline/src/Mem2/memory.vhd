@@ -11,6 +11,7 @@ entity memory is
         memRead: in std_logic;
         memWrite: in std_logic;
         dataBusSelector: in std_logic;
+        interrupt : in std_logic;
 
         dataToBeWritten: in std_logic_vector(15 downto 0);
         writeAddress: in std_logic_vector(15 downto 0);
@@ -37,7 +38,7 @@ begin
             if memWrite = '1' then
                     memory_array(to_integer(unsigned(writeAddress))) <= dataToBeWritten;
                 -- interrupt
-                if dataBusSelector = '1' then
+                if interrupt = '1' then
                     memory_array(to_integer(unsigned(writeAddress))-1) <= newFlags & "0000000000000";
             end if;
         end if;

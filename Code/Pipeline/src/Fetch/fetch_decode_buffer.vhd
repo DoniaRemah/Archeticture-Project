@@ -6,13 +6,15 @@ USE IEEE.std_logic_1164.all;
 -- *********THIS REGISTER UPDATES ON FALLING CLOCK EDGE***********
 
 ENTITY fetch_decode_buffer IS
-PORT( clk,rst,load_use,flush,freeze,hazard : IN std_logic; 
+PORT( clk,rst,interrupt,load_use,flush,freeze,hazard : IN std_logic; 
 instruction_in: in std_logic_vector(31 downto 0);
 new_pc_in: in std_logic_vector(15 downto 0);
+interrupt_pc : in std_logic_vector(15 downto 0);
 new_pc_out: out std_logic_vector(15 downto 0);
 instruction_out: out std_logic_vector(31 downto 0);
 inport : in std_logic_vector(15 downto 0);
-inportOut : out std_logic_vector(15 downto 0)
+inportOut : out std_logic_vector(15 downto 0);
+interruptOut : out std_logic
 );
 END fetch_decode_buffer;
 
@@ -24,8 +26,12 @@ PROCESS(clk,rst)
 BEGIN
 IF(rst = '1') THEN
         instruction_out <="10000000000000000000000000000000";
+        interruptOut <= '0';
 elsIF rising_edge(clk) THEN
-    if (flush = '1' and hazard /='1'and load_use /='1') then
+    if(interrupt ='1') then
+        new_pc_out <= interrupt_pc;
+        instruction_out <="11111000000000000000000000000000";
+    elsif (flush = '1' and hazard /='1'and load_use /='1') then
         instruction_out <="10000000000000000000000000000000";
     elsif (hazard /='1'and load_use /='1' and freeze /= '1') then
         -- pc_out <= new_pc_in;
@@ -36,6 +42,7 @@ elsIF rising_edge(clk) THEN
     elsif (hazard /='1'and load_use /='1' and freeze = '1') then
         instruction_out <= "11100100000000000000000000000000";
     end if;
+    interruptOut <= interrupt;
 END IF;
 END PROCESS;
     -- new_pc_out <= pc_out;

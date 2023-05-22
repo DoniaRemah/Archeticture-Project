@@ -6,7 +6,9 @@ ENTITY instCache IS
 	PORT(
 		address : IN  std_logic_vector(15 DOWNTO 0);
 		dataout: OUT std_logic_vector(31 DOWNTO 0);
-		reset_value : OUT std_logic_vector(15 DOWNTO 0));
+		reset_value : OUT std_logic_vector(15 DOWNTO 0);
+		interrupt_value : OUT std_logic_vector(15 DOWNTO 0)
+		);
 END ENTITY instCache;
 
 ARCHITECTURE cache_arc OF instCache IS
@@ -20,4 +22,5 @@ ARCHITECTURE cache_arc OF instCache IS
 		-- insturction that this is its turn
 		dataout <= ram(to_integer(unsigned(address))) &  ram(to_integer(unsigned(address)+1));
 		reset_value <= ram(0);
+		interrupt_value <= ram(1);
 END cache_arc;
