@@ -6,7 +6,7 @@ USE IEEE.std_logic_1164.all;
 -- *********THIS REGISTER UPDATES ON FALLING CLOCK EDGE***********
 
 ENTITY fetch_decode_buffer IS
-PORT( clk,load_use,flush,freeze,hazard : IN std_logic; 
+PORT( clk,rst,load_use,flush,freeze,hazard : IN std_logic; 
 instruction_in: in std_logic_vector(31 downto 0);
 new_pc_in: in std_logic_vector(15 downto 0);
 new_pc_out: out std_logic_vector(15 downto 0);
@@ -20,9 +20,11 @@ ARCHITECTURE fetch_decode_buffer_arch OF fetch_decode_buffer IS
 signal pc_out: std_logic_vector(15 downto 0);
 signal ins_out: std_logic_vector(31 downto 0);
 BEGIN
-PROCESS(clk)
+PROCESS(clk,rst)
 BEGIN
-IF rising_edge(clk) THEN
+IF(rst = '1') THEN
+        instruction_out <="10000000000000000000000000000000";
+elsIF rising_edge(clk) THEN
     if (hazard /='1'and load_use /='1' and freeze /= '1') then
         -- pc_out <= new_pc_in;
         -- ins_out <= instruction_in;

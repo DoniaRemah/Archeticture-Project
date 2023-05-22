@@ -185,7 +185,7 @@ begin
         -- mux 8x1
         mux8x1_selector<=dataBusSelectorOut_mem2&(readAddressSelOut_mem2 and memReadOut_mem2)&(writeAddressSelOut_mem2 and memWriteOut_mem2);
 
-        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,load_use_hazard,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
+        fetch_dec_buffer: entity work.fetch_decode_buffer port map(clk,rst,load_use_hazard,Flush_sig,Freeze_sig,Hazard_sig,Instruction,New_PC,buff_pc,buff_ins,inport,inportOUTde);
         
         flag_reg: entity work.flagReg port map (clk,rst,interrupt,flag_en_wb,writeback_flags,out_flags);
 
