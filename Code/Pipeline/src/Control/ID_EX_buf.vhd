@@ -5,7 +5,8 @@ use IEEE.numeric_std.all;
 entity ID_EX_buf is
     port (
         clk : in std_logic;         
-        reset : in std_logic;       
+        reset : in std_logic;  
+        load_input: in std_logic;     
         writeEnable : in std_logic; 
         interrupt : in std_logic;     
 
@@ -52,8 +53,8 @@ entity ID_EX_buf is
         FlagsOut: out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
 inportOut : out std_logic_vector(15 downto 0);
-outport_ins_out : OUT std_logic
-
+outport_ins_out : OUT std_logic;
+ins_load:out std_logic
     );
 end ID_EX_buf;
 
@@ -93,6 +94,7 @@ begin
         FlagsOut <= "000";
         inportOut <= (others => '0');
         outport_ins_out <= '0';
+        ins_load <='0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -128,6 +130,7 @@ begin
             FlagsOut <= Flags;
             inportOut <= inport;
             outport_ins_out <= outport_ins;
+            ins_load <= load_input;
             end if;
         end if;
     end process;

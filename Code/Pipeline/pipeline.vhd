@@ -164,7 +164,7 @@ signal load_ins_out_ex: std_logic;
 signal load_ins_out_mem1: std_logic;
 signal load_ins_out_mem2: std_logic;
 signal load_use_hazard: std_logic;
-
+signal load_ins_out_dec: std_logic;
 begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
@@ -193,13 +193,13 @@ begin
         writeback_data,reg_file_en_wb,Rd_data,Rs1_data,Rs2_data);
         -- // Decode Components
 
-        dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,pc_en,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
+        dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,load_ins,pc_en,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,control_prop,alu_enable,
         buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,outportins,Rd_data,Rs1_data,Rs2_data,New_PC,
         buff_ins(15 downto 0),buff_ins(18 downto 16),buff_ins(24 downto 22),buff_ins(21 downto 19),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,ALUEnableOut,
         Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
-        offset_ImmOut,RdAddressOut,rs1AddressOut,rs2AddressOut,FlagsOut,inportOUTde,inportOUTex,outportins_ex);
+        offset_ImmOut,RdAddressOut,rs1AddressOut,rs2AddressOut,FlagsOut,inportOUTde,inportOUTex,outportins_ex,load_ins_out_dec);
 
         control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),load_ins,alu_enable,branching_operation,part_selector,op_selector, call_op,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,data_sel,flag_sel,in_data_sel,reg_file_en,flag_en,control_prop,current_ret_rti,outportins);
@@ -208,7 +208,7 @@ begin
         execute: entity work.execute port map(ALUEnableOut,partSelectorOut,opSelectorOut,Imm_Src_selectorOut,branchingOpOut,RS1_DATA_Out_FDU,RS2_DATA_Out_FDU,
         offset_ImmOut,Flags_Out_FDU,Branching_sig,alu_res,alu_flags_res,outportdata_ex);
 
-        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',load_use_hazard,load_ins,Hazard_sig,interrupt,outportins_ex,outportdata_ex,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
+        execute_mem1_buffer: entity work.ex_mem1_buf port map(clk,rst,'1',load_use_hazard,load_ins_out_dec,Hazard_sig,interrupt,outportins_ex,outportdata_ex,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,alu_res,RS1_DATA_Out_FDU,RS2_DATA_Out_FDU,
         newPCAddressOut,RdAddressOut,alu_flags_res,dataSelectorOut_ex, inDataSelectorOut_ex, flagSelectorOut_ex, flagEnableOut_ex, regFileEnableOut_ex,
         readAddressSelOut_ex,writeAddressSelOut_ex,dataWrittenSelOut_ex,memOpOut_ex,memReadOut_ex, memWriteOut_ex, dataBusSelectorOut_ex, propRetRtiOut_ex,
@@ -273,7 +273,7 @@ begin
                 DES_Add_exc_mem1=>RdAddressOut_ex,
                 des_add_mem1_mem2=>RdAddressOut_mem2,
                 load_int_mem2_wb=>load_ins_out_mem2,
-                LOAD_USE_cASE=> 
+                LOAD_USE_cASE=> load_use_hazard
         );
         
 

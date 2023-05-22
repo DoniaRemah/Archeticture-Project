@@ -26,6 +26,8 @@ process (rs1_add,rs2_add,DES_Add_exc_mem1,des_add_mem1_mem2,load_ins_exc_MEM1,lo
             LOAD_USE_cASE <= '1';
         elsif (load_int_mem2_wb='1') then
             LOAD_USE_cASE <= '0';
+        else
+            LOAD_USE_cASE <= '0';
         end if;
     end process; 
 end logicofloaduse;
