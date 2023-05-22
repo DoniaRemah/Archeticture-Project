@@ -7,6 +7,8 @@ entity ex_mem1_buf is
         clk : in std_logic;         
         reset : in std_logic;       
         writeEnable : in std_logic; 
+        load_use: in std_logic;
+        load_ins:in std_logic;
         hdu_signal:in std_logic;
         interrupt : in std_logic;  
         outport_ins :  in std_logic;
@@ -36,7 +38,8 @@ entity ex_mem1_buf is
         inport : in std_logic_vector(15 downto 0);
 inportOut : out std_logic_vector(15 downto 0);
 outport_ins_out :  out std_logic;
-        outport_ins_data_out :  out std_logic_vector(15 downto 0)
+        outport_ins_data_out :  out std_logic_vector(15 downto 0);
+        load_ins_out: out std_logic
     );
 end ex_mem1_buf;
 
@@ -95,9 +98,10 @@ begin
             outport_ins_out <= '0' ;
             outport_ins_data_out <= (others => '0');
             -- check on the falling edge of teh clock
+            load_ins_out<='0';
         elsif rising_edge(clk) then
 
-            if hdu_signal = '1' then
+            if hdu_signal = '1' or load_use = '1' then
                 dataSelectorOut <= '0';
                 inDataSelectorOut <= '0';
                 flagSelectorOut <= '0';
@@ -120,6 +124,7 @@ begin
                 inportOut <= (others => '0');
                 outport_ins_out <= '0' ;
             outport_ins_data_out <= (others => '0');
+            load_ins_out<= '0';
             elsif writeEnable = '1' then
             -- assign input signals to corresponding signals
                 -- dataSelectorSig <= dataSelector;
@@ -164,6 +169,7 @@ begin
             inportOut <= inport;
             outport_ins_out <= outport_ins ;
             outport_ins_data_out <= outport_ins_data;
+            load_ins_out <= load_ins;
             end if;
         end if;
     end process;

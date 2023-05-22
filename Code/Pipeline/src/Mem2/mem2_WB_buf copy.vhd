@@ -6,7 +6,8 @@ entity mem2_WB_buf is
     port (
         clk : in std_logic;         
         reset : in std_logic;       
-        writeEnable : in std_logic;   
+        writeEnable : in std_logic; 
+        load_ins: in std_logic;  
         interrupt : in std_logic; 
                 outport_ins :  in std_logic;
         outport_ins_data :  in std_logic_vector(15 downto 0);
@@ -30,7 +31,8 @@ entity mem2_WB_buf is
         memFlags,ALUflags,wbAddress:out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
         inportOut : out std_logic_vector(15 downto 0);
-        outport_ins_data_out :  out std_logic_vector(15 downto 0)
+        outport_ins_data_out :  out std_logic_vector(15 downto 0);
+        load_ins_out: out std_logic
     );
 end mem2_WB_buf;
 
@@ -52,6 +54,7 @@ begin
             wbAddress <= (others => '0');
             inportOut <= (others => '0');
             outport_ins_data_out <= (others => '0');
+            load_ins_out <= '0';
         elsif rising_edge(clk) then
             if writeEnable = '1' then
                 -- write the inputs to the corresponding outputs
@@ -66,6 +69,7 @@ begin
                 ALUflags <= newFlags;
                 wbAddress <= RdAddress;
                 inportOut <= inport;
+                load_ins_out <= load_ins;
                 if(outport_ins = '1') then
                 
                     outport_ins_data_out <= outport_ins_data;

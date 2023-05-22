@@ -7,8 +7,9 @@ entity mem1_mem2_buf is
         clk : in std_logic;         
         reset : in std_logic;       
         writeEnable : in std_logic; 
+        load_ins: in std_logic;
         interrupt : in std_logic; 
-         outport_ins :  in std_logic;
+        outport_ins :  in std_logic;
         outport_ins_data :  in std_logic_vector(15 downto 0);    
 
         -- the write back signals
@@ -35,7 +36,8 @@ entity mem1_mem2_buf is
         inport : in std_logic_vector(15 downto 0);
 inportOut : out std_logic_vector(15 downto 0);
 outport_ins_out :  out std_logic;
-        outport_ins_data_out :  out std_logic_vector(15 downto 0)
+        outport_ins_data_out :  out std_logic_vector(15 downto 0);
+        load_ins_out: out std_logic
     );
 end mem1_mem2_buf;
 
@@ -68,6 +70,7 @@ begin
             inportOut <= (others => '0');
             outport_ins_out <= '0' ;
             outport_ins_data_out <= (others => '0');
+            load_ins_out <= '0'; 
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -94,6 +97,7 @@ begin
             inportOut <= inport;
             outport_ins_out <= outport_ins ;
             outport_ins_data_out <= outport_ins_data;
+            load_ins_out <= load_ins;
             end if;
         end if;
     end process;
