@@ -4,6 +4,7 @@ USE IEEE.std_logic_1164.all;
 
 entity Control_Unit is
     Port (opcode : in std_logic_vector(5 downto 0);
+        load_INS:out std_logic;
           alu_enable : out std_logic;
           branch_enable : out std_logic;
           part_selector : out std_logic_vector(1 downto 0);
@@ -50,5 +51,5 @@ begin
     propagated_ret_rti <= '0' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
     current_ret_rti <= '1' when opcode = "111001" else (opcode(5) and opcode(4) and  opcode(3) and opcode(2));
     outport_ins <= '1' when opcode = "100010" else '0';
-    
+    load_INS <= '1' when opcode="110000" or opcode="101000" else '0';
 end Behavioral;
