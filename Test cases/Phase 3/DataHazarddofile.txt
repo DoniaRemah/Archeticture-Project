@@ -14,6 +14,7 @@ add wave -position end  sim:/pipeline/Instruction
 add wave -position end  sim:/pipeline/Freeze_sig
 add wave -position end  sim:/pipeline/load_use_hazard
 add wave -position 11  sim:/pipeline/Flush_sig
+add wave -position end  sim:/pipeline/newSPfromAdder
 force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
 force -freeze sim:/pipeline/rst 1 0
 force -freeze sim:/pipeline/inport 0044 0
