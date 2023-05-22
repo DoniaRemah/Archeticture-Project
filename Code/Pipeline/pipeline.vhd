@@ -293,6 +293,12 @@ begin
                 Reg_File_Enable=>reg_file_en_wb,
                 Execution_WB_Signal=>regFileEnableOut_ex,
                 Mem1_Wb_Signal=>regFileEnableOut_mem2,
+                inDataSelectorOut_ex_mem1=>inDataSelectorOut_ex,
+                inportOUT_ex_mem1=>inportOUTmem1,
+                inDataSelectorOut_mem1_mem2 =>inDataSelectorOut_mem2,
+                inportOUT_mem1_mem2=>inportOUTmem2,
+                inDataSelectorOut_mem2_wb=>inDataSelectorOut_wb,
+                inportOUT_ex_mem2_wb=>inportOUTwb,
                 RS1_DATA_Out=>RS1_DATA_Out_FDU,
                 RS2_DATA_Out=>RS2_DATA_Out_FDU
         );
