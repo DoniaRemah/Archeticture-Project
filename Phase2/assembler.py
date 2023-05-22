@@ -83,15 +83,15 @@ def main():
     global Lines_Counter
     global org_memory_value
     # Removing the target file if already existing
-    if os.path.exists("Testcache.mem"):
-        os.remove("Testcache.mem")
+    if os.path.exists("ControlCache.mem"):
+        os.remove("ControlCache.mem")
 
     # Opening assembly instructions
     assembly_file_dir = "Phase2\DataHazard.asm"
     assembly_ins = open(assembly_file_dir, encoding='utf-8-sig')
     
     #Creating File to write in
-    with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+    with open("ControlCache.mem", "a", encoding='utf-8-sig') as cache_file:
         cache_file.write("xxxxxxxxxxxxxxxx\n")
         Lines_Counter = Lines_Counter+1
     # Looping over each line
@@ -104,7 +104,7 @@ def main():
             ord_split_value = re.split(r'\s+', ord_split[1]) 
             while org_memory_value != int(ord_split_value[0],16):
                 if org_memory_value <= int(ord_split_value[0],16):
-                    with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+                    with open("ControlCache.mem", "a", encoding='utf-8-sig') as cache_file:
                         cache_file.write("xxxxxxxxxxxxxxxx\n")
                     Lines_Counter = Lines_Counter+1
                     org_memory_value = org_memory_value+1
@@ -117,14 +117,14 @@ def main():
             address_value = bin(int(re.split(r'\s+', line)[0], 16))[2:].zfill(16)
 
             #Writing in the specified memory location
-            with open("Testcache.mem", "r", encoding='utf-8') as file:
+            with open("ControlCache.mem", "r", encoding='utf-8') as file:
                 data = file.readlines()
                 data[org_memory_value]= address_value+"\n"
             
-            with open("Testcache.mem", 'w', encoding='utf-8') as file:
+            with open("ControlCache.mem", 'w', encoding='utf-8') as file:
                 file.writelines(data)
             
-            with open("Testcache.mem", "a", encoding='utf-8-sig') as cache_file:
+            with open("ControlCache.mem", "a", encoding='utf-8-sig') as cache_file:
                 cache_file.write("xxxxxxxxxxxxxxxx\n")
                 Lines_Counter = Lines_Counter+1
                 org_memory_value = org_memory_value+1
@@ -163,15 +163,15 @@ def toMachineCode(command, operands):
     rs2_bits = checkRs2(command,operands)
 
         #Writing in the specified memory location
-    with open("Testcache.mem", "r", encoding='utf-8') as file:
+    with open("ControlCache.mem", "r", encoding='utf-8') as file:
         data = file.readlines()
         if org_memory_value <= len(data)-1:
             # data[org_memory_value]= di"\n""xxxxxxxxxxxxxxxx\n"ct_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n"
             data[org_memory_value]= dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n"
-            with open("Testcache.mem", 'w', encoding='utf-8') as file:
+            with open("ControlCache.mem", 'w', encoding='utf-8') as file:
                 file.writelines(data)
         else:
-            with open("Testcache.mem", 'a', encoding='utf-8') as file:
+            with open("ControlCache.mem", 'a', encoding='utf-8') as file:
                 # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
                 file.writelines(dict_commands[command]+immediate_bit+rs1_bits+rs2_bits+dst_bits+"\n")
         Lines_Counter = Lines_Counter+1
@@ -195,19 +195,19 @@ def toMachineCode(command, operands):
         #Writing in the specified memory location
         
 
-        with open("Testcache.mem", "r", encoding='utf-8') as file:
+        with open("ControlCache.mem", "r", encoding='utf-8') as file:
             data = file.readlines()
 
             if org_memory_value <= len(data)-1:
                 data[org_memory_value]= immediate_Value+"\n"
-                with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                with open("ControlCache.mem", 'w', encoding='utf-8') as file:
                     file.writelines(data)
-                    with open("Testcache.mem", 'w', encoding='utf-8') as file:
+                    with open("ControlCache.mem", 'w', encoding='utf-8') as file:
                         file.writelines(data)
                         Lines_Counter = Lines_Counter+1
                         org_memory_value = org_memory_value+1
             else:
-                with open("Testcache.mem", 'a', encoding='utf-8') as file:
+                with open("ControlCache.mem", 'a', encoding='utf-8') as file:
                     # file.writelines(dict_commands[command]+immediate_bit+" rs1 "+rs1_bits+" rs2 "+rs2_bits+" rdst "+dst_bits+"\n")
                     file.writelines(immediate_Value+"\n")
                     Lines_Counter = Lines_Counter+1
