@@ -26,11 +26,15 @@ entity ID_EX_buf is
         -- hazard signal
         hazard: in std_logic;
 
+                outport_ins : in std_logic;
+
         -- the data in
         rdData,rs1Data,rs2Data,newPCAddress : in std_logic_vector(15 downto 0);  
         offset_Imm: in std_logic_vector(15 downto 0);
         RdAddress,rs1Address,rs2Address: in std_logic_vector(2 downto 0);
         Flags: in std_logic_vector(2 downto 0);
+
+
         
         -- wb signals
         dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut:out std_logic;
@@ -47,7 +51,8 @@ entity ID_EX_buf is
         RdAddressOut,rs1AddressOut,rs2AddressOut: out std_logic_vector(2 downto 0);
         FlagsOut: out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
-inportOut : out std_logic_vector(15 downto 0)
+inportOut : out std_logic_vector(15 downto 0);
+outport_ins_out : OUT std_logic
 
     );
 end ID_EX_buf;
@@ -87,6 +92,7 @@ begin
         rs2AddressOut <= "000";
         FlagsOut <= "000";
         inportOut <= (others => '0');
+        outport_ins_out <= '0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
             if writeEnable = '1' then
@@ -121,6 +127,7 @@ begin
             rs2AddressOut <= rs2Address;
             FlagsOut <= Flags;
             inportOut <= inport;
+            outport_ins_out <= outport_ins;
             end if;
         end if;
     end process;
