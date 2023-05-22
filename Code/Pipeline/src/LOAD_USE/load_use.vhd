@@ -10,6 +10,8 @@ entity load_use is
     DES_Add_exc_mem1:in std_logic_vector (2 downto 0);
 	des_add_mem1_mem2:in std_logic_vector (2 downto 0);
     load_int_mem2_wb:in std_logic;
+    branch_op,callop:in std_logic;
+    RD_address_dec_ex:in std_logic_vector (2 downto 0);
     LOAD_USE_cASE:out std_logic
     );
 end load_use;
@@ -20,9 +22,9 @@ begin
 process (rs1_add,rs2_add,DES_Add_exc_mem1,des_add_mem1_mem2,load_ins_exc_MEM1,load_ins_MEM1_MEM2)
     begin
     
-        if (load_ins_exc_MEM1 = '1' and (rs1_add=DES_Add_exc_mem1 or rs2_add=DES_Add_exc_mem1)) then
+        if (load_ins_exc_MEM1 = '1' and (rs1_add=DES_Add_exc_mem1 or rs2_add=DES_Add_exc_mem1 or ((RD_address_dec_ex = DES_Add_exc_mem1) and (callop = '1' or branch_op ='1' )))) then
             LOAD_USE_cASE <= '1';
-        elsif (load_ins_MEM1_MEM2 = '1' and (rs1_add=des_add_mem1_mem2 or rs2_add=des_add_mem1_mem2)) then
+        elsif (load_ins_MEM1_MEM2 = '1' and (rs1_add=des_add_mem1_mem2 or rs2_add=des_add_mem1_mem2 or ((RD_address_dec_ex = des_add_mem1_mem2) and (callop = '1' or branch_op ='1' )))) then
             LOAD_USE_cASE <= '1';
         elsif (load_int_mem2_wb='1') then
             LOAD_USE_cASE <= '0';

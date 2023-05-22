@@ -165,10 +165,13 @@ signal load_ins_out_mem1: std_logic;
 signal load_ins_out_mem2: std_logic;
 signal load_use_hazard: std_logic;
 signal load_ins_out_dec: std_logic;
+
+signal callop_control: std_logic;
+signal result_jump_call_add : std_logic_vector(15 downto 0);
 begin
         -- // Fetching Components
         inst_cache: entity work.instCache port map (old_pc ,instruction,pc_rst_value);
-        mux4x1: entity work.mux4x1 port map(New_PC,Jumped_call_address,dataread_memory,x"0000",propagated_ret_rti,branching_call_sig,New_PC_mux_out);
+        mux4x1: entity work.mux4x1 port map(New_PC,result_jump_call_add,dataread_memory,x"0000",propagated_ret_rti,branching_call_sig,New_PC_mux_out);
         pc_reg: entity work.pc_reg port map(clk,rst,Hazard_sig,New_PC_mux_out,pc_en,old_pc,pc_rst_value);
         mux2x1: entity work.mux2x1 port map(x"0001",x"0002",instruction(25),addition_value);
         pc_adder: entity work.adder port map(old_pc,addition_value,New_PC);
@@ -195,13 +198,13 @@ begin
 
         dec_ex_buff: entity work.ID_EX_buf port map(clk,rst,load_ins,pc_en,interrupt,data_sel,in_data_sel,flag_sel,flag_en,reg_file_en,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,control_prop,alu_enable,
-        buff_ins(25),branching_operation,call_op,part_selector,op_selector,Flush_sig,Hazard_sig,outportins,Rd_data,Rs1_data,Rs2_data,New_PC,
+        buff_ins(25),branching_operation,callop_control,part_selector,op_selector,Flush_sig,Hazard_sig,outportins,Rd_data,Rs1_data,Rs2_data,New_PC,
         buff_ins(15 downto 0),buff_ins(18 downto 16),buff_ins(24 downto 22),buff_ins(21 downto 19),out_flags,dataSelectorOut,inDataSelectorOut,flagSelectorOut,flagEnableOut,regFileEnableOut,
         readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut,memWriteOut,dataBusSelectorOut,prop_ret_rti_out,ALUEnableOut,
         Imm_Src_selectorOut,branchingOpOut,call_op,partSelectorOut,opSelectorOut,newPCAddressOut,Jumped_call_address,rs1DataOut,rs2DataOut,
         offset_ImmOut,RdAddressOut,rs1AddressOut,rs2AddressOut,FlagsOut,inportOUTde,inportOUTex,outportins_ex,load_ins_out_dec);
 
-        control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),load_ins,alu_enable,branching_operation,part_selector,op_selector, call_op,
+        control_unit: entity work.Control_unit port map (buff_ins(31 downto 26),load_ins,alu_enable,branching_operation,part_selector,op_selector, callop_control,
         read_address_sel,write_address_sel,data_written_sel,mem_op,mem_read,mem_write,data_bus_sel,data_sel,flag_sel,in_data_sel,reg_file_en,flag_en,control_prop,current_ret_rti,outportins);
 
 
@@ -273,6 +276,9 @@ begin
                 DES_Add_exc_mem1=>RdAddressOut_ex,
                 des_add_mem1_mem2=>RdAddressOut_mem2,
                 load_int_mem2_wb=>load_ins_out_mem2,
+                branch_op=>branchingOpOut,
+                callop=>call_op,
+                RD_address_dec_ex=>RdAddressOut,
                 LOAD_USE_cASE=> load_use_hazard
         );
         
@@ -318,8 +324,13 @@ begin
                 inportOUT_mem1_mem2=>inportOUTmem2,
                 inDataSelectorOut_mem2_wb=>inDataSelectorOut_wb,
                 inportOUT_ex_mem2_wb=>inportOUTwb,
+                RD_address_dec_ex => RdAddressOut,
+                RD_data_dec_ex => Jumped_call_address,
+                branch_op=>branchingOpOut,
+                callop=> call_op,
                 RS1_DATA_Out=>RS1_DATA_Out_FDU,
-                RS2_DATA_Out=>RS2_DATA_Out_FDU
+                RS2_DATA_Out=>RS2_DATA_Out_FDU,
+                RD_data_OUT=>result_jump_call_add
         );
 
         -- the fdu of flags

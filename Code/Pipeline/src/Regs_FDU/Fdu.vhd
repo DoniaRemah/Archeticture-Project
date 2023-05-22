@@ -22,8 +22,13 @@ entity FDU is
     inportOUT_mem1_mem2 : in std_logic_vector (15 downto 0);
     inDataSelectorOut_mem2_wb : in std_logic;
     inportOUT_ex_mem2_wb : in std_logic_vector (15 downto 0);
+    RD_address_dec_ex : in std_logic_vector (2 downto 0);
+    RD_data_dec_ex : in std_logic_vector (15 downto 0);
+    branch_op,callop: in std_logic;
+
     RS1_DATA_Out:out std_logic_vector (15 downto 0);
-    RS2_DATA_Out:out std_logic_vector (15 downto 0)
+    RS2_DATA_Out:out std_logic_vector (15 downto 0);
+    RD_data_OUT: out std_logic_vector (15 downto 0)
     );
 end FDU;
 
@@ -37,6 +42,7 @@ VARIABLE rs2 : bit :='0';
     
     RS1_DATA_Out <= RS1_Data;
     RS2_DATA_Out <= RS2_Data;
+    RD_data_OUT <= RD_data_dec_ex;
     rs1 :='0';
     rs2:='0';
         -- My source, is the destination of a previous alu operation
@@ -114,6 +120,33 @@ VARIABLE rs2 : bit :='0';
                         if rs1 ='0' then 
                             RS1_DATA_Out <= RS1_Data;
                     end if;
+                end if;
+        end if;
+
+        if (Execution_WB_Signal = '1' and ((RD_address_dec_ex = ALU_Rdst) and (callop = '1' or branch_op ='1' ))) then
+            if(inDataSelectorOut_ex_mem1 ='1') then
+                    RD_data_OUT <=inportOUT_ex_mem1;
+                else
+                    RD_data_OUT <= Alu_Result_Immd;
+                end if;
+            
+
+        -- Second instruction after the one we want its result
+        elsif (Mem1_Wb_Signal = '1' and ((RD_address_dec_ex = MEM1_Rd_Address) and (callop = '1' or branch_op ='1' ))) then
+
+                if(inDataSelectorOut_mem1_mem2 ='1') then
+                    RD_data_OUT <=inportOUT_mem1_mem2;
+                else
+                    RD_data_OUT <= Mem1_Alu_Result_Immd;
+                end if;
+                
+
+        -- Third Instruction after the one we want its result
+        elsif ( Reg_File_Enable = '1'  and ((RD_address_dec_ex = WB_Address) and (callop = '1' or branch_op ='1' ))) then
+                if(inDataSelectorOut_mem2_wb='1') then
+                    RD_data_OUT <=inportOUT_ex_mem2_wb;
+                else
+                    RD_data_OUT <= WB_Data;
                 end if;
         end if;
     end process; 

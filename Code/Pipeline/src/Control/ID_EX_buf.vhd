@@ -97,7 +97,7 @@ begin
         ins_load <='0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
-            if (flush = '1') then
+            if (flush = '1' and writeEnable = '1') then
             dataSelectorOut <= '0';
         inDataSelectorOut <= '0';
         flagSelectorOut <= '0';

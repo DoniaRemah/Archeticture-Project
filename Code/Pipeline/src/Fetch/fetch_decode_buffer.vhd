@@ -25,7 +25,7 @@ BEGIN
 IF(rst = '1') THEN
         instruction_out <="10000000000000000000000000000000";
 elsIF rising_edge(clk) THEN
-    if (flush = '1') then
+    if (flush = '1' and hazard /='1'and load_use /='1') then
         instruction_out <="10000000000000000000000000000000";
     elsif (hazard /='1'and load_use /='1' and freeze /= '1') then
         -- pc_out <= new_pc_in;
