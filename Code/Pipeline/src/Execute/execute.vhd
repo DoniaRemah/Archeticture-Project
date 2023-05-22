@@ -14,7 +14,8 @@ port  (
 	flags : in std_logic_vector (2 downto 0); 
     branching_res_control_sig : out std_logic;
 	alu_res : out std_logic_vector (15 downto 0);
-    new_flags : out std_logic_vector (2 downto 0)
+    new_flags : out std_logic_vector (2 downto 0);
+    outportdata : out std_logic_vector (15 downto 0)
 );
 end execute;
 
@@ -100,6 +101,7 @@ begin
     branching_res_control_sig <= temp_branching_res_control_sig;
     alu_res <= temp_alu_res;
     new_flags <= temp_new_flags;
+    outportdata <= rs1_data;
 
     -- buff : ex_mem1_buf PORT MAP (clk , reset , writeEnable , interrupt , dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable , readAddressSel,writeAddressSel,dataWrittenSel,memOp,memRead, memWrite, dataBusSelector, propRetRti , temp_alu_res , rs1_data , rs2_data , pc , RdAddress , temp_new_flags , dataSelectorOut, inDataSelectorOut, flagSelectorOut, flagEnableOut, regFileEnableOut , readAddressSelOut,writeAddressSelOut,dataWrittenSelOut,memOpOut,memReadOut, memWriteOut, dataBusSelectorOut, propRetRtiOut , ALU_ImmOut, rs1_data_Out, rs2_data_Out ,newPC_address_out , RdAddressOut , newFlagsOut);
 

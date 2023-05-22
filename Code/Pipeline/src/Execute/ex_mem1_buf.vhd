@@ -8,7 +8,9 @@ entity ex_mem1_buf is
         reset : in std_logic;       
         writeEnable : in std_logic; 
         hdu_signal:in std_logic;
-        interrupt : in std_logic;     
+        interrupt : in std_logic;  
+        outport_ins :  in std_logic;
+        outport_ins_data :  in std_logic_vector(15 downto 0);
 
         -- the write back signals
         dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
@@ -32,7 +34,9 @@ entity ex_mem1_buf is
         
         newFlagsOut: out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
-inportOut : out std_logic_vector(15 downto 0)
+inportOut : out std_logic_vector(15 downto 0);
+outport_ins_out :  out std_logic;
+        outport_ins_data_out :  out std_logic_vector(15 downto 0)
     );
 end ex_mem1_buf;
 
@@ -88,6 +92,8 @@ begin
             RdAddressOut <= (others => '0');
             newFlagsOut <= (others => '0');
             inportOut <= (others => '0');
+            outport_ins_out <= '0' ;
+            outport_ins_data_out <= (others => '0');
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
 
@@ -112,6 +118,8 @@ begin
                 RdAddressOut <= (others => '0');
                 newFlagsOut <= (others => '0');
                 inportOut <= (others => '0');
+                outport_ins_out <= '0' ;
+            outport_ins_data_out <= (others => '0');
             elsif writeEnable = '1' then
             -- assign input signals to corresponding signals
                 -- dataSelectorSig <= dataSelector;
@@ -154,6 +162,8 @@ begin
             RdAddressOut <= RdAddress;
             newFlagsOut <= newFlags;
             inportOut <= inport;
+            outport_ins_out <= outport_ins ;
+            outport_ins_data_out <= outport_ins_data;
             end if;
         end if;
     end process;

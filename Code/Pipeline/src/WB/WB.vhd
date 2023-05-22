@@ -15,6 +15,7 @@ entity WB is
         -- OUTPUTS
         WBData: out std_logic_vector(15 downto 0);
         WBFlags:out std_logic_vector(2 downto 0)
+
     );
 end entity WB;
 
@@ -54,4 +55,6 @@ begin
                 selector => flagSelector,
                 dataOut => WBFlags
             );
+
+            
 end architecture Behavioral;

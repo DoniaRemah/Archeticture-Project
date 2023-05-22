@@ -8,6 +8,8 @@ entity mem2_WB_buf is
         reset : in std_logic;       
         writeEnable : in std_logic;   
         interrupt : in std_logic; 
+                outport_ins :  in std_logic;
+        outport_ins_data :  in std_logic_vector(15 downto 0);
 
         -- the write back signals
         dataSelector, inDataSelector, flagSelector, flagEnable, regFileEnable:in std_logic;
@@ -27,7 +29,8 @@ entity mem2_WB_buf is
         -- note: when reading the flags from the memory, take the most significant 3 bit
         memFlags,ALUflags,wbAddress:out std_logic_vector(2 downto 0);
         inport : in std_logic_vector(15 downto 0);
-        inportOut : out std_logic_vector(15 downto 0)
+        inportOut : out std_logic_vector(15 downto 0);
+        outport_ins_data_out :  out std_logic_vector(15 downto 0)
     );
 end mem2_WB_buf;
 
@@ -48,6 +51,7 @@ begin
             ALUflags <= (others => '0');
             wbAddress <= (others => '0');
             inportOut <= (others => '0');
+            outport_ins_data_out <= (others => '0');
         elsif rising_edge(clk) then
             if writeEnable = '1' then
                 -- write the inputs to the corresponding outputs
@@ -62,6 +66,10 @@ begin
                 ALUflags <= newFlags;
                 wbAddress <= RdAddress;
                 inportOut <= inport;
+                if(outport_ins = '1') then
+                
+                    outport_ins_data_out <= outport_ins_data;
+                end if;
             end if;
         end if;
     end process;
