@@ -1,94 +1,4 @@
 vsim -gui work.pipeline
-# vsim -gui work.pipeline 
-# Start time: 06:16:41 on May 22,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.pipeline(pipeline_arch)
-# Loading work.instcache(cache_arc)
-# Loading work.mux4x1(mux4x1_arch)
-# Loading work.pc_reg(pc_reg_arch)
-# Loading work.mux2x1(mux2x1_arch)
-# Loading work.adder(behavioral)
-# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
-# Loading work.flagreg(behavioral)
-# Loading work.regfile(behavioral)
-# Loading work.id_ex_buf(behavioral)
-# Loading work.control_unit(behavioral)
-# Loading work.execute(archexecute)
-# Loading work.alu(archalu)
-# Loading work.branchingop(archbranchingop)
-# Loading work.carryop(archcarryop)
-# Loading work.movop(archmovop)
-# Loading work.aluop(archaluop)
-# Loading work.notop(archnotop)
-# Loading work.inc(archinc)
-# Loading work.decop(archdec)
-# Loading work.andop(archandop)
-# Loading work.orop(archorop)
-# Loading work.add_sub(archadd_sub)
-# Loading work.my_nadder(a_my_adder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alumux8x1(alumux8x1_arch)
-# Loading work.ex_mem1_buf(behavioral)
-# Loading work.hdu(logicofhdu)
-# Loading work.mem1(behavioral)
-# Loading work.mux8x1(mux8x1_arch)
-# Loading work.sp_reg(behavioral)
-# Loading work.spwe_circuit(spwe_circuit_arch)
-# Loading work.load_use(logicofloaduse)
-# Loading work.mem1_mem2_buf(behavioral)
-# Loading work.memory(behavioral)
-# Loading work.mem2_wb_buf(behavioral)
-# Loading work.wb(behavioral)
-# Loading work.fdu(logicoffdu)
-# Loading work.fdu_flags(logicoffdu)
-# vsim -gui work.pipeline 
-# Start time: 05:55:54 on May 22,2023
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading work.pipeline(pipeline_arch)
-# Loading work.instcache(cache_arc)
-# Loading work.mux4x1(mux4x1_arch)
-# Loading work.pc_reg(pc_reg_arch)
-# Loading work.mux2x1(mux2x1_arch)
-# Loading work.adder(behavioral)
-# Loading work.fetch_decode_buffer(fetch_decode_buffer_arch)
-# Loading work.flagreg(behavioral)
-# Loading work.regfile(behavioral)
-# Loading work.id_ex_buf(behavioral)
-# Loading work.control_unit(behavioral)
-# Loading work.execute(archexecute)
-# Loading work.alu(archalu)
-# Loading work.branchingop(archbranchingop)
-# Loading work.carryop(archcarryop)
-# Loading work.movop(archmovop)
-# Loading work.aluop(archaluop)
-# Loading work.notop(archnotop)
-# Loading work.inc(archinc)
-# Loading work.decop(archdec)
-# Loading work.andop(archandop)
-# Loading work.orop(archorop)
-# Loading work.add_sub(archadd_sub)
-# Loading work.my_nadder(a_my_adder)
-# Loading work.my_adder(a_my_adder)
-# Loading work.alumux8x1(alumux8x1_arch)
-# Loading work.ex_mem1_buf(behavioral)
-# Loading work.hdu(logicofhdu)
-# Loading work.mem1(behavioral)
-# Loading work.mux8x1(mux8x1_arch)
-# Loading work.sp_reg(behavioral)
-# Loading work.spwe_circuit(spwe_circuit_arch)
-# Loading work.load_use(logicofloaduse)
-# Loading work.mem1_mem2_buf(behavioral)
-# Loading work.memory(behavioral)
-# Loading work.mem2_wb_buf(behavioral)
-# Loading work.wb(behavioral)
-# Loading work.fdu(logicoffdu)
-# Loading work.fdu_flags(logicoffdu)
 mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Testcache.mem -format binary /pipeline/inst_cache/ram
 mem load -i E:/Faculty/Senior-1/Spring2023/CompArch/project/Archeticture-Project/Code/Pipeline/datamemory.mem -format mti /pipeline/memory/memory_array
 add wave -position end  sim:/pipeline/clk
@@ -99,48 +9,15 @@ add wave -position end  sim:/pipeline/flag_reg/outFlags
 add wave -position 2  sim:/pipeline/Hazard_sig
 add wave -position end  sim:/pipeline/Reg_File/memory_array
 add wave -position end  sim:/pipeline/old_pc
-add wave -position end  sim:/pipeline/New_PC
+add wave -position end  sim:/pipeline/New_PC_mux_out
 add wave -position end  sim:/pipeline/Instruction
-add wave -position end  sim:/pipeline/buff_ins
 add wave -position end  sim:/pipeline/Freeze_sig
-add wave -position 8  sim:/pipeline/New_PC_mux_out
-add wave -position end  sim:/pipeline/load_ins
-add wave -position end  sim:/pipeline/load_ins_out_ex
-add wave -position end  sim:/pipeline/load_ins_out_mem1
-add wave -position end  sim:/pipeline/load_ins_out_mem2
 add wave -position end  sim:/pipeline/load_use_hazard
-add wave -position end  sim:/pipeline/load_ins_out_dec
-add wave -position end  sim:/pipeline/alu_res
+add wave -position 11  sim:/pipeline/Flush_sig
 force -freeze sim:/pipeline/clk 1 0, 0 {5 ps} -r 10ps
 force -freeze sim:/pipeline/rst 1 0
 force -freeze sim:/pipeline/inport 0044 0
 run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /pipeline/inst_cache
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /pipeline/Reg_File
 force -freeze sim:/pipeline/rst 0 0
 run
 run

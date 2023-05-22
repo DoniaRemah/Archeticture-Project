@@ -97,7 +97,39 @@ begin
         ins_load <='0';
             -- check on the falling edge of teh clock
         elsif rising_edge(clk) then
-            if writeEnable = '1' then
+            if (flush = '1') then
+            dataSelectorOut <= '0';
+        inDataSelectorOut <= '0';
+        flagSelectorOut <= '0';
+        flagEnableOut <= '0';
+        regFileEnableOut <= '0';
+        readAddressSelOut <= '0';
+        writeAddressSelOut <= '0';
+        dataWrittenSelOut <= '0';
+        memOpOut <= '0';
+        memReadOut <= '0';
+        memWriteOut <= '0';
+        dataBusSelectorOut <= '0';
+        propRetRtiOut <= '0';
+        ALUEnableOut <= '0';
+        Imm_Src_selectorOut <= '0';
+        branchingOpOut <= '0';
+        callOpOut <= '0';
+        partSelectorOut <= "00";
+        opSelectorOut <= "000";
+        newPCAddressOut <= "0000000000000000";
+        jumped_call_address <= "0000000000000000";
+        rs1DataOut <= "0000000000000000";
+        rs2DataOut <= "0000000000000000";
+        offset_ImmOut <= "0000000000000000";
+        RdAddressOut <= "000";
+        rs1AddressOut <= "000";
+        rs2AddressOut <= "000";
+        FlagsOut <= "000";
+        inportOut <= (others => '0');
+        outport_ins_out <= '0';
+        ins_load <='0';
+            elsif writeEnable = '1' then
             -- write output to corresponding input
             dataSelectorOut <= dataSelector;
             inDataSelectorOut <= inDataSelector;
